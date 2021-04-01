@@ -35,7 +35,7 @@
     border-color: white;
 }
 
-/* ----- Site Footer Colors----- */
+/* --- Site Footer Colors --- */
 #site-footer {
     background: black;
 }
@@ -46,6 +46,19 @@
 
 .social-icon {
     color: white;
+}
+
+/* --- Events Page Colors --- */
+.event-heading {
+    color: black;
+}
+
+.event-text {
+    color: black;
+}
+
+.event-venue {
+    color: black;
 }
 
 /* ----- End of Color palette ----- */

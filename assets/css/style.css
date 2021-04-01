@@ -20,14 +20,15 @@
 
 .site-header {
     background-color: black;
+    border-bottom: 3px solid #FEFD6D;
 }
 
 #logo {
-    color: white;
+    color: #03E0E6;
     font-size: 2rem;
 }
 
-#nav-text {
+.nav-text {
     color: white;
 }
 
@@ -46,6 +47,10 @@
 
 .social-icon {
     color: white;
+}
+
+.social-icon:hover {
+    color: #03E0E6;
 }
 
 /* --- Events Page Colors --- */
@@ -81,6 +86,7 @@
     padding: 20px;
 }
 
+
 /* ----- Site Footer ----- */
 .social-icon {
     padding: 10px;
@@ -92,6 +98,7 @@
     bottom: 0;
     width: 100%;
     padding: 25px;
+    border-top: 3px solid #FEFD6D;
 }
 
 .footer-text {

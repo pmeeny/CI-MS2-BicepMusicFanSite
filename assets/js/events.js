@@ -60,8 +60,16 @@ function displayEvents(eventResults) {
     }
 }
 
+/**
+ * [displayPagination takes in one parameter , the eventResults object, and displays numbered pagination for the pages of events]
+ * @param  eventResults [The event results object]
+ */
 function displayPagination(eventResults) {
+    var numberofPages = eventResults.page.totalPages;
 
+    for (var i = 0; i < numberofPages; i++) {
+            $("#divPages").append('<div class="pagenumber">' + i + '</div>');
+    }
 }
 
 getEvents(page, displayPagination);

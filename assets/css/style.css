@@ -34,6 +34,19 @@
     border-color: white;
 }
 
+/* ----- Site Footer Colors----- */
+#site-footer {
+    background: black;
+}
+
+.mailing-list-text{
+    color: white;
+}
+
+.social-icon {
+    color: white;
+}
+
 /* ----- End of Color palette ----- */
 
 
@@ -52,6 +65,23 @@
     color: white;
     width: 100%;
     padding: 20px;
+}
+
+/* ----- Site Footer ----- */
+.social-icon {
+    padding: 30px 10px;
+    font-size: 20px;
+}
+
+#site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+}
+
+.footer-text {
+    padding: 30px;
 }
 
 /* ----- Media Queries ----- */

@@ -68,7 +68,7 @@ function displayPagination(eventResults) {
     var numberofPages = eventResults.page.totalPages;
 
     for (var i = 0; i < numberofPages; i++) {
-            $("#divPages").append('<div class="pagenumber">' + i + '</div>');
+        $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
     }
 }
 

@@ -14,8 +14,7 @@
 
 /* ----- Start of Color palette ----- */
 
-
-/* --- Header Colors --- */
+/* --- Navigation bar Colors --- */
 
 .site-header {
     background-color: black;
@@ -33,14 +32,17 @@
     border-color: white;
 }
 
-
-/* --- Navigation bar Colors --- */
-
-
 /* ----- End of Color palette ----- */
 
 
 /* ----- Navigation bar ----- */
 
+/* ----- Hero Video ----- */
+#dj-video {
+    position: fixed;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
 
 /* ----- Media Queries ----- */

@@ -7,3 +7,40 @@
 * {
     font-family: 'Lato', sans-serif;
 }
+
+
+/* --- Global styling --- */
+
+
+/* ----- Start of Color palette ----- */
+
+
+/* --- Header Colors --- */
+
+.site-header {
+    background-color: black;
+}
+
+#logo {
+    color: white;
+}
+
+#nav-text {
+    color: white;
+}
+
+#toggler-border {
+    border-color: white;
+}
+
+
+/* --- Navigation bar Colors --- */
+
+
+/* ----- End of Color palette ----- */
+
+
+/* ----- Navigation bar ----- */
+
+
+/* ----- Media Queries ----- */

@@ -249,8 +249,9 @@ To run this project locally, you will need to clone the repository
 
 - For the social media icons in the footer, I used the code with some modifications from the Code Institute, CV project, reference: https://github.com/Code-Institute-Org/ucd-resume
 
-- For the navigation bar, and hero image, I used the code with some modifications from the Code Institute, Whiskey project, reference https://learn.codeinstitute.net/login?next=/ci_program/diplomainsoftwaredevelopment
+- For the navigation bar I used the code with some modifications from the Bootstrap website: https://getbootstrap.com/docs/4.6/components/navbar/
 
+- For the hero video and text overlay on the index.html page, I used the code with some modifications from the w3schools website: https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 
 - I use a number of Bootstrap components and the source code in the examples: Navbar, Carousel, Modal, Collapse in the four webpages
     - https://getbootstrap.com/docs/4.6/components/navbar/

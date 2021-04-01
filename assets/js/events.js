@@ -42,17 +42,17 @@ function getEvents(page, callback) {
  * @param  eventResults [The event results object]
  */
 function displayEvents(eventResults) {
-    var items = $('#events .list-group-item');
+    var items = $('#events .individual-event');
     //items.hide();
     var events = eventResults._embedded.events;
     var item = items.first();
 
     // loop throught the events object and display the event information
     for (var i = 0; i < events.length; i++) {
-        item.children('.list-group-item-heading').text(events[i].name);
-        item.children('.list-group-item-text').text(events[i].dates.start.localDate);
+        item.children('.event-heading').text(events[i].name);
+        item.children('.event-text').text(events[i].dates.start.localDate);
         try {
-            item.children('.venue').text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
+            item.children('.event-venue').text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
         } catch (err) {
             console.log(err);
         }

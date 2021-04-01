@@ -98,4 +98,10 @@
     padding: 30px;
 }
 
+/* ----- Event Page ----- */
+#event-pages div {
+    float: left;
+    margin: 5px 10px;
+}
+
 /* ----- Media Queries ----- */

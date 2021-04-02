@@ -125,7 +125,26 @@
 /* ----- Event Page ----- */
 #event-pages div {
     float: left;
-    margin: 5px 10px;
+}
+
+.events-information{
+    background-color: #e8e8e8;
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
+
+}
+
+#event-pages {
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.event-page-number{
+    border-right: 1px solid black;
+    padding: 15px 15px 15px 15px;
 }
 
 /* ----- Media Queries ----- */

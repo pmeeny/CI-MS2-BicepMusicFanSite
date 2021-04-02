@@ -123,6 +123,10 @@
 }
 
 /* ----- Event Page ----- */
+.pagination {
+    border: 1px solid black;
+}
+
 #event-pages div {
     float: left;
 }
@@ -130,21 +134,28 @@
 .events-information{
     background-color: #e8e8e8;
     padding: 20px 20px 20px 20px;
-    margin-top: 20px;
+    padding-top: 20px;
 
 }
 
 #event-pages {
-    border: 1px solid black;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 .event-page-number{
+    float: left;;
+    padding: 20px 20px;
     border-right: 1px solid black;
-    padding: 15px 15px 15px 15px;
+}
+
+#previous {
+    float: left;;
+    padding: 20px 20px;
+    border-right: 1px solid black;
+}
+
+#next {
+    float: left;
+    padding: 20px;
 }
 
 /* ----- Media Queries ----- */

@@ -37,33 +37,38 @@
             </nav>
         </div>
     </header>
+    <div class="container">
+        <h1>All BICEP events</h1>
+    </div>
 
     <!-- Events Information -->
     <div class="container">
+        <div class="upcoming-events container">
+            <h2>8 upcoming events</h2>
+        </div>
         <div class="events-information">
-            <h1>Events will be displayed below</h1>
 
         <!-- Events Information, two events per page will be displayed -->
         <div class="event-information">
                 <div id="events" class="events-list">
-                    <a href="" class="individual-event">
-                        <h4 class="event-heading"></h4>
-                        <p class="event-text"></p>
-                        <p class="event-venue"></p>
+                    <a href="" class="individual-event row">
+                            <p class="event-text col-3"></p>
+                            <p class="event-heading col-3"></h4>
+                            <p class="event-venue col-3"></p>  
                     </a>
-                    <a href="" class="individual-event">
-                        <h4 class="event-heading"></h4>
-                        <p class="event-text"></p>
-                        <p class="event-venue"></p>
+                    <a href="" class="individual-event row">
+                        <p class="event-text col-3"></p>
+                        <p class="event-heading col-3"></p>
+                        <p class="event-venue col-3"></p>  
                     </a>
                 </div>
             </div>
 
             <!-- Pagination to display the page numbers -->
             <div class="pagination">
-                <div id="previous"><a href="#"><span aria-hidden="true">Prev</span></a></div>
+                <div id="previous"><span aria-hidden="true">Prev</span></div>
                 <div id="event-pages"></div>
-                <div id="next"><a href="#"><span aria-hidden="true">Next</span></a></div>
+                <div id="next"><span aria-hidden="true">Next</span></div>
             </div>
         </div>
     </div>

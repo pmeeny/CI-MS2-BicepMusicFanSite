@@ -261,6 +261,8 @@ To run this project locally, you will need to clone the repository
 
 - I used the W3 schools website to find out compatibility and examples of various form components: https://www.w3schools.com/
 
+- For the events.html pagination styling, I used an example from https://www.w3schools.com/css/css3_pagination.asp 
+
 # Content
 
 <br>

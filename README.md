@@ -263,8 +263,6 @@ To run this project locally, you will need to clone the repository
 
 - For the events.html pagination styling, I used an example from https://www.w3schools.com/css/css3_pagination.asp 
 
-https://www.codingnepalweb.com/2020/10/create-quiz-app-with-timer-using-javascript.html
-
 # Content
 
 <br>

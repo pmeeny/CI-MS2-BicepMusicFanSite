@@ -11,15 +11,7 @@
 
 /* --- Global styling --- */
 .white-header1-text {
-    color: white;
-}
-
-.white-header2-text {
-    color: white;
-}
-
-.white-p-text {
-    color: white;
+    background-color: white;
 }
 
 /* ----- Start of Color palette ----- */
@@ -132,11 +124,6 @@
 
 /* ----- Event Page ----- */
 
-#all-events {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
-    height: 800px;
-}
-
 #event-pages div {
     float: left;
 }
@@ -187,10 +174,4 @@
     background-color: #FEFD6D;
   }
   
-/* ----- About Page ----- */
-#about {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
-    height: 700px;
-}
-
 /* ----- Media Queries ----- */

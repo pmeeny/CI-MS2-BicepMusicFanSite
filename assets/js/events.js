@@ -58,7 +58,7 @@ function getEventsForSubsequentPages(page, callback) {
         }
     }
 
-       // Ajax get request to return events with bicep keyword, 2 events per page for subsequent page updates, the result is stored in eventResults json object]
+       // Ajax get request to return events with bicep keyword, 2 events per page for subsequent page updates, the result is stored in eventResults json object
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z&size=2&locale=*&page=" + page,
@@ -110,7 +110,7 @@ function displayPagination(eventResults) {
 }
 
 /**
- * [eventPageClicked is called when a page number is clicked, the events for that page is updated from an API call and the events page is updated with the data]
+ * [eventPageClicked is called when a page number is clicked, the events for that page is updated from an API call and the events page is updated with the data
  */
 $(document).on('click', ".event-page-number", function eventPageClicked() {
     var currentselectedPage = $(this).text();

@@ -263,6 +263,8 @@ To run this project locally, you will need to clone the repository
 
 - For the events.html pagination styling, I used an example from https://www.w3schools.com/css/css3_pagination.asp 
 
+- For the hero image and alignment on all pages, I used the example described in https://codetheweb.blog/fullscreen-image-hero/
+
 # Content
 
 <br>

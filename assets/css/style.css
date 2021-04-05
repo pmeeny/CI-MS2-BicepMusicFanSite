@@ -57,7 +57,7 @@
 }
 
 .social-icon:hover {
-    color: #03E0E6;
+    color: rgba(255,255,255,.5);
 }
 
 /* --- Events Page Colors --- */
@@ -86,24 +86,22 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-
-    /* Flexbox stuff */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Text styles */
     text-align: center;
 }
 
+.dj-image{
+    padding-left: 0px;
+    padding-right: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-event.jpg");
+    background-repeat: no-repeat;
+}
 
-.overlay {
-  /*  position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px; */
+.dj-image:hover{
+    background-image: url("../images/dj-event.jpg");
 }
 
 /* ----- Site Footer ----- */
@@ -137,7 +135,7 @@
 }
 
 .common_btn:hover {
-    background: #FEFD6D;
+    background: rgba(255,255,255,.5);
 }
 
 /* ----- Event Page ----- */
@@ -157,7 +155,6 @@
     padding-top: 20px;
     height: 300px;
 }
-
 
 .event-page-number{
     float: left;;

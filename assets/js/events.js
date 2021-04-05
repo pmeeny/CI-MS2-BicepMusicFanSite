@@ -58,7 +58,7 @@ function getEventsForSubsequentPages(page, callback) {
         }
     }
 
-       // Ajax get request to return events with bicep keyword, 2 events per page for subsequent page updates, the result is stored in eventResults json object
+    // Ajax get request to return events with bicep keyword, 2 events per page for subsequent page updates, the result is stored in eventResults json object
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z&size=2&locale=*&page=" + page,
@@ -75,19 +75,28 @@ function getEventsForSubsequentPages(page, callback) {
 }
 
 /**
- * [displayEvents takes in one parameter , the eventResults object, and displays the event description for the events id]
+ * [displayEvents takes in one parameter , the eventResults object, 
+ * and displays the event description for the events id]
  * @param  eventResults [The event results object]
  */
 function displayEvents(eventResults) {
     var items = $('#events .individual-event');
-    //items.hide();
     var events = eventResults._embedded.events;
+    console.log(events)
     var item = items.first();
 
     // loop throught the events object and display the event information
     for (var i = 0; i < events.length; i++) {
         item.children('.event-heading').text(events[i].name);
         item.children('.event-text').text(events[i].dates.start.localDate);
+        var timeString = events[i].dates.start.localTime;
+        item.children('.event-time').text(timeString.slice(0, 5));
+        if(i==0){
+            item.children('.event-url-1').text(events[i].url);
+        }
+        else{
+            item.children('.event-url-2').text(events[i].url);
+        }    
         try {
             item.children('.event-venue').text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
         } catch (err) {
@@ -98,7 +107,8 @@ function displayEvents(eventResults) {
 }
 
 /**
- * [displayPagination takes in one parameter , the eventResults object, and displays numbered pagination for the pages of events]
+ * [displayPagination takes in one parameter , the eventResults object, 
+ * and displays numbered pagination for the pages of events]
  * @param  eventResults [The event results object]
  */
 function displayPagination(eventResults) {
@@ -110,12 +120,32 @@ function displayPagination(eventResults) {
 }
 
 /**
- * [eventPageClicked is called when a page number is clicked, the events for that page is updated from an API call and the events page is updated with the data
+ * [eventPageClicked is called when a page number is clicked, the events for that page is updated 
+ * from an API call and the events page is updated with the data]
  */
 $(document).on('click', ".event-page-number", function eventPageClicked() {
     var currentselectedPage = $(this).text();
     page = currentselectedPage;
     getEventsForSubsequentPages(currentselectedPage)
 });
+
+/**
+ * [Click event that will display more information about the event if the more 
+ * info button is clicked, 1st entry on results]
+ */
+$( "#more-info-1" ).click(function(event) {
+   event.preventDefault();
+    $('.event-url-1').show();
+});
+
+/**
+ * [Click event that will display more information about the event if the more 
+ * info button is clicked, 2nd entry on results]
+ */
+$( "#more-info-2" ).click(function(event) {
+    event.preventDefault();
+     $('.event-url-2').show();
+ 
+ });
 
 getEvents(page, displayPagination);

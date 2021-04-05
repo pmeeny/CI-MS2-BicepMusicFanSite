@@ -28,12 +28,11 @@
 
 .site-header {
     background-color: black;
-    border-bottom: 3px solid #FEFD6D;
 }
 
 #logo {
-    color: #03E0E6;
-    font-size: 2rem;
+    color: white;
+    font-size: 3rem;
 }
 
 .nav-text {
@@ -79,21 +78,33 @@
 
 /* ----- Navigation bar ----- */
 
-/* ----- Hero Video ----- */
-#dj-video {
-    position: fixed;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
+/* ----- Hero image and overlay text ----- */
+#hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
 }
+
 
 .overlay {
-    position: fixed;
-    color: white;
+  /*  position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
     width: 100%;
-    padding: 20px;
+    padding: 20px; */
 }
-
 
 /* ----- Site Footer ----- */
 .social-icon {
@@ -102,11 +113,10 @@
 }
 
 #site-footer {
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    margin: 0;
     width: 100%;
     padding: 25px;
-    border-top: 3px solid #FEFD6D;
 }
 
 .footer-text {
@@ -115,7 +125,7 @@
 
 .common_btn {
     display: inline-block;
-    background: #03E0E6;
+    background: white;
     color: black;
     text-align: center;
     vertical-align: middle;
@@ -202,6 +212,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
     height: 700px;
 }
+
   
 /* ----- Quiz Page ----- */
 #quiz {

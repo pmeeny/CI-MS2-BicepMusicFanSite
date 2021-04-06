@@ -1,4 +1,5 @@
 var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var allAnswers = {};
 var questions = [
   {
       question: "Where are BICEP from?",
@@ -6,7 +7,7 @@ var questions = [
       b: "London",
       c: "Belfast",
       d: "Edinburgh",
-      answer: "c"
+      answer: "Belfast"
     },
   {
       question: "What was BICEPs first album called?",
@@ -14,7 +15,7 @@ var questions = [
       b: "Nova",
       c: "The light",
       d: "Forever",
-      answer: "a"
+      answer: "Bicep"
     },
   ];
 
@@ -29,18 +30,23 @@ function get(x){
 }
 // this function renders a question for display on the page
 function renderQuestion(){
-  console.log(shuffledQuestions)
   test = get("quiz_results");
   if(pos >= shuffledQuestions.length){
 
     $('#quiz_results').html("You got "+correct+" of "+shuffledQuestions.length+" questions correct")
 
     $("#test_status").html("Test completed");
+    $("#submit_answer").hide();
+    $('#question').hide();
+
+    for (var i in allAnswers) {
+      $("#correct_answers").append(allAnswers[i]);
+      $("#correct_answers").append("<br");
+    }
     pos = 0;
     correct = 0;
     return false;
   }
-  console.log(questions)
   $("#test_status").html("Question "+(pos+1)+" of "+shuffledQuestions.length);
 
   $('#regTitle').html('Hello World');
@@ -50,7 +56,6 @@ function renderQuestion(){
   chB = shuffledQuestions[pos].b;
   chC = shuffledQuestions[pos].c;
   chD = shuffledQuestions[pos].d;
-  console.log(shuffledQuestions)
 
   $('#question').html("<h3>"+question+"</h3>")
 
@@ -62,7 +67,6 @@ function renderQuestion(){
 
 $("#submit_answer").click(function(){
   checkAnswer();
-  console.log(questions)
 });
 
 
@@ -71,14 +75,31 @@ function checkAnswer(){
   for(var i=0; i<choices.length; i++){
     if(choices[i].checked){
       choice = choices[i].value;
+      parent = choices[i].parentNode.innerText.trim();
+      console.log(parent);
+      console.log(choice);
+      console.log(shuffledQuestions[pos].answer);
+      console.log(shuffledQuestions[pos].question);
+
+      allAnswers[i] = "Question: " + shuffledQuestions[pos].question + " : " +
+                      "Your answer: " + parent+ " : " +
+                      "Correct Answer: " + shuffledQuestions[pos].answer;
+      
+      console.log(allAnswers)
     }
   }
 
-  if(choice == shuffledQuestions[pos].answer){
+  if(parent == shuffledQuestions[pos].answer){
     correct++;
+ 
+  }
+  else{
+    // store the wrong answers
   }
   pos++;
   renderQuestion();
 }
+
+
 shuffleQuestions()
 renderQuestion();

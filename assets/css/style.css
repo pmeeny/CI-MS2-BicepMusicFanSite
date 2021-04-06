@@ -152,7 +152,12 @@
 
 #all-events {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
-    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100%;
 }
 
 #event-pages div {
@@ -216,14 +221,24 @@
 /* ----- About Page ----- */
 #about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
-    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100%;
 }
 
   
 /* ----- Quiz Page ----- */
 #quiz {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
-    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100%;
 }
 
 #quiz-holder {

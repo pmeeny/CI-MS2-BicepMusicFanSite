@@ -85,7 +85,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -94,14 +94,25 @@
 }
 
 .dj-image{
-    padding-left: 0px;
-    padding-right: 0px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-event.jpg");
     background-repeat: no-repeat;
-}
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
 
 .dj-image:hover{
-    background-image: url("../images/dj-event.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-event.jpg");
+}
+
+#four-images{
+    margin: 0;
+}
+
+#four-images a:hover {
+    text-decoration: none;
 }
 
 /* ----- Site Footer ----- */
@@ -111,7 +122,6 @@
 }
 
 #site-footer {
-    position: relative;
     margin: 0;
     width: 100%;
     padding: 25px;
@@ -181,7 +191,6 @@
     background-color: #FEFD6D;
 }
 
-
 .upcoming-events {
     background: grey;
     margin-bottom: 0;
@@ -223,4 +232,4 @@
     padding-top: 20px;
 }
 
-   /* ----- Media Queries ----- */
+/* ----- Media Queries ----- */

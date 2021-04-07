@@ -40,7 +40,6 @@ function renderQuestion(){
 
 $("#submit_answer").click(function(){
   checkAnswer();
-  console.log(questions)
 });
 
 
@@ -54,14 +53,31 @@ function checkAnswer(){
   for(var i=0; i<choices.length; i++){
     if(choices[i].checked){
       choice = choices[i].value;
+      parent = choices[i].parentNode.innerText.trim();
+      console.log(parent);
+      console.log(choice);
+      console.log(shuffledQuestions[pos].answer);
+      console.log(shuffledQuestions[pos].question);
+
+      allAnswers[i] = "Question: " + shuffledQuestions[pos].question + " : " +
+                      "Your answer: " + parent+ " : " +
+                      "Correct Answer: " + shuffledQuestions[pos].answer;
+      
+      console.log(allAnswers)
     }
   }
 
   if(choice == shuffledQuestions[position].answer){
     correct++;
+ 
+  }
+  else{
+    // store the wrong answers
   }
   position++;
   renderQuestion();
 }
+
+
 shuffleQuestions()
 renderQuestion();

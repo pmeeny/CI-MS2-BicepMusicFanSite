@@ -12,6 +12,7 @@
 /* --- Global styling --- */
 .white-header1-text {
     color: white;
+    font-size: 1.5rem;
 }
 
 .white-header2-text {
@@ -241,6 +242,10 @@
     width: 100%;
 }
 
+.table {
+    table-layout: fixed;
+}
+
 #quiz-holder {
     background-color: white;
     padding: 40px 40px 40px 40px;
@@ -248,8 +253,64 @@
     border-radius: 25px;
 }
 
+#results_text{
+    display: none;
+}
+
 .results_table{
     display: none;
+}
+
+#quiz_title{
+    text-align: center;
+}
+
+#quiz-text {
+    text-align: center;
+}
+
+#quiz-paragraph {
+    color: white;
+}
+
+#quiz-header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0062cc;
+}
+
+#quiz-header div{
+    font-size:1.0rem;
+}
+
+#question {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+#progress-area {
+    padding-top: 10px;  
+}
+
+#quiz_results {
+    border-bottom: 2px solid #0062cc;
+}
+
+
+#submit_answer {
+    background-color: #0062cc;
+}
+
+#submit-button-area {
+    padding-top: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
 }
 
 /* ----- Media Queries ----- */

@@ -5,7 +5,7 @@ var questions = [
         b: "London",
         c: "Belfast",
         d: "Edinburgh",
-        answer: "c"
+        answer: "Belfast"
       },
     {
         question: "What was BICEPs first album called?",
@@ -13,7 +13,7 @@ var questions = [
         b: "Nova",
         c: "The light",
         d: "Forever",
-        answer: "a"
+        answer: "Bicep"
       },
     ];
   

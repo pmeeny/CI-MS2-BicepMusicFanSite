@@ -1,6 +1,7 @@
 var position = 0,choice, choices, choiceOne, choiceTwo, choiceThree, choiceFour,correctAnswers = 0;
 var percentage=0;
 var allAnswers = {};
+var answerInformation=0;
 
 var h1 = document.getElementsByTagName('time')[0],
     seconds = 0, minutes = 0, hours = 0,
@@ -38,7 +39,6 @@ function displayQuestions(){
   choiceTwo = shuffledQuestions[position].b;
   choiceThree = shuffledQuestions[position].c;
   choiceFour = shuffledQuestions[position].d;
-  console.log(shuffledQuestions)
 
   $('#question').html("<h3>"+question+"</h3>")
 
@@ -68,16 +68,16 @@ function displayQuizResults(){
 
 function checkAnswer(){
   choices = document.getElementsByName("choices");
-  for(var i=0; i<choices.length; i++){
-    if(choices[i].checked){
-      choice = choices[i].value;
-      parent = choices[i].parentNode.innerText.trim();
+  for(var selected=0; selected<choices.length; selected++){
+    if(choices[selected].checked){
+      choice = choices[selected].value;
+      parent = choices[selected].parentNode.innerText.trim();
       console.log(parent);
       console.log(choice);
       console.log(shuffledQuestions[position].answer);
       console.log(shuffledQuestions[position].question);
 
-      allAnswers[i] = "Question: " + shuffledQuestions[position].question + " : " +
+      allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
                       "Your answer: " + parent+ " : " +
                       "Correct Answer: " + shuffledQuestions[position].answer
     }

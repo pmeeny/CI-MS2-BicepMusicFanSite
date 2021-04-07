@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item mr-2"><a class="nav-link nav-text-selected" href="index.html">Home</a></li>
-                        <li class="nav-item mr-2"><a class="nav-link nav-text">About</a></li>
+                        <li class="nav-item mr-2"><a class="nav-link nav-text" href="about.html">About</a></li>
                         <li class="nav-item mr-2"><a class="nav-link nav-text" href="events.html">Events</a></li>
                         <li class="active nav-item mr-2"><a class="nav-link nav-text">Quiz</a></li>
                         
@@ -56,22 +56,65 @@
 
                 </div>
                 <div id="quiz_results">
-                    <div id="optionA"></div>
-                    <div id="optionB"></div>
-                    <div id="optionC"></div>
-                    <div id="optionD"></div>
+                    <form>
+                        <!--<input type="radio" id="optionA" name="choices" value="a" required></input>
+                        //<input type="radio" id="optionB" name='choices' value='b'></input>
+                        //<input type="radio" id="optionC" name='choices' value='c'></input>
+                        //<input type="radio" id="optionD" name='choices' value='d'></input>
+                        //<button id="submit_answer" type="submit">Submit Answer</button> -->
+                            <input type="radio" id="optionA" name="choices" value="a" checked="checked">
+                           <label id="optionAA" for="optionA"></label><br>
+                     
+                            <input type="radio" id="optionB" name="choices" value="b">
+                            <label id="optionBB" for="optionB"></label><br> 
+                        
+                            <input type="radio" id="optionC" name="choices" value="c">
+                            <label id="optionCC" for="optionC"></label><br>
+
+                            <input type="radio" id="optionD" name="choices" value="d">
+                            <label id="optionDD" for="optionD"></label><br>
+                    </form>
                 </div>
                 <div class="row">
                     <div class="col-8">
-                        <button type="button" id="submit_answer">Submit Answer</button>
+                        <button id="submit_answer">Submit</button>
                     </div>
-                    <div class="col-4"<h2 id="test_status"></h2></div>
-                    <div id="correct_answers">Correct Answers</div>
+                    <div class="col-4"><h2 id="test_status"></h2>
+                    </div>
                     <div id="total_time_spent"></div>
+                </div>
+                <table class="table results_table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Correct Answers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                             <div id="correct_answers"></div>
+                        </td>
+                        </tr>
+                </tbody>
+                </table>
+                <table class="table results_table">
+                    <thead>
+                      <tr>
+                        <th scope="col">InCorrect Answers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                             <div id="incorrect_answers"></div>
+                        </td>
+                        </tr>
+                </tbody>
+                </table>
                 </div>
             </div>
         </div>
-    </div>
+
 
     <!-- Footer -->
     <footer id="site-footer">

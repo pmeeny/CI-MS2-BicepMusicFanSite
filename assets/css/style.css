@@ -242,9 +242,14 @@
 }
 
 #quiz-holder {
-    background-color: #e8e8e8;
-    padding: 20px 20px 20px 20px;
+    background-color: white;
+    padding: 40px 40px 40px 40px;
     padding-top: 20px;
+    border-radius: 25px;
+}
+
+.results_table{
+    display: none;
 }
 
 /* ----- Media Queries ----- */

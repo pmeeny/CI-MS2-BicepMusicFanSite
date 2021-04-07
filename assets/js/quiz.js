@@ -23,6 +23,7 @@ function displayQuestions(){
     $("#question").hide()
     $("#submit_answer").hide();
     $("#total_time_spent").html(document.getElementById("stopwatch").textContent);
+    $(".results_table").show();
 
     updatePercentage();
     displayQuizResults();
@@ -32,21 +33,22 @@ function displayQuestions(){
     return false;
   }
 
-  $("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
+$("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
 
-  question = questions[position].question;
-  choiceOne = shuffledQuestions[position].a;
-  choiceTwo = shuffledQuestions[position].b;
-  choiceThree = shuffledQuestions[position].c;
-  choiceFour = shuffledQuestions[position].d;
+question = questions[position].question;
+choiceOne = shuffledQuestions[position].a;
+choiceTwo = shuffledQuestions[position].b;
+choiceThree = shuffledQuestions[position].c;
+choiceFour = shuffledQuestions[position].d;
 
-  $('#question').html("<h3>"+question+"</h3>")
+$('#question').html("<h3>"+question+"</h3>")
 
-  $('#optionA').html("<label> <input type='radio' name='choices' value='a'> "+choiceOne+"</label><br>");
-  $('#optionB').html("<label> <input type='radio' name='choices' value='b'> "+choiceTwo+"</label><br>");
-  $('#optionC').html("<label> <input type='radio' name='choices' value='c'> "+choiceThree+"</label><br>");
-  $('#optionD').html("<label> <input type='radio' name='choices' value='d'> "+choiceFour+"</label><br>");
-  updatePercentage();
+$('#optionAA').html(choiceOne);
+$('#optionBB').html(choiceTwo);
+$('#optionCC').html(choiceThree);
+$('#optionDD').html(choiceFour);
+
+updatePercentage();
 }
 
 $("#submit_answer").click(function(){
@@ -60,35 +62,66 @@ function updatePercentage(){
 }
 
 function displayQuizResults(){
-  for (var i in allAnswers) {
-    $("#correct_answers").append(allAnswers[i]);
-    $("#correct_answers").append("<br");
+    for (var i in allAnswers) {
+      if(allAnswers[i].includes("Both answers match")){
+        $("#correct_answers").css({"color":"green"})
+        $("#correct_answers").append(allAnswers[i]);
+        $("#correct_answers").append("<br");
+      }
+      else{
+        $("#incorrect_answers").css({"color":"red"})
+        $("#incorrect_answers").append(allAnswers[i]);
+        $("#incorrect_answers").append("<br");
+      }
+    }
   }
-}
 
 function checkAnswer(){
   choices = document.getElementsByName("choices");
   for(var selected=0; selected<choices.length; selected++){
     if(choices[selected].checked){
       choice = choices[selected].value;
-      parent = choices[selected].parentNode.innerText.trim();
+      parent = choices[selected].nextElementSibling.innerHTML;
       console.log(parent);
       console.log(choice);
       console.log(shuffledQuestions[position].answer);
       console.log(shuffledQuestions[position].question);
 
-      allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
+
+     /// allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
+     // "Your answer: " + parent+ " : " +
+     // "Correct Answer: " + shuffledQuestions[position].answer
+
+     if(parent == shuffledQuestions[position].answer){
+        allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
                       "Your answer: " + parent+ " : " +
-                      "Correct Answer: " + shuffledQuestions[position].answer
-    }
+                     "Correct Answer: " + shuffledQuestions[position].answer  +
+                      "Both answers match";                 
+      }
+      else {
+        allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
+        "Your answer: " + parent+ " : " +
+        "Correct Answer: " + shuffledQuestions[position].answer;
+      }
+
+}
+
+     // if(parent == shuffledQuestions[position].answer){
+      //  allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
+     //                 "Your answer: " + parent+ " : " +
+      //                "Correct Answer: " + shuffledQuestions[position].answer  +
+     //                 "Both answers match";                 
+     // }
+     // else {
+     //   allAnswers[answerInformation++] = "Question: " + shuffledQuestions[position].question + " : " +
+     //   "Your answer: " + parent+ " : " +
+     //   "Correct Answer: " + shuffledQuestions[position].answer;
+     // }
   }
 
   if(parent == shuffledQuestions[position].answer){
     correctAnswers++;
  
-  }
-  else{
-    // store the wrong answers
   }
   position++;
   displayQuestions();

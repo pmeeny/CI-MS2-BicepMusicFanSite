@@ -272,6 +272,8 @@ To run this project locally, you will need to clone the repository
 
 - For the stopwatch: https://jsfiddle.net/Daniel_Hug/pvk6p/
 
+- For updating the quiz progress bar, I found this page useful: https://stackoverflow.com/questions/21182058/dynamically-change-bootstrap-progress-bar-value-when-checkboxes-checked
+
 # Content
 
 <br>

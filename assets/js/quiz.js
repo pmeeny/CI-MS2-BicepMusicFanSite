@@ -1,13 +1,10 @@
-var position = 0,choice, choices, chA, chB, chC, correctAnswers = 0;
+var position = 0,choice, choices, choiceOne, choiceTwo, choiceThree, choiceFour,correctAnswers = 0;
 var percentage=0;
 var allAnswers = {};
 
 var h1 = document.getElementsByTagName('time')[0],
-    start = document.getElementById('start'),
-    stop = document.getElementById('stop'),
-    clear = document.getElementById('clear'),
     seconds = 0, minutes = 0, hours = 0,
-    t;
+    time;
 
 var shuffledQuestions;
 
@@ -36,18 +33,18 @@ function renderQuestion(){
   $("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
 
   question = questions[position].question;
-  chA = shuffledQuestions[position].a;
-  chB = shuffledQuestions[position].b;
-  chC = shuffledQuestions[position].c;
-  chD = shuffledQuestions[position].d;
+  choiceOne = shuffledQuestions[position].a;
+  choiceTwo = shuffledQuestions[position].b;
+  choiceThree = shuffledQuestions[position].c;
+  choiceFour = shuffledQuestions[position].d;
   console.log(shuffledQuestions)
 
   $('#question').html("<h3>"+question+"</h3>")
 
-  $('#optionA').html("<label> <input type='radio' name='choices' value='a'> "+chA+"</label><br>");
-  $('#optionB').html("<label> <input type='radio' name='choices' value='b'> "+chB+"</label><br>");
-  $('#optionC').html("<label> <input type='radio' name='choices' value='c'> "+chC+"</label><br>");
-  $('#optionD').html("<label> <input type='radio' name='choices' value='d'> "+chD+"</label><br>");
+  $('#optionA').html("<label> <input type='radio' name='choices' value='a'> "+choiceOne+"</label><br>");
+  $('#optionB').html("<label> <input type='radio' name='choices' value='b'> "+choiceTwo+"</label><br>");
+  $('#optionC').html("<label> <input type='radio' name='choices' value='c'> "+choiceThree+"</label><br>");
+  $('#optionD').html("<label> <input type='radio' name='choices' value='d'> "+choiceFour+"</label><br>");
   updatePercentage();
 }
 
@@ -122,7 +119,7 @@ function add() {
     startTimer();
 }
 function startTimer() {
-    t = setTimeout(add, 1000);
+    time = setTimeout(add, 1000);
 }
 
 /* Start button */
@@ -130,7 +127,7 @@ function startTimer() {
 
 /* Stop button */function stopTimer() {
   console.log("in here")
-    clearTimeout(t);
+    clearTimeout(time);
 }
 
 /* Clear button */

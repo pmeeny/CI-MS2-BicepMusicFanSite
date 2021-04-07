@@ -1,14 +1,14 @@
-var position = 0,choice, choices, choiceOne, choiceTwo, choiceThree, choiceFour,correctAnswers = 0;
+var position = 0, choices, choiceOne, choiceTwo, choiceThree, choiceFour, correctAnswers = 0;
 var usersAnswer;
 var percentage=0;
 var allAnswers = [];
 allAnswers[0] = [];
 allAnswers[1] = [];
+allAnswers[2] = [];
+allAnswers[3] = [];
 var answerInformation=0;
 
-var h1 = document.getElementsByTagName('time')[0],
-    seconds = 0, minutes = 0, hours = 0,
-    time;
+var h1 = document.getElementsByTagName('time')[0], seconds = 0, minutes = 0, time;
 
 var shuffledQuestions;
 
@@ -18,12 +18,12 @@ function shuffleQuestions(){
 
 
 function displayQuestions(){
-  console.log(shuffledQuestions)
   if(position >= shuffledQuestions.length){
 
-    $('#quiz_results').html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
-    $("#test_status").html("Test completed");
+    $('#overall_result').html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
+    $("#test_status").hide();
     $("#question").hide()
+    $("#quiz_options").hide()
     $("#submit_answer").hide();
     $("#total_time_spent").html(document.getElementById("stopwatch").textContent);
     $(".results_table").show();
@@ -44,17 +44,16 @@ choiceTwo = shuffledQuestions[position].b;
 choiceThree = shuffledQuestions[position].c;
 choiceFour = shuffledQuestions[position].d;
 
-$('#question').html("<h3>"+question+"</h3>")
-
-$('#optionAA').html(choiceOne);
-$('#optionBB').html(choiceTwo);
-$('#optionCC').html(choiceThree);
-$('#optionDD').html(choiceFour);
+$('#question').html(position+1+ ". " +"<span>"+question+"</span>")
+$('#optionA_label').html(choiceOne);
+$('#optionB_label').html(choiceTwo);
+$('#optionC_label').html(choiceThree);
+$('#optionD_label').html(choiceFour);
 
 updatePercentage();
 }
 
-$("#submit_answer").click(function(){
+$("#submit_answer").click(function submitAnswerClicked(){
   checkAnswer();
 });
 
@@ -62,23 +61,24 @@ $("#submit_answer").click(function(){
 function updatePercentage(){
   percentage = percentage + 10;
   $(".progress-bar").html(percentage + "%");
+  $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage)
 }
 
 function displayQuizResults(){
     for (var i in allAnswers) {
       if(allAnswers[i][3] == true){
-        $("#correct_answers").css({"color":"green"})
-        $("#correct_answers").append(allAnswers[i][0]);
-        $("#correct_answers").append(allAnswers[i][1]);
-        $("#correct_answers").append(allAnswers[i][2]);
-        $("#correct_answers").append("<br");
+        $("#answers").append("<tr>")
+        $("#answers").append("<td class='correct'>" + allAnswers[i][0] +"</td>");
+        $("#answers").append("<td class='correct'>" + allAnswers[i][1] +"</td>");
+        $("#answers").append("<td class='correct'>" + allAnswers[i][2] +"</td>");
+        $("#answers").append("</tr>")
       }
       else{
-        $("#incorrect_answers").css({"color":"red"})
-        $("#incorrect_answers").append(allAnswers[i][0]);
-        $("#incorrect_answers").append(allAnswers[i][1]);
-        $("#incorrect_answers").append(allAnswers[i][2]);
-        $("#incorrect_answers").append("<br");
+        $("#answers").append("<tr>")
+        $("#answers").append("<td class='incorrect'>" + allAnswers[i][0] +"</td>");
+        $("#answers").append("<td class='incorrect'>" + allAnswers[i][1] +"</td>");
+        $("#answers").append("<td class='incorrect'>" + allAnswers[i][2] +"</td>");
+        $("#answers").append("<tr>")
       }
     }
   }
@@ -126,11 +126,10 @@ function add() {
         minutes++;
         if (minutes >= 60) {
             minutes = 0;
-            hours++;
         }
     }
     
-    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    h1.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
     startTimer();
 }
@@ -138,16 +137,8 @@ function startTimer() {
     time = setTimeout(add, 1000);
 }
 
-/* Start button */
-//start.onclick = startTimer;
-
-/* Stop button */function stopTimer() {
+/* Stop timer */
+function stopTimer() {
   console.log("in here")
     clearTimeout(time);
 }
-
-/* Clear button */
-//clear.onclick = function() {
-//    h1.textContent = "00:00:00";
-//    seconds = 0; minutes = 0; hours = 0;
-//}

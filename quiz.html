@@ -43,75 +43,57 @@
     <!-- Hero Video and content -->
     <div id="quiz">
         <div class="container">
-            <h1 class="white-header1-text">Quiz</h1>
+            <p id="quiz-paragraph">Test your knowledge on BICEP with a quiz, there are ten questions in total, good luck!</p>
             <div class="container" id="quiz-holder">
-                <div class="row">
-                    <div class="col-8">BICEP Quiz</div>
-                    <div class="col-4"><h1><time id="stopwatch">00:00:00</time></h1></div>
-                </div>    
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                <h1 id="quiz_title">Quiz</h1>
+                <div id="quiz-header">
+                    <div class="row">
+                        <div class="col-6" id="stopwatch-area">Timer(MM:SS): <time id="stopwatch">00:00</time></div>
+                        <div class="col-6" id="test_status"></div>
+                    </div>   
+                    <div id="progress-area"> 
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                    </div>    
                 </div>
                 <div id="question">
-
                 </div>
-                <div id="quiz_results">
+                <div id="quiz_options">
                     <form>
-                        <!--<input type="radio" id="optionA" name="choices" value="a" required></input>
-                        //<input type="radio" id="optionB" name='choices' value='b'></input>
-                        //<input type="radio" id="optionC" name='choices' value='c'></input>
-                        //<input type="radio" id="optionD" name='choices' value='d'></input>
-                        //<button id="submit_answer" type="submit">Submit Answer</button> -->
-                            <input type="radio" id="optionA" name="choices" value="a" checked="checked">
-                           <label id="optionAA" for="optionA"></label><br>
+                        <input type="radio" id="optionA" name="choices" value="a" checked="checked">
+                        <label id="optionA_label" for="optionA"></label><br>
                      
-                            <input type="radio" id="optionB" name="choices" value="b">
-                            <label id="optionBB" for="optionB"></label><br> 
+                        <input type="radio" id="optionB" name="choices" value="b">
+                        <label id="optionB_label" for="optionB"></label><br> 
                         
-                            <input type="radio" id="optionC" name="choices" value="c">
-                            <label id="optionCC" for="optionC"></label><br>
+                        <input type="radio" id="optionC" name="choices" value="c">
+                        <label id="optionC_label" for="optionC"></label><br>
 
-                            <input type="radio" id="optionD" name="choices" value="d">
-                            <label id="optionDD" for="optionD"></label><br>
+                        <input type="radio" id="optionD" name="choices" value="d">
+                        <label id="optionD_label" for="optionD"></label><br>
                     </form>
                 </div>
-                <div class="row">
+                <div class="row" id="submit-button-area">
                     <div class="col-8">
-                        <button id="submit_answer">Submit</button>
+                        <button id="submit_answer" class="btn btn-primary">Submit Answer</button>
                     </div>
-                    <div class="col-4"><h2 id="test_status"></h2>
-                    </div>
-                    <div id="total_time_spent"></div>
                 </div>
+                <h2 id="results_text">Results</h2>
+                <div id="overall_result"></div>
                 <table class="table results_table">
                     <thead>
                       <tr>
-                        <th scope="col">Correct Answers</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Your answer</th>
+                        <th scope="col">Correct answer</th>
                       </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                             <div id="correct_answers"></div>
-                        </td>
-                        </tr>
-                </tbody>
+                    <tbody id="answers">
+                    </tbody>
                 </table>
-                <table class="table results_table">
-                    <thead>
-                      <tr>
-                        <th scope="col">InCorrect Answers</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                             <div id="incorrect_answers"></div>
-                        </td>
-                        </tr>
-                </tbody>
-                </table>
-                </div>
+            </div>
+            </div>    
             </div>
         </div>
 

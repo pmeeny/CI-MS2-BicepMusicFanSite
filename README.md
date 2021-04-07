@@ -175,6 +175,11 @@ Below are the test results for testing the website requirements against a range 
 Bug Number | Comment |  Solution/Design decision |
 ------------ | ------------- | ------------- | 
 1 | TBC | TBC
+The time spent is displaying after each question
+The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
+
+2 allAnswers element was being overwritten if 2 questions had the same number
+The fix was to create a new counter, and to increment that seperatly when adding to the allAnswers list
 
 <br>
 
@@ -263,7 +268,9 @@ To run this project locally, you will need to clone the repository
 
 - For the events.html pagination styling, I used an example from https://www.w3schools.com/css/css3_pagination.asp 
 
-- For the hero image and alignment on all pages, I used the example described in https://codetheweb.blog/fullscreen-image-hero/
+- For the hero image and alignment on all pages, I used the examples described in https://codetheweb.blog/fullscreen-image-hero/ and https://stackoverflow.com/questions/4240015/css-text-in-center-of-background-image
+
+- For the stopwatch: https://jsfiddle.net/Daniel_Hug/pvk6p/
 
 # Content
 

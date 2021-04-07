@@ -13,7 +13,7 @@ function shuffleQuestions(){
 }
 
 
-function renderQuestion(){
+function displayQuestions(){
   console.log(shuffledQuestions)
   if(position >= shuffledQuestions.length){
 
@@ -21,7 +21,8 @@ function renderQuestion(){
     $("#test_status").html("Test completed");
     $("#question").hide()
     $("#submit_answer").hide();
-  
+    $("#total_time_spent").html(document.getElementById("stopwatch").textContent);
+
     updatePercentage();
     displayQuizResults();
     stopTimer();
@@ -78,10 +79,7 @@ function checkAnswer(){
 
       allAnswers[i] = "Question: " + shuffledQuestions[position].question + " : " +
                       "Your answer: " + parent+ " : " +
-                      "Correct Answer: " + shuffledQuestions[position].answer +
-
-                      "Time spent: " + document.getElementById("stopwatch").textContent;
-
+                      "Correct Answer: " + shuffledQuestions[position].answer
     }
   }
 
@@ -93,12 +91,12 @@ function checkAnswer(){
     // store the wrong answers
   }
   position++;
-  renderQuestion();
+  displayQuestions();
 }
 
 
 shuffleQuestions()
-renderQuestion();
+displayQuestions();
 startTimer();
 
 // https://jsfiddle.net/Daniel_Hug/pvk6p/

@@ -86,7 +86,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -147,6 +147,10 @@
 
 .common_btn:hover {
     background: #e8e8e8;
+}
+
+.social-icons{
+    text-align: right;
 }
 
 /* ----- Event Page ----- */
@@ -238,7 +242,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: max-content;
+    height: 80vh;
     width: 100%;
     padding-bottom: 20px;
 }
@@ -322,3 +326,16 @@
 }
 
 /* ----- Media Queries ----- */
+/* --- Medium Screen --- */
+@media screen and (max-width: 768px) {
+    #quiz {
+        height: max-content;
+    }
+}
+
+/* X-SMALL SCREEN */
+@media screen and (max-width: 481px) {
+    .social-icon {
+        padding: 5px;
+    }
+}   

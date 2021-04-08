@@ -40,20 +40,20 @@
         </div>
     </header>
 
-    <!-- Hero Video and content -->
-    <div id="quiz">
-        <div class="container">
+    <!-- Quiz, questions and results -->
+    <div id="quiz" class="container">
+        <div>
             <p id="quiz-paragraph">Test your knowledge on BICEP with a quiz, there are ten questions in total, good luck!</p>
             <div class="container" id="quiz-holder">
                 <h1 id="quiz_title">Quiz</h1>
                 <div id="quiz-header">
                     <div class="row">
-                        <div class="col-6" id="stopwatch-area">Timer(MM:SS): <time id="stopwatch">00:00</time></div>
+                        <div class="col-6" id="stopwatch-area">Timer(MM:SS): <timer id="stopwatch">00:00</timer></div>
                         <div class="col-6" id="test_status"></div>
                     </div>   
                     <div id="progress-area"> 
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                            <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                         </div>
                     </div>    
                 </div>
@@ -94,10 +94,8 @@
                     </tbody>
                 </table>
             </div>
-            </div>    
-            </div>
-        </div>
-
+        </div>    
+    </div>
 
     <!-- Footer -->
     <footer id="site-footer">

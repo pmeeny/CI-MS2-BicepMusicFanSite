@@ -85,9 +85,7 @@
 }
 
 /* ----- Navigation bar ----- */
-.nav-icon {
-    
-}
+
 
 /* ----- Hero image and overlay text ----- */
 #hero-image {
@@ -356,8 +354,8 @@
         height: max-content;
     }
 
-    .nav-icon {
-        visibility: hidden;
+    .nav-icon-holder {
+        display: none;
     }
 }
 

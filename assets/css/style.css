@@ -134,8 +134,8 @@
 
 .common_btn {
     display: inline-block;
-    background: white;
-    color: black;
+    background: #0c6ace;
+    color: white;
     text-align: center;
     vertical-align: middle;
     border: 1px solid transparent;
@@ -146,7 +146,7 @@
 }
 
 .common_btn:hover {
-    background: rgba(255,255,255,.5);
+    background: #e8e8e8;
 }
 
 /* ----- Event Page ----- */
@@ -184,7 +184,7 @@
 }
 
 #previous:hover {
-    background-color: #FEFD6D;
+    background-color: #0062cc;
 }
 
 #next {
@@ -194,7 +194,7 @@
 }
 
 #next:hover {
-    background-color: #FEFD6D;
+    background-color: #0062cc;
 }
 
 .upcoming-events {
@@ -208,7 +208,7 @@
 }
 
 .event-page-number:hover {
-    background-color: #FEFD6D;
+    background-color: #0062cc;
 }
 
 .event-url-1 {
@@ -238,8 +238,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    height: max-content;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .table {
@@ -248,8 +249,8 @@
 
 #quiz-holder {
     background-color: white;
-    padding: 40px 40px 40px 40px;
     padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 25px;
 }
 
@@ -296,6 +297,9 @@
     border-bottom: 2px solid #0062cc;
 }
 
+#progress-bar {
+    background-color: #0062cc;
+}
 
 #submit_answer {
     background-color: #0062cc;

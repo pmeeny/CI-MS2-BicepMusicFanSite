@@ -27,7 +27,7 @@ var getTopTracks = async (token) => {
 }
 
 
-var getAlbums = async (token) => {
+var getAlbums1 = async (token) => {
     const result = await fetch(`https://api.spotify.com/v1/albums/4psDRFbIlUM1KUb1omccXo?market=IE`, {
     method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + token}
@@ -37,21 +37,51 @@ var getAlbums = async (token) => {
     return data;
 }
 
+var getAlbums2 = async (token) => {
+    const result = await fetch(`https://api.spotify.com/v1/albums/0EdtTRCl3J22AnWrNpH1w9?market=IE`, {
+    method: 'GET',
+        headers: { 'Authorization' : 'Bearer ' + token}
+
+    });
+    const data = await result.json();
+    return data;
+}
 
 getToken().then(returnData =>{
-    getAlbums(returnData.access_token).then(newData=> {
-        console.log(newData);
-        //displayTopTracks(newData);
-        displayAlbum(newData)
-        console.log(newData);
+    getAlbums1(returnData.access_token).then(newData=> {
+        displayAlbum1(newData)
+    })
+
+    getAlbums2(returnData.access_token).then(newData=> {
+        displayTopTracks(newData);
+        displayAlbum2(newData)
+    })
+
+    getTopTracks(returnData.access_token).then(newData=> {
+        displayTopTracks(newData);
     })
 });
 
-function displayAlbum(data){
-    //var img1 = new Image();
-    //img1.setAttribute("src",data.images[0]);
-    var img= '<img src ="' +data.images[0].url + '" />';
-    $("#album1").append(img)
+function displayAlbum1(data){
+    var img= '<img id="album1" src ="' +data.images[0].url + '" />';
+    $("#album1_image").append(img)
+
+    var albumTracks = data.tracks.items;;
+    for(var i=0; i<albumTracks.length; i++){
+        var track = albumTracks[i].name;
+        $("#album1_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
+    }
+}
+
+function displayAlbum2(data){
+    var img= '<img id="album1" src ="' +data.images[0].url + '" />';
+    $("#album2_image").append(img)
+
+    var albumTracks = data.tracks.items;;
+    for(var i=0; i<albumTracks.length; i++){
+        var track = albumTracks[i].name;
+        $("#album2_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
+    }
 }
 
 function displayTopTracks(data){

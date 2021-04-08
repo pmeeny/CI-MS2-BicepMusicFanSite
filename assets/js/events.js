@@ -1,3 +1,4 @@
+// Events variables
 var page = 0;
 var eventResults;
 
@@ -85,7 +86,7 @@ function displayEvents(eventResults) {
     console.log(events)
     var item = items.first();
 
-    // loop throught the events object and display the event information
+    // loop through the events object and display the event information
     for (var i = 0; i < events.length; i++) {
         item.children('.event-heading').text(events[i].name);
         item.children('.event-text').text(events[i].dates.start.localDate);
@@ -115,7 +116,14 @@ function displayPagination(eventResults) {
     var numberofPages = eventResults.page.totalPages;
 
     for (var i = 0; i < numberofPages; i++) {
-        $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
+        if (i == 0) {
+            $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
+
+            $(".event-page-number").addClass('selected')
+
+        } else {
+            $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
+        }
     }
 }
 
@@ -127,13 +135,15 @@ $(document).on('click', ".event-page-number", function eventPageClicked() {
     var currentselectedPage = $(this).text();
     page = currentselectedPage;
     getEventsForSubsequentPages(currentselectedPage)
+    $(".event-page-number").removeClass('selected')
+    $(this).addClass('selected');
 });
 
 /**
  * [Click event that will display more information about the event if the more 
  * info button is clicked, 1st entry on results]
  */
-$( "#more-info-1" ).click(function(event) {
+$( "#event1" ).click(function(event) {
    event.preventDefault();
     $('.event-url-1').show();
 });
@@ -142,7 +152,7 @@ $( "#more-info-1" ).click(function(event) {
  * [Click event that will display more information about the event if the more 
  * info button is clicked, 2nd entry on results]
  */
-$( "#more-info-2" ).click(function(event) {
+$( "#event2" ).click(function(event) {
     event.preventDefault();
      $('.event-url-2').show();
  

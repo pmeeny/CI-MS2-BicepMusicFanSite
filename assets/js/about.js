@@ -65,12 +65,16 @@ getToken().then(returnData =>{
 function displayAlbum1(data){
     var img= '<img id="album1" src ="' +data.images[0].url + '" />';
     $("#album1_image").append(img)
-
+    console.log(data);
     var albumTracks = data.tracks.items;;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         $("#album1_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
     }
+    $("#album1_info").append("<span>Name: " + data.name + "</span><br>");
+    $("#album1_info").append("<span>Release Date: " + data.release_date + "</span><br>");
+    $("#album1_info").append("<span>Label: " + data.label + "</span><br>");
+    $("#album1_info").append("<span>Track Count: " + data.total_tracks + "</span><br>");
 }
 
 function displayAlbum2(data){
@@ -82,14 +86,16 @@ function displayAlbum2(data){
         var track = albumTracks[i].name;
         $("#album2_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
     }
+
+    $("#album2_info").append("<span>Name: " + data.name + "</span><br>");
+    $("#album2_info").append("<span>Release Date: " + data.release_date + "</span><br>");
+    $("#album2_info").append("<span>Label: " + data.label + "</span><br>");
+    $("#album2_info").append("<span>Track Count: " + data.total_tracks + "</span><br>");
 }
 
 function displayTopTracks(data){
     var topTracks = data.tracks;
-    console.log(topTracks)
-
     for (var i = 0; i < topTracks.length; i++) {
-        console.log(topTracks[i].name);
         var leadingNumber = i+1;
         $("#toptracks").append('<div class="top-track-number">' + leadingNumber + '. ' + topTracks[i].name + '</div>')
     }

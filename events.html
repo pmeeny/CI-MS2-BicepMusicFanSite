@@ -42,43 +42,37 @@
 
     <!-- Events -->
     <div id="all-events">
-        <div class="container">
-            <h1 class="white-header1-text">All BICEP events</h1>
-        </div>
         <!-- Events Information -->
-        <div class="container">
+        <div class="container" id="events-holder">
             <div class="upcoming-events container">
-                <h2>8 upcoming events</h2>
+                <h2>Events</h2>
             </div>
             <div class="events-information">
-
-            <!-- Events Information, two events per page will be displayed -->
-            <div class="event-information">
-                    <div id="events" class="events-list">
-                        <a href="" class="individual-event111 row">
-                            <p class="col-3">Date</p>
-                            <p class="col-3">Time</p>
-                            <p class="col-3">Heading</h4>
-                            <p class="col-3">Venue</p>     
-                    </a>
-                        <a href="" class="individual-event row">
-                                <p class="event-text col-3"></p>
-                                <p class="event-time col-3"></p>
-                                <p class="event-heading col-3"></h4>
-                                <p class="event-venue col-3"></p> 
-                                <button id="more-info-1">More info</button>
-                                <p class="event-url-1"></p>    
-                        </a>
-                        <a href="" class="individual-event row">
-                            <p class="event-text col-3"></p>
-                            <p class="event-time col-3"></p>
-                            <p class="event-heading col-3"></p>
-                            <p class="event-venue col-3"></p> 
-                            <button id="more-info-2">More info</button>
-                            <p class="event-url-2"></p>    
-                        </a>
+                <!-- Events Information, two events per page will be displayed -->
+                <div class="event-information">
+                        <div id="events" class="events-list">
+                            <div class="event-header row">
+                                <p class="col-2">Date</p>
+                                <p class="col-2">Time</p>
+                                <p class="col-4">Heading</p> 
+                                <p class="col-4">Venue</p>   
+                            </div>  
+                            <a href="" id="event1" class="individual-event row">
+                                    <p class="event-text col-2"></p>
+                                    <p class="event-time col-2"></p>
+                                    <p class="event-heading col-4"></p> 
+                                    <p class="event-venue col-4"></p> 
+                                    <p class="event-url-1"></p>   
+                            </a>
+                            <a href="" id="event2" class="individual-event row">
+                                <p class="event-text col-2"></p>
+                                <p class="event-time col-2"></p>
+                                <p class="event-heading col-4"></p>
+                                <p class="event-venue col-4"></p> 
+                                <p class="event-url-2"></p>   
+                            </a>   
+                        </div>
                     </div>
-                </div>
 
                 <!-- Pagination to display the page numbers -->
                 <div class="pagination">

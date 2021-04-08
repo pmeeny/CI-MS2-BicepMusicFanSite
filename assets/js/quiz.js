@@ -1,27 +1,28 @@
-var position = 0, choices, choiceOne, choiceTwo, choiceThree, choiceFour, correctAnswers = 0;
-var usersAnswer;
-var percentage=0;
-var allAnswers = [];
-allAnswers[0] = [];
-allAnswers[1] = [];
-allAnswers[2] = [];
-allAnswers[3] = [];
-var answerInformation=0;
 
-var h1 = document.getElementsByTagName('time')[0], seconds = 0, minutes = 0, time;
+// Quiz Variables
+var position = 0, correctAnswers = 0, percentage=0, answerInformation=0;
+var usersAnswer, choices, choiceOne, choiceTwo, choiceThree, choiceFour, shuffledQuestions;
+var allAnswers = []
+allAnswers[0] = [], allAnswers[1] = [], allAnswers[2] = [],allAnswers[3] = [];
 
-var shuffledQuestions;
+// Timer Variables
+var timer = document.getElementsByTagName('timer')[0], seconds = 0, minutes = 0, time;
 
+
+/**
+ * [shuffleQuestions randomly shuffles the questions shuffledQuestions]
+ */
 function shuffleQuestions(){
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 }
 
-
+/**
+ * [displayQuestions]
+ */
 function displayQuestions(){
   $("#error").html("");
   $('input[name="choices"]').prop('checked', false);
   if(position >= shuffledQuestions.length){
-
     $('#overall_result').html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
     $("#test_status").hide();
     $("#question").hide()
@@ -30,47 +31,49 @@ function displayQuestions(){
     $("#total_time_spent").html(document.getElementById("stopwatch").textContent);
     $(".results_table").show();
 
-    updatePercentage();
     displayQuizResults();
     stopTimer();
     position = 0;
     correctAnswers = 0;
     return false;
   }
-
-$("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
-
-question = questions[position].question;
-choiceOne = shuffledQuestions[position].a;
-choiceTwo = shuffledQuestions[position].b;
-choiceThree = shuffledQuestions[position].c;
-choiceFour = shuffledQuestions[position].d;
-
-$('#question').html(position+1+ ". " +"<span>"+question+"</span>")
-$('#optionA_label').html(choiceOne);
-$('#optionB_label').html(choiceTwo);
-$('#optionC_label').html(choiceThree);
-$('#optionD_label').html(choiceFour);
-
+displayNewQuestion()
 updatePercentage();
 }
 
-$("#submit_answer").click(function submitAnswerClicked(){
-  var radio_buttons = $("input[name='choices']");
-    if( radio_buttons.filter(':checked').length == 0){
-      $("#error").html("Please select one of the options");
-      return;
-    } 
-  checkAnswer();
-});
 
+/**
+ * [displayQuestions]
+ */
+function displayNewQuestion(){
+  $("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
 
+  question = questions[position].question;
+  choiceOne = shuffledQuestions[position].a;
+  choiceTwo = shuffledQuestions[position].b;
+  choiceThree = shuffledQuestions[position].c;
+  choiceFour = shuffledQuestions[position].d;
+  
+  $('#question').html(position+1+ ". " +"<span>"+question+"</span>")
+  $('#optionA_label').html(choiceOne);
+  $('#optionB_label').html(choiceTwo);
+  $('#optionC_label').html(choiceThree);
+  $('#optionD_label').html(choiceFour);
+  
+}
+
+/**
+ * [updatePercentage]
+ */
 function updatePercentage(){
-  percentage = percentage + 10;
+  percentage = percentage + 25;
   $(".progress-bar").html(percentage + "%");
   $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage)
 }
 
+/**
+ * [displayQuizResults]
+ */
 function displayQuizResults(){
     for (var i in allAnswers) {
       if(allAnswers[i][3] == true){
@@ -90,6 +93,9 @@ function displayQuizResults(){
     }
   }
 
+/**
+ * [displayQuizResults]
+ */
 function checkAnswer(){
   choices = document.getElementsByName("choices");
  
@@ -119,14 +125,10 @@ function checkAnswer(){
   displayQuestions();
 }
 
-
-shuffleQuestions()
-displayQuestions();
-startTimer();
-
-// https://jsfiddle.net/Daniel_Hug/pvk6p/
-
-function add() {
+/**
+ * [addTimerDetails, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ */
+function addTimerDetails() {
     seconds++;
     if (seconds >= 60) {
         seconds = 0;
@@ -136,16 +138,37 @@ function add() {
         }
     }
     
-    h1.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
-
+    timer.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }
+
+/**
+ * [startTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ */
 function startTimer() {
-    time = setTimeout(add, 1000);
+    time = setTimeout(addTimerDetails, 1000);
 }
 
-/* Stop timer */
+/**
+ * [stopTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ */
 function stopTimer() {
-  console.log("in here")
     clearTimeout(time);
 }
+
+/**
+ * [submitAnswerClicked]
+ */
+ $("#submit_answer").click(function submitAnswerClicked(){
+  var radio_buttons = $("input[name='choices']");
+    if( radio_buttons.filter(':checked').length == 0){
+      $("#error").html("Please select one of the options");
+      return;
+    } 
+  checkAnswer();
+});
+
+
+shuffleQuestions()
+displayQuestions();
+startTimer();

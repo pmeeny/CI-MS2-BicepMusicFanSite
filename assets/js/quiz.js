@@ -1,12 +1,21 @@
 
 // Quiz Variables
-var position = 0, correctAnswers = 0, percentage=0, answerInformation=0;
-var usersAnswer, choices, choiceOne, choiceTwo, choiceThree, choiceFour, shuffledQuestions;
+var position = 0;
+var correctAnswers = 0;
+var percentage = 0;
+var answerInformation=0;
+var usersAnswer;
+var choices;
+var choiceOne;
+var choiceTwo;
+var choiceThree;
+var choiceFour;
+var shuffledQuestions;
 var allAnswers = []
 allAnswers[0] = [], allAnswers[1] = [], allAnswers[2] = [],allAnswers[3] = [];
 
 // Timer Variables
-var timer = document.getElementsByTagName('timer')[0], seconds = 0, minutes = 0, time;
+var timer = document.getElementsByTagName("timer")[0], seconds = 0, minutes = 0, time;
 
 
 /**
@@ -23,7 +32,7 @@ function displayQuestions(){
   $("#error").html("");
   $('input[name="choices"]').prop('checked', false);
   if(position >= shuffledQuestions.length){
-    $('#overall_result').html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
+    $("#overall_result").html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
     $("#test_status").hide();
     $("#question").hide()
     $("#quiz_options").hide()
@@ -138,7 +147,8 @@ function addTimerDetails() {
         }
     }
     
-    timer.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    timer.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") 
+    + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }
 

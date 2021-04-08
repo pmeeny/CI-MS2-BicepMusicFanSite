@@ -252,8 +252,25 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    height: max-content;
     width: 100%;
+}
+
+#album1 {
+    height: 200px;
+    width: 200px;
+}
+
+#album1_tracks {
+    color: white;
+}
+
+#album2_tracks {
+    color: white;
+}
+
+#toptracks{
+    color: white;
 }
 
 /* ----- Quiz Page ----- */

@@ -75,9 +75,19 @@
 }
 
 /* ----- End of Color palette ----- */
+.nav-icon {
+    font-size: 2rem;
+    text-align: center;
+}
 
+.nav-icon-holder {
+    text-align: center;
+}
 
 /* ----- Navigation bar ----- */
+.nav-icon {
+    
+}
 
 /* ----- Hero image and overlay text ----- */
 #hero-image {
@@ -344,6 +354,10 @@
     #events-holder {
         min-height: 630px;
         height: max-content;
+    }
+
+    .nav-icon {
+        visibility: hidden;
     }
 }
 

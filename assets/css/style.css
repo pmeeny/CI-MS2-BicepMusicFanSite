@@ -163,6 +163,8 @@
     background-attachment: fixed;
     height: 90vh;
     width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 #event-pages div {
@@ -170,20 +172,26 @@
 }
 
 .events-information{
-    background-color: #e8e8e8;
     padding: 20px 20px 20px 20px;
     padding-top: 20px;
     height: 300px;
 }
 
+#events-holder{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 25px;
+}
+
 .event-page-number{
     float: left;;
-    padding: 20px 20px;
+    padding: 10px 10px;
 }
 
 #previous {
     float: left;;
-    padding: 20px 20px;
+    padding: 10px 10px;
     color: black;
 }
 
@@ -193,7 +201,7 @@
 
 #next {
     float: left;
-    padding: 20px;
+    padding: 10px;
     color: black;
 }
 
@@ -202,9 +210,9 @@
 }
 
 .upcoming-events {
-    background: grey;
     margin-bottom: 0;
     border-radius: 10px 10px 0 0;
+    text-align: center;
 }
 
 .upcoming-events h2 {
@@ -223,6 +231,12 @@
     display: none;
 }
 
+.selected {
+    text-decoration: underline;
+    background: red;
+    pointer-events:none
+}
+
 /* ----- About Page ----- */
 #about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -234,7 +248,6 @@
     width: 100%;
 }
 
-  
 /* ----- Quiz Page ----- */
 #quiz {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -328,7 +341,8 @@
 /* ----- Media Queries ----- */
 /* --- Medium Screen --- */
 @media screen and (max-width: 768px) {
-    #quiz {
+    #events-holder {
+        min-height: 630px;
         height: max-content;
     }
 }
@@ -338,4 +352,20 @@
     .social-icon {
         padding: 5px;
     }
+
+    #quiz {
+        min-height: 630px;
+        height: max-content;
+    }
+
+    #all-events {
+        min-height: 630px;
+        height: max-content;
+    }
+
+    #events-holder {
+        min-height: 630px;
+        height: max-content;
+    }
+
 }   

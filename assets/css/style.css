@@ -261,15 +261,24 @@
     width: 200px;
 }
 
-#album1_tracks {
-    color: white;
-}
-
-#album2_tracks {
+#album1_tracks, #album2_tracks {
     color: white;
 }
 
 #toptracks{
+    color: white;
+}
+
+#albums {
+    border-style: groove;
+    border-color: white;
+}
+
+#album1_info, #album2_info {
+    color: white;
+}
+
+#album1_image,#album2_image{
     color: white;
 }
 

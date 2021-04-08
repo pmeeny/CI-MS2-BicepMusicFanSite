@@ -18,6 +18,8 @@ function shuffleQuestions(){
 
 
 function displayQuestions(){
+  $("#error").html("");
+  $('input[name="choices"]').prop('checked', false);
   if(position >= shuffledQuestions.length){
 
     $('#overall_result').html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
@@ -54,6 +56,11 @@ updatePercentage();
 }
 
 $("#submit_answer").click(function submitAnswerClicked(){
+  var radio_buttons = $("input[name='choices']");
+    if( radio_buttons.filter(':checked').length == 0){
+      $("#error").html("Please select one of the options");
+      return;
+    } 
   checkAnswer();
 });
 

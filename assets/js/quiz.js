@@ -15,7 +15,7 @@ var allAnswers = []
 allAnswers[0] = [], allAnswers[1] = [], allAnswers[2] = [],allAnswers[3] = [];
 
 // Timer Variables
-var timer = document.getElementsByTagName("timer")[0], seconds = 0, minutes = 0, time;
+var timer = document.getElementById("timer"), seconds = 0, minutes = 0, time;
 
 
 /**

@@ -37,7 +37,6 @@ function displayQuestions(){
     $("#question").hide()
     $("#quiz_options").hide()
     $("#submit_answer").hide();
-    $("#total_time_spent").html(document.getElementById("stopwatch").textContent);
     $(".results_table").show();
 
     displayQuizResults();

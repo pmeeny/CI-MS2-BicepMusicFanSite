@@ -258,20 +258,24 @@
 
 #album1 {
     height: 200px;
-    width: 200px;
+    width: 300px;
+}
+
+#album2 {
+    height: 200px;
+    width: 300px;
 }
 
 #album1_tracks, #album2_tracks {
     color: white;
 }
 
-#toptracks{
+#album1_tracks a, #album2_tracks a {
     color: white;
 }
 
-#albums {
-    border-style: groove;
-    border-color: white;
+#toptracks{
+    color: white;
 }
 
 #album1_info, #album2_info {
@@ -281,6 +285,49 @@
 #album1_image,#album2_image{
     color: white;
 }
+#track-preview {
+    display: none;
+}
+
+/* The flip box css was taken from here and modified: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-bottom: 30px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
 
 /* ----- Quiz Page ----- */
 #quiz {
@@ -383,6 +430,23 @@
     .nav-icon-holder {
         display: none;
     }
+
+    /* --- About Page --- */   
+    #album1 {
+        height: 200px;
+        width: 250px;
+    }
+
+    #album2 {
+        height: 200px;
+        width: 250px;
+    }
+
+    .flip-box {
+        width: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
 }
 
 /* X-SMALL SCREEN */
@@ -405,5 +469,23 @@
         min-height: 630px;
         height: max-content;
     }
+
+        /* --- About Page --- */   
+        #album1 {
+            height: 100px;
+            width: 120px;
+        }
+    
+        #album2 {
+            height: 100px;
+            width: 120px;
+        }
+    
+        .flip-box {
+            width: 100px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        
 
 }   

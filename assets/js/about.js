@@ -1,6 +1,7 @@
 const clientId = 'bb60c805a05440999011d33d17846c61';
 const clientSecret = '3290f175cc254cec8a7492fde67287ee';
-const bicepArtistID = '73A3bLnfnz5BoQjb4gNCga'
+const bicepArtistID = '73A3bLnfnz5BoQjb4gNCga';
+var topTracks;
 
 var getToken = async () => {
         console.log ("in getToken 1");
@@ -59,17 +60,19 @@ getToken().then(returnData =>{
 
     getTopTracks(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
+        topTrackClicked(newData);
     })
 });
 
 function displayAlbum1(data){
-    var img= '<img id="album1" src ="' +data.images[0].url + '" />';
+    var img= '<img alt="bicep album called bicep" id="album1" src ="' +data.images[0].url + '" />';
     $("#album1_image").append(img)
     console.log(data);
     var albumTracks = data.tracks.items;;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
-        $("#album1_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
+        var href = albumTracks[i].external_urls.spotify;
+        $("#album1_tracks").append("<span>" + (i+1) + ". "  +  "<a" + ' target="_blank"' + " href=" + href +">" + track + "</a></span><br>");
     }
     $("#album1_info").append("<span>Name: " + data.name + "</span><br>");
     $("#album1_info").append("<span>Release Date: " + data.release_date + "</span><br>");
@@ -78,13 +81,15 @@ function displayAlbum1(data){
 }
 
 function displayAlbum2(data){
-    var img= '<img id="album1" src ="' +data.images[0].url + '" />';
+    var img= '<img alt="bicep album called isles"  id="album2" src ="' +data.images[0].url + '" />';
     $("#album2_image").append(img)
 
-    var albumTracks = data.tracks.items;;
+    var albumTracks = data.tracks.items;
+    console.log(albumTracks)
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
-        $("#album2_tracks").append("<span>" + (i+1) + ". " + track + "</span><br>");
+        var href = albumTracks[i].external_urls.spotify;
+        $("#album2_tracks").append("<span>" + (i+1) + ". "  +  "<a" + ' target="_blank"' + " href=" + href +">" + track + "</a></span><br>");
     }
 
     $("#album2_info").append("<span>Name: " + data.name + "</span><br>");
@@ -94,11 +99,12 @@ function displayAlbum2(data){
 }
 
 function displayTopTracks(data){
-    var topTracks = data.tracks;
+    topTracks = data.tracks;
+    console.log(topTracks);
     for (var i = 0; i < topTracks.length; i++) {
         var leadingNumber = i+1;
-        $("#toptracks").append('<div class="top-track-number">' + leadingNumber + '. ' + topTracks[i].name + '</div>')
-    }
+        $("#toptracks").append('<div class="top-track-number">'+ topTracks[i].name + '</div>')
+    } 
 }
 
 $(document).ready(function(){
@@ -110,4 +116,24 @@ $(document).ready(function(){
       });
     });
   });
-  
+
+function topTrackClicked(data){
+    var topTracks = data
+    return toptracks;
+}
+
+$(document).on('click', ".top-track-number", function clickedButton(data) {
+    var currentselectedTrack = $(this).text();
+    console.log("in here");
+
+    console.log(topTracks);
+    for(var i=0; i<topTracks.length; i++){
+       if(currentselectedTrack == topTracks[i].name){
+            console.log("found it");
+            console.log(currentselectedTrack);
+            $("#track-preview").html("<source src=" + topTracks[i].preview_url + " type=audio/mpeg>");
+            $("#track-preview").css("display", "inline-block");
+            $("#track-preview")[0].load();
+        }
+    }
+});

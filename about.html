@@ -80,26 +80,60 @@
             <!--<div id="toptracks">
 
             </div> -->
-
+            <!-- Credit for flipbox divs to flip pictures:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image -->
             <div id="albums">
                 <div class="container">
                     <div class="row">
-                      <div class="col-sm" id="album1_info">Album Info:<br></div>
-                      <div class="col-sm" id="album1_tracks">Track Listing:<br></div>
-                      <div class="col-sm" id="album1_image">Album art:<br></div>
+                        <div class="col-6">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div id="album2_image"></div>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <div id="album2_info">Album Info:<br></div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>        
+                        <div class="col-6">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div id="album1_image"></div>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <div id="album1_info">Album Info:<br></div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>  
+                    </div>  
+                    <div class="row">     
+                        <div class="col-6">
+                            <div class="col-sm" id="album2_tracks">Track Listing:<br></div>
+                        </div>               
+                        <div class="col-6">
+                            <div class="col-sm" id="album1_tracks">Track Listing:<br></div>
+                        </div>        
                     </div>
-                    <div class="row">
-                        <div class="col-sm" id="album2_info">Album Info:<br></div>
-                        <div class="col-sm" id="album2_tracks">Track Listing:<br></div>
-                        <div class="col-sm" id="album2_image">Album art:<br></div>
+                </div>     
+            </div>      
+            <h1 class="white-header1-text">Top Tracks</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div id="toptracks"></div>
                     </div>
+                    <div class="col-6">    
+                        <video id="track-preview" controls autoplay name="media">
+                        </video>
+                    </div>    
                 </div>
-            </div>
-            <h1 class="white-header1-text">Top Tracks</h1>  
-            <div id="toptracks"></div>
-        </div>    
-    </div>
-    
+            </div>    
+        </div>
+    </div>    
+            
     <!-- Footer -->
     <footer id="site-footer">
         <div class="container">

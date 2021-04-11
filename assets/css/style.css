@@ -344,9 +344,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 80vh;
+    height: 100%;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 .table {
@@ -354,7 +355,7 @@
 }
 
 #quiz-holder {
-    background-color: white;
+    background-image: linear-gradient(180deg, grey, white);
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 25px;
@@ -382,7 +383,6 @@
 
 #quiz-header {
     padding-bottom: 20px;
-    border-bottom: 2px solid #0062cc;
 }
 
 #quiz-header div{
@@ -397,10 +397,6 @@
 
 #progress-area {
     padding-top: 10px;  
-}
-
-#quiz_results {
-    border-bottom: 2px solid #0062cc;
 }
 
 #progress-bar {
@@ -425,6 +421,10 @@
 
 #error {
     color: red;
+}
+
+#timer-area, #overall_result, #test_status{
+    font-weight: bold;
 }
 
 /* ----- Media Queries ----- */

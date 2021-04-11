@@ -117,11 +117,6 @@ $(document).ready(function(){
     });
   });
 
-function topTrackClicked(data){
-    var topTracks = data
-    return toptracks;
-}
-
 $(document).on('click', ".top-track-number", function clickedButton(data) {
     var currentselectedTrack = $(this).text();
     console.log("in here");

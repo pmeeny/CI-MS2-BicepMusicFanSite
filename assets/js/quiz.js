@@ -11,12 +11,14 @@ var choiceTwo;
 var choiceThree;
 var choiceFour;
 var shuffledQuestions;
-var allAnswers = []
-allAnswers[0] = [], allAnswers[1] = [], allAnswers[2] = [],allAnswers[3] = [];
+var allAnswers = [];
+allAnswers[0] = [];
+allAnswers[1] = [];
+allAnswers[2] = [];
+allAnswers[3] = [];
 
 // Timer Variables
 var timer = document.getElementById("timer"), seconds = 0, minutes = 0, time;
-
 
 /**
  * [shuffleQuestions randomly shuffles the questions shuffledQuestions]
@@ -115,19 +117,18 @@ function checkAnswer(){
       allAnswers[answerInformation][1] = usersAnswer;
       allAnswers[answerInformation][2] = shuffledQuestions[position].answer;
 
-     // Users answer is correct 
+     // Users answer is correct
      if(usersAnswer == shuffledQuestions[position].answer){
-        allAnswers[answerInformation][3] = true;                               
+        allAnswers[answerInformation][3] = true;
       }
       else {
-        allAnswers[answerInformation][3] = false;      
+        allAnswers[answerInformation][3] = false;
       }
-      answerInformation++ 
+      answerInformation++;
     }
   }
   if(usersAnswer == shuffledQuestions[position].answer){
     correctAnswers++;
- 
   }
   position++;
   displayQuestions();
@@ -145,8 +146,7 @@ function addTimerDetails() {
             minutes = 0;
         }
     }
-    
-    timer.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") 
+    timer.textContent = "Timer(MM:SS): " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")
     + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }

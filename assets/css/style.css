@@ -254,6 +254,8 @@
     background-attachment: fixed;
     height: max-content;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #album1 {
@@ -286,7 +288,13 @@
     color: white;
 }
 #track-preview {
-    display: none;
+    height: 60px;
+    width: 250px;
+}
+
+#track-preview-text {
+    color: white;
+    font-weight: bold;
 }
 
 /* The flip box css was taken from here and modified: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 */
@@ -447,6 +455,10 @@
         height: 250px;
         margin-bottom: 10px;
     }
+    
+    #track-preview-text {
+        padding-top: 10px;
+    }
 }
 
 /* X-SMALL SCREEN */
@@ -470,22 +482,30 @@
         height: max-content;
     }
 
-        /* --- About Page --- */   
-        #album1 {
-            height: 100px;
-            width: 120px;
-        }
+    /* --- About Page --- */   
+    #album1 {
+        height: 110px;
+        width: 120px;
+    }
     
-        #album2 {
-            height: 100px;
-            width: 120px;
-        }
+    #album2 {
+        height: 110px;
+        width: 120px;
+    }
     
-        .flip-box {
-            width: 100px;
-            height: 120px;
-            margin-bottom: 10px;
-        }
-        
+    .flip-box {
+        width: 110px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    #album1_tracks #album2_tracks {
+        padding-top: 10px;
+    }
 
+    #album1_info, #album2_info{
+        font-size: 0.8rem;
+    }
+    #track-preview-text {
+        padding-top: 10px;
+    }
 }   

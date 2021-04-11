@@ -95,10 +95,34 @@
                 <h2 class="white-header1-text">BICEP QUIZ GAME</h2>
                 <p class="white-p-text">Take part in a quiz on the DJ duo</p>
             </a>
-            <a class="col-sm-6 col-lg-3 dj-pioneer">
+            <a class="col-sm-6 col-lg-3 dj-pioneer" data-target="#exampleModal" data-toggle="modal">
                 <h2 class="white-header1-text">BICEP MAIL LIST</h2>
                 <p class="white-p-text">Sign-up to the dj's weekly email</p>
             </a>
+        </div>
+    </div>
+
+    <!-- Modal (Credit: https://getbootstrap.com/docs/4.0/components/modal/)-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign up to BICEP's mailing list</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <form>
+                <input type="text" id="name" placeholder="Your name"><br>
+                <input type="email" id="email" placeholder="Your email address">
+            </form>    
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
         </div>
     </div>
 

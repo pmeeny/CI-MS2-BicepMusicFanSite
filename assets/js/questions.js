@@ -28,7 +28,7 @@ var questions = [
     },
     {
       //Question 4
-      question: "What year did they first perform at the AVA festival",
+      question: "What year did they first perform at the AVA festival?",
       a: "2015",
       b: "2018",
       c: "2016",
@@ -37,7 +37,7 @@ var questions = [
     },
     {
       //Question 5
-      question: "What number did Isles peak to on the UK album charts",
+      question: "What number did Isles peak to on the UK album charts?",
       a: "1",
       b: "2",
       c: "3",
@@ -46,7 +46,7 @@ var questions = [
     },
     {
       //Question 6
-      question: "What is the name of BICEP'S online blog",
+      question: "What is the name of BICEP'S online blog?",
       a: "Blog about BICEP",
       b: "BICEPs famous blog",
       c: "Feel my Bicep",
@@ -55,7 +55,7 @@ var questions = [
     },
     {
       //Question 7
-      question: "How many members are in BICEP",
+      question: "How many members are in BICEP?",
       a: "2",
       b: "3",
       c: "4",
@@ -64,7 +64,7 @@ var questions = [
     },
     {
       //Question 8
-      question: "Which house music legend(s) re-mixed Vision of Love",
+      question: "Which house music legend(s) re-mixed Vision of Love?",
       a: "Joey Beltram",
       b: "Carl Cox",
       c: "Carl Craig",
@@ -73,7 +73,7 @@ var questions = [
     },
     {
       //Question 9
-      question: "What label are BICEP on",
+      question: "What label are BICEP on?",
       a: "Sony",
       b: "Virgin Music",
       c: "Soma",
@@ -82,7 +82,7 @@ var questions = [
     },
     {
       //Question 10
-      question: "What year did they win the DJ Mag's 'Best of British Breakthrough DJ' award",
+      question: "What year did they win the DJ Mag's 'Best of British Breakthrough DJ' award?",
       a: "2011",
       b: "2012",
       c: "2013",

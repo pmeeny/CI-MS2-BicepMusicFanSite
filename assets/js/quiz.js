@@ -16,6 +16,12 @@ allAnswers[0] = [];
 allAnswers[1] = [];
 allAnswers[2] = [];
 allAnswers[3] = [];
+allAnswers[4] = [];
+allAnswers[5] = [];
+allAnswers[6] = [];
+allAnswers[7] = [];
+allAnswers[8] = [];
+allAnswers[9] = [];
 
 // Timer Variables
 var timer = document.getElementById("timer"), seconds = 0, minutes = 0, time;
@@ -34,10 +40,10 @@ function displayQuestions(){
   $("#error").html("");
   $('input[name="choices"]').prop('checked', false);
   if(position >= shuffledQuestions.length){
-    $("#overall_result").html("You got "+correctAnswers+" of "+shuffledQuestions.length+" questions correct")
+    $("#overall_result").html("You got "+correctAnswers+"/"+shuffledQuestions.length+" correct");
     $("#test_status").hide();
-    $("#question").hide()
-    $("#quiz_options").hide()
+    $("#question").hide();
+    $("#quiz_options").hide();
     $("#submit_answer").hide();
     $(".results_table").show();
 
@@ -47,7 +53,7 @@ function displayQuestions(){
     correctAnswers = 0;
     return false;
   }
-displayNewQuestion()
+displayNewQuestion();
 updatePercentage();
 }
 
@@ -63,22 +69,21 @@ function displayNewQuestion(){
   choiceTwo = shuffledQuestions[position].b;
   choiceThree = shuffledQuestions[position].c;
   choiceFour = shuffledQuestions[position].d;
-  
-  $('#question').html(position+1+ ". " +"<span>"+question+"</span>")
+
+  $('#question').html(position+1+ ". " +"<span>"+question+"</span>");
   $('#optionA_label').html(choiceOne);
   $('#optionB_label').html(choiceTwo);
   $('#optionC_label').html(choiceThree);
   $('#optionD_label').html(choiceFour);
-  
 }
 
 /**
  * [updatePercentage]
  */
 function updatePercentage(){
-  percentage = percentage + 25;
+  percentage = percentage + 10;
   $(".progress-bar").html(percentage + "%");
-  $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage)
+  $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage);
 }
 
 /**
@@ -108,7 +113,7 @@ function displayQuizResults(){
  */
 function checkAnswer(){
   choices = document.getElementsByName("choices");
- 
+
   for(var selected=0; selected<choices.length; selected++){
     if(choices[selected].checked){
       usersAnswer = choices[selected].nextElementSibling.innerHTML;
@@ -173,10 +178,9 @@ function stopTimer() {
     if( radio_buttons.filter(':checked').length == 0){
       $("#error").html("Please select one of the options");
       return;
-    } 
+    }
   checkAnswer();
 });
-
 
 shuffleQuestions()
 displayQuestions();

@@ -274,6 +274,8 @@ To run this project locally, you will need to clone the repository
 
 - For updating the quiz progress bar, I found this page useful: https://stackoverflow.com/questions/21182058/dynamically-change-bootstrap-progress-bar-value-when-checkboxes-checked
 
+- Image flipping css, used in the about.html page: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2
+
 # Content
 
 <br>

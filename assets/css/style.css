@@ -102,7 +102,7 @@
     text-align: center;
 }
 
-.dj-image{
+.dj-event{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-event.jpg");
     background-repeat: no-repeat;
     height: 30vh;
@@ -112,8 +112,50 @@
     align-items: center;
 }    
 
-.dj-image:hover{
+.dj-event:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-event.jpg");
+}
+
+.dj-disco{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-disco.jpg");
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+
+.dj-disco:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-disco.jpg");
+}
+
+.dj-pioneer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-pioneer.jpg");
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+
+.dj-pioneer:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-pioneer.jpg");
+}
+
+.dj-vinyl{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-vinyl.jpg");
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+
+.dj-vinyl:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-vinyl.jpg");
 }
 
 #four-images{

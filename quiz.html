@@ -71,13 +71,14 @@
     <!-- Quiz, questions and results -->
     <div id="quiz">
         <div class="container">
+            <h1 class="white-header1-text">Quiz</h1>
             <p id="quiz-paragraph">Test your knowledge on BICEP with a quiz, there are ten questions in total, good luck!</p>
             <div class="container" id="quiz-holder">
-                <h1 id="quiz_title">Quiz</h1>
                 <div id="quiz-header">
                     <div class="row">
-                        <div class="col-6" id="stopwatch-area">Timer(MM:SS): <div id="timer">00:00</div></div>
-                        <div class="col-6" id="test_status"></div>
+                        <div class="col-8" id="timer-area"><div id="timer">00:00</div></div>
+                        <div class="col-4" id="test_status"></div>
+                        <div class="col-4" id="overall_result"></div>
                     </div>   
                     <div id="progress-area"> 
                         <div class="progress">
@@ -109,9 +110,8 @@
                     </div>
                 </div>
                 <div id="results_text"></div>
-                <div id="overall_result"></div>
                 <table class="table results_table">
-                    <thead class="thead-light">
+                    <thead>
                       <tr>
                         <th scope="col">Question</th>
                         <th scope="col">Your answer</th>

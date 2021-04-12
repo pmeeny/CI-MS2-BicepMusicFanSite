@@ -78,6 +78,7 @@ function getEventsForSubsequentPages(page, callback) {
         success: function(json) {
             eventResults = json;
             displayEvents(eventResults);
+            callback(eventResults);
         },
         error: function(xhr, status, err) {
             // Log an error to the console if the request is not successful
@@ -130,12 +131,83 @@ function displayPagination(eventResults) {
     for (var i = 0; i < numberofPages; i++) {
         if (i == 0) {
             $("#event-pages").append('<div class="event-page-number">' + i + "</div>");
-
             $(".event-page-number").addClass("selected")
 
         } else {
             $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
         }
+    }
+}
+
+ /**
+ * [Update next and previous divs when previous link clicked]
+ */
+  function updatePaginationWhenPreviousClicked() {
+
+    if (!(isNextAvailable(eventResults._links.next))) {
+        $("#next").hide();
+    } else {
+        $("#next").show();
+    }
+
+    if ((isPrevAvailable(eventResults._links.prev))) {
+        $("#previous").show();
+    } else {
+        $("#previous").hide();
+    }
+}
+
+ /**
+ * [Update next and previous divs when next link clicked]
+ */
+function updatePaginationWhenNextClicked() {
+    if (!(isNextAvailable(eventResults._links.next))) {
+        $("#next").hide();
+    } else {
+        $("#next").show();
+    }
+
+    if ((isPrevAvailable(eventResults._links.prev))) {
+        $("#previous").show();
+    }
+}
+
+/**
+ * [Update next and previous divs when page selected]
+ */
+function updatePaginationWhenPageSelected() {
+    if (!(isNextAvailable(eventResults._links.next))) {
+        $("#next").hide();
+    } else {
+        $("#next").show();
+    }
+
+    if (!(isPrevAvailable(eventResults._links.prev))) {
+        $("#previous").hide();
+    } else {
+        $("#previous").show();
+    }
+}
+
+ /**
+ * [Checks if the previous is available in the links object]
+ */
+function isPrevAvailable() {
+    if (('prev' in eventResults._links)) {
+        return true
+    } else {
+        return false;
+    }
+}
+
+ /**
+ * [Checks if the next is available in the links object]
+ */
+function isNextAvailable() {
+    if (('next' in eventResults._links)) {
+        return true
+    } else {
+        return false;
     }
 }
 
@@ -148,7 +220,7 @@ function displayPagination(eventResults) {
 $(document).on("click", ".event-page-number", function eventPageClicked() {
     var currentselectedPage = $(this).text();
     page = currentselectedPage;
-    getEventsForSubsequentPages(currentselectedPage)
+    getEventsForSubsequentPages(currentselectedPage, updatePaginationWhenPageSelected)
     $(".event-page-number").removeClass("selected")
     $(this).addClass("selected");
 });
@@ -173,5 +245,27 @@ $( "#event2" ).click(function(event) {
     event.preventDefault();
      $(".event-url-2").show();
  });
+
+ /**
+ * [Listener to update events page when previous 
+ * link clicked]
+ */
+ $(document).on('click', "#previous", function previousButtonClicked() {
+    $(".event-page-number").removeClass('selected')
+    $("#event-pages > div:nth-child(" + page + ")").addClass('selected');
+    getEventsForSubsequentPages(--page, updatePaginationWhenPreviousClicked)
+});
+
+ /**
+ * [Listener to update events page when next 
+ * link clicked]
+ */
+$(document).on('click', "#next", function nextButtonClicked() {
+    console.log("Next button clicked")
+    getEventsForSubsequentPages(++page, updatePaginationWhenNextClicked)
+    cp = page + 1;
+    $(".event-page-number").removeClass('selected')
+    $("#event-pages > div:nth-child(" + cp + ")").addClass('selected');
+});
 
 getEvents(page, displayPagination);

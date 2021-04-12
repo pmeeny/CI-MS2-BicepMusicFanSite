@@ -497,6 +497,13 @@
 }
 
 /* ----- Media Queries ----- */
+/* --- Large Screen --- */
+@media screen and (max-width: 991px) {
+    .nav-icon-holder {
+        display: none;
+    }
+}
+
 /* --- Medium Screen --- */
 @media screen and (max-width: 768px) {
     #events-holder {

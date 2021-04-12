@@ -191,7 +191,10 @@ I used https://validator.w3.org/
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-
+index.html | Passed, No errors found | [Results](assets/images/testing/html-validation/index_html_validation.jpg)
+about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.jpg)
+events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.jpg)
+quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.jpg)
 
 <br>
 
@@ -207,7 +210,7 @@ I used https://jigsaw.w3.org/css-validator/
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-
+style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.jpg)
 
 ### Chrome Dev tools Lighthouse 
 

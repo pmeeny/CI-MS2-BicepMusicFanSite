@@ -90,12 +90,11 @@ function getEventsForSubsequentPages(page, callback) {
 /**
  * [displayEvents takes in one parameter , the eventResults object,
  * and displays the event description for the events id]
- * @param  eventResults [The event results object]
+ * @param eventResults [The event results object]
  */
 function displayEvents(eventResults) {
     var items = $("#events .individual-event");
     var events = eventResults._embedded.events;
-    console.log(events)
     var item = items.first();
 
     //loop through the events object and display the event information
@@ -104,11 +103,12 @@ function displayEvents(eventResults) {
         item.children(".event-text").text(events[i].dates.start.localDate);
         var timeString = events[i].dates.start.localTime;
         item.children(".event-time").text(timeString.slice(0, 5));
+        console.log(events);
         if(i==0){
-            item.children(".event-url-1").text(events[i].url);
+            $(".event-url-1").text("URL: " + events[i].url);
         }
         else{
-            item.children(".event-url-2").text(events[i].url);
+            $(".event-url-2").text("URL: " + events[i].url);
         }    
         try {
             item.children(".event-venue").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
@@ -227,23 +227,23 @@ $(document).on("click", ".event-page-number", function eventPageClicked() {
 
 /**
  * [Click event that will display
- * more information about the event 
+ * more information about the event(toggle enabled) 
  * if the more info button is clicked, 
  * displays the 1st entry on results]
  */
-$( "#event1" ).click(function(event) {
+$("#event1").click(function(event) {
    event.preventDefault();
-    $(".event-url-1").show();
+   $(".event1-container").toggle();
 });
 
 /**
  * [Click event that will display more
- * information about the event if the more
- * info button is clicked, 2nd entry on results]
+ * information about the event(toggle enabled) 
+ * if the more info button is clicked, 2nd entry on results]
  */
-$( "#event2" ).click(function(event) {
+$("#event2").click(function(event) {
     event.preventDefault();
-     $(".event-url-2").show();
+    $(".event2-container").toggle();
  });
 
  /**

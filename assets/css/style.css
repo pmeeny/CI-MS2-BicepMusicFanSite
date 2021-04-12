@@ -322,7 +322,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 180vh;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -361,6 +361,10 @@
 #track-preview-text {
     color: white;
     font-weight: bold;
+}
+
+.top-track-number {
+    color: white;
 }
 
 /* The flip box css was taken from here and modified: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 */

@@ -203,6 +203,11 @@
     text-align: right;
 }
 
+#spotify_image {
+    height: 50px; 
+    width: 140px;
+}
+
 /* ----- Event Page ----- */
 
 #all-events {

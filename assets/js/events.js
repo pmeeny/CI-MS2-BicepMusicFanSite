@@ -103,21 +103,33 @@ function displayEvents(eventResults) {
         item.children(".event-text").text(events[i].dates.start.localDate);
         var timeString = events[i].dates.start.localTime;
         item.children(".event-time").text(timeString.slice(0, 5));
-        console.log(events);
-        if(i==0){
-            $(".event-url-1").text("URL: " + events[i].url);
-        }
-        else{
-            $(".event-url-2").text("URL: " + events[i].url);
-        }    
         try {
-            item.children(".event-venue").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
-        } catch (err) {
+            if(i==0){
+                $(".event-venue1").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
+                item.children(".event-url-1").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
+                
+            }
+            else{
+                $(".event-venue2").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
+                item.children(".event-url-2").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
+            }    
+        }catch (err) {
             console.log(err);
         }
         item = item.next();
     }
 }
+
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+      center: { lat: -34.397, lng: 150.644 },
+    });
+    //const geocoder = new google.maps.Geocoder();
+    //document.getElementById("submit").addEventListener("click", () => {
+    //  geocodeAddress(geocoder, map);
+    //});
+  }
 
 /**
  * [displayPagination takes in one parameter,
@@ -231,7 +243,7 @@ $(document).on("click", ".event-page-number", function eventPageClicked() {
  * if the more info button is clicked, 
  * displays the 1st entry on results]
  */
-$("#event1").click(function(event) {
+$(".event-click-1").click(function(event) {
    event.preventDefault();
    $(".event1-container").toggle();
 });
@@ -241,7 +253,7 @@ $("#event1").click(function(event) {
  * information about the event(toggle enabled) 
  * if the more info button is clicked, 2nd entry on results]
  */
-$("#event2").click(function(event) {
+$(".event-click-2").click(function(event) {
     event.preventDefault();
     $(".event2-container").toggle();
  });
@@ -269,3 +281,4 @@ $(document).on('click', "#next", function nextButtonClicked() {
 });
 
 getEvents(page, displayPagination);
+initMap();

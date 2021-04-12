@@ -10,6 +10,10 @@
     <title>BICEP fan site - Events</title>
     <!-- User style css -->
     <link rel="stylesheet " href="assets/css/style.css" type="text/css"/>
+
+    <!-- Polyfill needed for google maps api call -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 </head>
 
 <body>
@@ -85,24 +89,25 @@
                                 <p class="col-4">Heading</p> 
                                 <p class="col-4">Venue</p>   
                             </div>  
-                            <a href="" id="event1" class="individual-event row">
-                                    <p class="event-text col-2"></p>
-                                    <p class="event-time col-2"></p>
-                                    <p class="event-heading col-4"></p> 
-                                    <p class="event-venue col-4"></p> 
+                            <div id="event1" class="individual-event row">
+                                    <p class="event-text event-click-1 col-2"></p>
+                                    <p class="event-time event-click-1 col-2"></p>
+                                    <p class="event-heading event-click-1 col-4"></p> 
+                                    <p class="event-url-1 col-4"></p> 
                                     <div class="container event1-container">
-                                        <p class="event-url-1"></p> 
+                                        <p class="event-venue1"></p> 
+            
                                     </div>
-                            </a>
-                            <a href="" id="event2" class="individual-event row">
-                                <p class="event-text col-2"></p>
-                                <p class="event-time col-2"></p>
-                                <p class="event-heading col-4"></p>
-                                <p class="event-venue col-4"></p> 
+                            </div>
+                            <div href="" id="event2" class="individual-event row">
+                                <p class="event-text event-click-2 col-2"></p>
+                                <p class="event-time event-click-2 col-2"></p>
+                                <p class="event-heading event-click-2 col-4"></p>
+                                <p class="event-url-2 col-4"></p> 
                                 <div class="container event2-container">
-                                    <p class="event-url-2"></p> 
+                                    <p class="event-venue2"></p> 
                                 </div> 
-                            </a>   
+                            </div>   
                         </div>
                     </div>
 
@@ -113,7 +118,9 @@
                     <div id="next"><span aria-hidden="true">Next</span></div>
                 </div>
             </div>
-        </div>
+            <div id="map">
+            </div>
+        </div>     
     </div>
 
     <!-- Footer -->
@@ -141,6 +148,9 @@
 
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/9e31b09f8c.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Maps Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWncKIaJ0_spPiZHLkwqIAhhgHqs-X0X4&libraries=&v=weekly"></script>
 
     <!-- Events javascript file -->
     <script src="assets/js/events.js"></script>

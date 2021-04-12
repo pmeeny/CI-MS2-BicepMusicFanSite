@@ -220,6 +220,8 @@
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #event-pages div {
@@ -234,6 +236,7 @@
 
 #events-holder{
     background-color: white;
+    height: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
     border-radius: 25px;
@@ -249,6 +252,10 @@
     padding: 10px 10px;
     color: black;
     display: none;
+}
+
+.pagination {
+    padding-top: 10px;
 }
 
 #previous:hover {
@@ -279,18 +286,28 @@
     background-color: #0062cc;
 }
 
-.event-url-1 {
+.event1-container {
+    text-align: center;
     display: none;
+    color: black;
+    border: 1px solid black;
 }
 
-.event-url-2 {
+.event2-container {
+    text-align: center;
     display: none;
+    color: black;
+    border: 1px solid black;
 }
 
 .selected {
     text-decoration: underline;
     background: red;
     pointer-events:none
+}
+
+.individual-event {
+    padding-bottom: 15px;
 }
 
 /* ----- About Page ----- */
@@ -516,12 +533,12 @@
     }
 
     #all-events {
-        min-height: 630px;
+        min-height: 900px;
         height: max-content;
     }
-
+    
     #events-holder {
-        min-height: 630px;
+        min-height: 900px;
         height: max-content;
     }
 

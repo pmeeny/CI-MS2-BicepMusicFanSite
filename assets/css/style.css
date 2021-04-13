@@ -12,7 +12,7 @@
 /* --- Global styling --- */
 .white-header1-text {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .white-header2-text {
@@ -21,7 +21,7 @@
 
 .white-p-text {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* ----- Start of Color palette ----- */
@@ -557,6 +557,16 @@
 
 /* X-SMALL SCREEN */
 @media screen and (max-width: 481px) {
+
+    /* --- Global styling --- */
+    .white-header1-text {
+        color: white;
+        font-size: 2.0rem;
+    }
+
+    .white-p-text {
+        font-size: 1.2rem;
+    }
 
     .social-icon {
         padding: 5px;

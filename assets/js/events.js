@@ -106,14 +106,15 @@ function displayEvents(eventResults) {
         try {
             if(i==0){
                 $(".event-venue1").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
-                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
-                console.log(venue);
                 item.children(".event-url-1").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
-                //initMap(venue);
+                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
+                initMap(venue, "map1");
             }
             else{
                 $(".event-venue2").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
                 item.children(".event-url-2").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
+                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
+                initMap(venue, "map2");
             }
         }catch (err) {
             console.log(err);
@@ -122,8 +123,16 @@ function displayEvents(eventResults) {
     }
 }
 
-function initMap(address) {
-    const map = new google.maps.Map(document.getElementById("map"), {
+  /**
+ * [displayPagination takes in one parameter,
+ * the eventResults object and displays numbered
+ * pagination for the pages of events
+ * Credit: https://developers.google.com/maps/documentation/]
+ * @param address [Location address]
+ * @param mapId [Map ID]
+ */
+function initMap(address, mapId) {
+    const map = new google.maps.Map(document.getElementById(mapId), {
       zoom: 8,
       center: { lat: -34.397, lng: 150.644 },
     });

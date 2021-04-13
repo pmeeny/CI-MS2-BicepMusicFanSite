@@ -353,7 +353,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 185vh;
+    height: 190vh;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -396,6 +396,10 @@
 
 .top-track-number {
     color: white;
+}
+
+#toptracks-holder {
+    padding-top: 10px;
 }
 
 /* The flip box css was taken from here and modified: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 */
@@ -603,7 +607,7 @@
     
     /* --- About Page --- */   
     #about {
-        height: 200vh;
+        height: 180vh;
     }
 
     #album1 {
@@ -637,5 +641,10 @@
 @media screen and (max-width: 320px) {
     #all-events {
         height: 200vh;   
+    }
+
+    /* --- About Page --- */   
+    #about {
+        height: 250vh;
     }
 }    

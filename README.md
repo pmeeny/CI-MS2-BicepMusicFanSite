@@ -2,7 +2,7 @@
 # Project Overview
 
 - This project is a website for the music DJ duo "BICEP" for submission as milestone project 2 as part of the Code Institute - Diploma in Software Development (Full stack) course.
-- The website showcases the music DJ duo
+- The website showcases the music DJ duo, their album information, event details and there is a quiz on the dj duo.
 
 - The website is deployed using GIThub pages at the following url: [BICEP](https://pmeeny.github.io/CodeInstitute-MilestoneProject2-BicepMusicFanSite/)
 
@@ -17,9 +17,12 @@
 - The primary goal of the website from the site owners perspective is 
 - The primary goal of the website from a site users perspective is 
 ## Structure
-I have structured the website into TBC pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
+I have structured the website into four pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
 
 1. Index: The index(homepage): This is the first page the user encounters, it contains
+2.
+3.
+4.
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
@@ -93,11 +96,11 @@ The website has TBC
 - Git (https://git-scm.com/)
     - Git was used as the source control tool for this project
 
-- Gitpod (https://gitpod.io/)
-    - An online Integrated Development Environment
-
 - Github (https://github.com/)
     - Github was used to store the project code in a repository
+
+- Guthub desktop
+    - Github desktop was used to view and make commits into GIT
 
 - Microsoft VSCode (https://code.visualstudio.com/)
     - A locally installed Integrated Development Environment
@@ -113,7 +116,7 @@ The website has TBC
     - Font awesome was used to provide the relevant fonts/icons for the website
 
 - JQuery (https://jquery.com)
-    - JQuery was required by Bootstrap for some of the the UI components, for example the carousel and in several of the javascript scripts
+    - JQuery was used throughout in several of the javascript files fro DOM manipulation
 
 - TinyPNG (https://tinypng.com/)
     - TinyPNG was used to compress images
@@ -136,14 +139,8 @@ The website has TBC
 - JS Fiddle (https://jsfiddle.net/)
     - Used for testing html and css concepts
 
-- Canva (https://www.canva.com/)
-    - Canva was used to design/create the website logo
-
 - GitHub Wiki TOC generator (https://ecotrust-canada.github.io/markdown-toc/)
     - Used for generating a table of contents for this README
-    
-- Adobe Colour (https://color.adobe.com/create/color-wheel)
-  - To generate the colour palette image used in this README
 
 # Testing
 The testing approach was manual, and testing was completed on the following browsers and device types
@@ -218,8 +215,14 @@ style.css | Passed, No errors found | [Results](assets/images/testing/css-valida
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-index.html (Desktop) | Performance: 98, Accessibility: 97, Best practices: 93, SEO: 90  | [Results](assets/images/testing/google-lighthouse/index_desktop_lighthouse.png)
-
+index.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+index.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+quiz.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+quiz.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+events.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+events.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
 
 <br>
 
@@ -277,16 +280,29 @@ To run this project locally, you will need to clone the repository
 
 - For updating the quiz progress bar, I found this page useful: https://stackoverflow.com/questions/21182058/dynamically-change-bootstrap-progress-bar-value-when-checkboxes-checked
 
-- Image flipping css, used in the about.html page: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2
+- The Image flipping css, used in the about.html page: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2
 
 # Content
+- Wikipedia (https://wikepedia.com/)
+    - The text on the about page is from wikpedia
+
+- Pixabay (https://pixabay.com/)
+    - The images on the home page are from pixabay
+
+- Font Awesome (http://fontawesome.com)    
+    - The fonts on the footer and header are from font awesome
+
+- Fonts (http://https://fonts.google.com/)    
+    - The text font(Lato) is from google fonts
+
+- Spotify (http://www.spotify.com)
+    - The spotify logo is from spotify.com brand guidelines and content    
 
 <br>
 
 # Media
 - Wikipedia (https://wikepedia.com/)
     - The text was used from Wikipedia
-
 
  <br>
 

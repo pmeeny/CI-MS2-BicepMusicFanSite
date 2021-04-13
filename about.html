@@ -76,10 +76,6 @@
             <p class="white-p-text">Bicep was formed in 2009 as a production and DJing pair in London, UK. The duo, childhood friends, created a blog called "Feel My Bicep", which was used to post lost and forgotten disco, Chicago house, Detroit techno and Italo disco edits.</p> 
             <h1 class="white-header1-text">Albums</h1>   
 
-            <!--<input id="myInput" type="text" placeholder="Search.."> -->
-            <!--<div id="toptracks">
-
-            </div> -->
             <!-- Credit for flipbox divs to flip pictures:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image -->
             <div id="albums">
                 <div class="container">
@@ -118,20 +114,22 @@
                         </div>        
                     </div>
                 </div>     
-            </div>      
-            <h1 class="white-header1-text">Top Tracks</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <div id="toptracks"></div>
+            </div>
+            <div id="toptracks-holder">     
+                <h1 class="white-header1-text">Top Tracks</h1> 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div id="toptracks"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">    
+                            <p id="track-preview-text">Track Preview(loads when a top track is clicked):</p>
+                            <video id="track-preview" controls autoplay>
+                            </video>
+                        </div>    
                     </div>
-                    <div class="col-sm-12 col-md-6">    
-                        <p id="track-preview-text">Track Preview(loads when a top track is clicked):</p>
-                        <video id="track-preview" controls autoplay>
-                        </video>
-                    </div>    
-                </div>
-            </div>    
+                </div>  
+            </div>       
         </div>
     </div>    
             

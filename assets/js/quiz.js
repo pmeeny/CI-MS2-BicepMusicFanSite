@@ -167,13 +167,12 @@ function displayCorrectAnswerInGreen() {
   });
 }
 
-
 /**
  * [displayCorrectAnswerInRed, updates label of wrongly selected answer]
  */
 function displayCorrectAnswerInRed() {
   $('#quiz-form .option').each(function() {
-    if($(this).text().match(shuffledQuestions[position].answer)) {
+    if($(this).text().match(usersAnswer)) {
         $(this).css('background-color', 'red'); 
     }      
   });

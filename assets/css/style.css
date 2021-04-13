@@ -216,7 +216,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 120vh;   
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -235,11 +235,15 @@
 }
 
 #events-holder{
-    background-color: white;
+    background-color: #e8e8e8;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
     border-radius: 25px;
+}
+
+#event-header-text {
+    font-weight: bold;    
 }
 
 .event-page-number{
@@ -259,7 +263,7 @@
 }
 
 #previous:hover {
-    background-color: #0062cc;
+    background-color: white;
 }
 
 #next {
@@ -269,7 +273,7 @@
 }
 
 #next:hover {
-    background-color: #0062cc;
+    background-color: white;
 }
 
 .upcoming-events {
@@ -283,26 +287,25 @@
 }
 
 .event-page-number:hover {
-    background-color: #0062cc;
+    background-color: white;
+    color: black;
 }
 
 .event1-container {
     text-align: center;
     display: none;
     color: black;
-    border: 1px solid black;
 }
 
 .event2-container {
     text-align: center;
     display: none;
     color: black;
-    border: 1px solid black;
 }
 
 .selected {
     text-decoration: underline;
-    background: red;
+    background: #007bff;
     pointer-events:none
 }
 
@@ -310,9 +313,16 @@
     padding-bottom: 15px;
 }
 
-#map {
-    height: 300px;
-    width: 300px;
+#map1 {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+
+#map2 {
+    height: 250px;
+    width: 250px;
+    margin: auto;
 }
 
 /* ----- About Page ----- */
@@ -413,7 +423,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     padding-bottom: 30px;
     padding-top: 20px;
@@ -498,18 +508,25 @@
 
 /* ----- Media Queries ----- */
 /* --- Large Screen --- */
+@media screen and (max-width: 1024px) {
+    #all-events {
+        height: 80vh;   
+    }
+}
+
+/* --- Large Screen --- */
 @media screen and (max-width: 991px) {
     .nav-icon-holder {
         display: none;
+    }
+
+    #all-events {
+        height: 160vh;   
     }
 }
 
 /* --- Medium Screen --- */
 @media screen and (max-width: 768px) {
-    #events-holder {
-        min-height: 630px;
-        height: max-content;
-    }
 
     .nav-icon-holder {
         display: none;
@@ -539,6 +556,7 @@
 
 /* X-SMALL SCREEN */
 @media screen and (max-width: 481px) {
+
     .social-icon {
         padding: 5px;
     }
@@ -549,15 +567,9 @@
     }
 
     #all-events {
-        min-height: 900px;
-        height: max-content;
+        height: 160vh;   
     }
     
-    #events-holder {
-        min-height: 900px;
-        height: max-content;
-    }
-
     /* --- About Page --- */   
     #album1 {
         height: 110px;
@@ -585,3 +597,10 @@
         padding-top: 10px;
     }
 }   
+
+/* Extra X-SMALL SCREEN */
+@media screen and (max-width: 320px) {
+    #all-events {
+        height: 200vh;   
+    }
+}    

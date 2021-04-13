@@ -503,7 +503,7 @@
     color: red;
 }
 
-#timer-area, #overall_result, #test_status{
+#timer-area, #overall_result, #test_status, #top_score{
     font-weight: bold;
 }
 

@@ -62,6 +62,7 @@ function displayQuestions(){
   if(position >= shuffledQuestions.length){
     $("#overall_result").html("You got "+correctAnswers+"/"+shuffledQuestions.length+" correct");
     setTopScore(correctAnswers);
+    getTopScore();
     $("#test_status").hide();
     $("#question").hide();
     $("#quiz_options").hide();

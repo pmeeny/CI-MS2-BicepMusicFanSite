@@ -106,13 +106,15 @@ function displayEvents(eventResults) {
         try {
             if(i==0){
                 $(".event-venue1").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
+                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
+                console.log(venue);
                 item.children(".event-url-1").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
-                
+                //initMap(venue);
             }
             else{
                 $(".event-venue2").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
                 item.children(".event-url-2").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
-            }    
+            }
         }catch (err) {
             console.log(err);
         }
@@ -120,15 +122,36 @@ function displayEvents(eventResults) {
     }
 }
 
-function initMap() {
+function initMap(address) {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 8,
       center: { lat: -34.397, lng: 150.644 },
     });
-    //const geocoder = new google.maps.Geocoder();
-    //document.getElementById("submit").addEventListener("click", () => {
-    //  geocodeAddress(geocoder, map);
-    //});
+    const geocoder = new google.maps.Geocoder();
+        geocodeAddress(geocoder, map, address);
+  }
+
+  /**
+ * [displayPagination takes in one parameter,
+ * the eventResults object and displays numbered
+ * pagination for the pages of events
+ * Credit: https://developers.google.com/maps/documentation/javascript
+ * /examples/geocoding-simple#maps_geocoding_simple-javascript]
+ * @param  geocoder [The geocoder object]
+ * @param resultsMap [Map containing result]
+ */
+  function geocodeAddress(geocoder, resultsMap, address) {
+    geocoder.geocode({ address: address }, (results, status) => {
+      if (status === "OK") {
+        resultsMap.setCenter(results[0].geometry.location);
+        new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location,
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
   }
 
 /**
@@ -281,4 +304,3 @@ $(document).on('click', "#next", function nextButtonClicked() {
 });
 
 getEvents(page, displayPagination);
-initMap();

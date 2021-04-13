@@ -4,7 +4,6 @@ const bicepArtistID = '73A3bLnfnz5BoQjb4gNCga';
 var topTracks;
 
 var getToken = async () => {
-        console.log ("in getToken 1");
         const result = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             headers: {
@@ -60,14 +59,12 @@ getToken().then(returnData =>{
 
     getTopTracks(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
-        topTrackClicked(newData);
     })
 });
 
 function displayAlbum1(data){
     var img= '<img alt="bicep album called bicep" id="album1" src ="' +data.images[0].url + '" />';
     $("#album1_image").append(img)
-    console.log(data);
     var albumTracks = data.tracks.items;;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
@@ -85,7 +82,6 @@ function displayAlbum2(data){
     $("#album2_image").append(img)
 
     var albumTracks = data.tracks.items;
-    console.log(albumTracks)
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
@@ -100,32 +96,23 @@ function displayAlbum2(data){
 
 function displayTopTracks(data){
     topTracks = data.tracks;
-    console.log(topTracks);
     for (var i = 0; i < topTracks.length; i++) {
-        var leadingNumber = i+1;
         $("#toptracks").append('<div class="top-track-number">'+ topTracks[i].name + '</div>')
-    } 
+    }
 }
 
 $(document).ready(function(){
     $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      console.log(value)
       $("#toptracks .top-track-number").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
     });
   });
 
-$(document).on('click', ".top-track-number", function clickedButton(data) {
+$(document).on('click', ".top-track-number", function topTrackClicked(data) {
     var currentselectedTrack = $(this).text();
-    console.log("in here");
-
-    console.log(topTracks);
     for(var i=0; i<topTracks.length; i++){
        if(currentselectedTrack == topTracks[i].name){
-            console.log("found it");
-            console.log(currentselectedTrack);
             $("#track-preview").html("<source src=" + topTracks[i].preview_url + " type=audio/mpeg>");
             $("#track-preview").css("display", "inline-block");
             $("#track-preview")[0].load();

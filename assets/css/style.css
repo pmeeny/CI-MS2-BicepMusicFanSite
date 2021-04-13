@@ -219,10 +219,6 @@
     border-radius: .25rem;   
 }
 
-.common_btn:hover {
-    background: #e8e8e8;
-}
-
 .social-icons{
     text-align: right;
 }
@@ -240,7 +236,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 120vh;   
+    height: 150vh;   
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -259,7 +255,7 @@
 }
 
 #events-holder{
-    background-color: #e8e8e8;
+    background-color: white;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 40px;

@@ -117,7 +117,6 @@ function checkAnswer(){
   for(var selected=0; selected<choices.length; selected++){
     if(choices[selected].checked){
       usersAnswer = choices[selected].nextElementSibling.innerHTML;
-
       allAnswers[answerInformation][0] = shuffledQuestions[position].question;
       allAnswers[answerInformation][1] = usersAnswer;
       allAnswers[answerInformation][2] = shuffledQuestions[position].answer;
@@ -132,11 +131,52 @@ function checkAnswer(){
       answerInformation++;
     }
   }
+  displayCorrectAnswerInGreen();
   if(usersAnswer == shuffledQuestions[position].answer){
     correctAnswers++;
   }
+  else{
+    displayCorrectAnswerInRed();
+  }
   position++;
-  displayQuestions();
+  waitOneSecondBeforeNextQuestion();
+}
+
+/**
+ * [wait2SecondsBeforeNextQuestion, wait one second before next question]
+ */
+function waitOneSecondBeforeNextQuestion(){
+setTimeout(
+  function() 
+    {
+      $('#quiz-form .option').each(function() {
+            $(this).css('background-color', 'white');   
+    });
+      displayQuestions();
+  }, 1000);
+}
+
+/**
+ * [displayCorrectAnswerInGreen, updates label of correct answer]
+ */
+function displayCorrectAnswerInGreen() {
+  $('#quiz-form .option').each(function() {
+    if($(this).text().match(shuffledQuestions[position].answer)) {
+        $(this).css('background-color', 'green'); 
+    }      
+  });
+}
+
+
+/**
+ * [displayCorrectAnswerInRed, updates label of wrongly selected answer]
+ */
+function displayCorrectAnswerInRed() {
+  $('#quiz-form .option').each(function() {
+    if($(this).text().match(shuffledQuestions[position].answer)) {
+        $(this).css('background-color', 'red'); 
+    }      
+  });
 }
 
 /**
@@ -180,6 +220,8 @@ function stopTimer() {
       return;
     }
   checkAnswer();
+
+
 });
 
 shuffleQuestions()

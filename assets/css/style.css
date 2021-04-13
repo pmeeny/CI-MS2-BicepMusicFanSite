@@ -17,11 +17,22 @@
 
 .white-header2-text {
     color: white;
+    font-size: 1.5rem;
+}
+
+.white-header3-text {
+    color: white;
+    font-size: 1.0rem;
+}
+
+
+.white-header2-text {
+    color: white;
 }
 
 .white-p-text {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* ----- Start of Color palette ----- */
@@ -75,6 +86,16 @@
     color: black;
 }
 
+.event-url-1 a{
+    color: black;
+    text-decoration: underline;
+}
+
+.event-url-2 a{
+    color: black;
+    text-decoration: underline;
+}
+
 /* ----- End of Color palette ----- */
 .nav-icon {
     font-size: 2rem;
@@ -101,6 +122,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .dj-event{
@@ -306,7 +329,8 @@
 
 .selected {
     text-decoration: underline;
-    background: #007bff;
+    background-color: black;
+    color: white;
     pointer-events:none
 }
 
@@ -333,7 +357,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 180vh;
+    height: 185vh;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -582,6 +606,10 @@
     }
     
     /* --- About Page --- */   
+    #about {
+        height: 200vh;
+    }
+
     #album1 {
         height: 110px;
         width: 120px;

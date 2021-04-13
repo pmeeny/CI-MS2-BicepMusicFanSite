@@ -178,6 +178,9 @@ The fix was to create a new div called total_time_spent, and to update this div 
 2 allAnswers element was being overwritten if 2 questions had the same number
 The fix was to create a new counter, and to increment that seperatly when adding to the allAnswers list
 
+3 Top score was not displaying the current value, once a quiz has been completed
+Fix was to call getTopScore after setTopScore once 10 questions were complete
+
 <br>
 
 ## Code Validators and Website Analysis

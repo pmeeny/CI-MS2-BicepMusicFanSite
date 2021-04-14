@@ -1,3 +1,5 @@
+/*jslint browser: true*/
+/*global $ */
 /**
  * [sendEmail to send email using EmailJS
  * Credit: Code Institute material "Sending Emails Using EmailJS"]
@@ -7,18 +9,18 @@ function sendMail(contactForm) {
     emailjs.send("gmail", "bicep", {
         "from_name": contactForm.full_name.value,
         "from_email": contactForm.email_address.value
-    })
-    .then(
-        function(response) {
+    }).then(
+        function (response) {
+            window.console.log("Email sent", response);
         },
-        function(error) {
-            console.log("FAILED", error);
+        function (error) {
+            window.console.log("FAILED", error);
         }
     );
     return false;  // To block from loading a new page
 }
 
-$('#mailinglistform').on('submit', function(e){
-    $('#formSubmitted').modal('show');
-    $('#mailingListModal').hide();
-  });
+$("#mailinglistform").on("submit", function () {
+    $("#formSubmitted").modal("show");
+    $("#mailingListModal").hide();
+});

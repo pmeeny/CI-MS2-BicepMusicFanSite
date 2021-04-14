@@ -3,7 +3,7 @@
 /**
  * [sendEmail to send email using EmailJS
  * Credit: Code Institute material "Sending Emails Using EmailJS"]
- * @param  contactForm [The contact form object]
+ * @param contactForm [The contact form object]
  */
 function sendMail(contactForm) {
     emailjs.send("gmail", "bicep", {
@@ -21,6 +21,5 @@ function sendMail(contactForm) {
 }
 
 $("#mailinglistform").on("submit", function () {
-    $("#formSubmitted").modal("show");
-    $("#mailingListModal").hide();
+    $("#mailingListModal").modal("hide");
 });

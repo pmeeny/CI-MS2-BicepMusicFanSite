@@ -236,7 +236,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 150vh;   
+    height: 100vh;
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -251,15 +251,16 @@
 .events-information{
     padding: 20px 20px 20px 20px;
     padding-top: 20px;
-    height: 300px;
+    height: inherit;
 }
 
 #events-holder{
     background-color: white;
-    height: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
     border-radius: 25px;
+    overflow:auto;
+    height: auto;
 }
 
 #event-header-text {
@@ -448,7 +449,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     padding-bottom: 30px;
     padding-top: 20px;
@@ -535,7 +536,11 @@
 /* --- Large Screen --- */
 @media screen and (max-width: 1024px) {
     #all-events {
-        height: 80vh;   
+        height: inherit;   
+    }
+
+    #quiz {
+        height: inherit;
     }
 }
 
@@ -546,7 +551,7 @@
     }
 
     #all-events {
-        height: 160vh;   
+        height: inherit;    
     }
 }
 
@@ -577,6 +582,10 @@
     #track-preview-text {
         padding-top: 10px;
     }
+
+    #quiz {
+        height: inherit; 
+    }    
 }
 
 /* X-SMALL SCREEN */
@@ -597,17 +606,16 @@
     }
 
     #quiz {
-        min-height: 630px;
-        height: max-content;
+        height: inherit;   
     }
 
     #all-events {
-        height: 160vh;   
+        height: inherit;   
     }
     
     /* --- About Page --- */   
     #about {
-        height: 180vh;
+        height: inherit;  
     }
 
     #album1 {
@@ -645,6 +653,10 @@
 
     /* --- About Page --- */   
     #about {
-        height: 250vh;
+        height: inherit;  
+    }
+
+    #quiz {
+        height: inherit;  
     }
 }    

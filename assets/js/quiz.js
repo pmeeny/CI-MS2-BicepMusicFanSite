@@ -24,7 +24,10 @@ allAnswers[8] = [];
 allAnswers[9] = [];
 
 // Timer Variables
-var timer = document.getElementById("timer"), seconds = 0, minutes = 0, time;
+var timer = document.getElementById("timer")
+var seconds = 0;
+var minutes = 0;
+var time;
 
 /**
  * [shuffleQuestions randomly shuffles the questions shuffledQuestions]
@@ -38,18 +41,18 @@ function shuffleQuestions(){
  */
 function setTopScore(correctAnswers){
   console.log(correctAnswers)
-  sessionStorage.setItem('topScore', correctAnswers);
+  sessionStorage.setItem("topScore", correctAnswers);
 }
 
 /**
  * [getTopScore Display sessionStorage with topScore key value]
  */
  function getTopScore(){
-   if(sessionStorage.getItem('topScore') == null){
+   if(sessionStorage.getItem("topScore") == null){
     $("#top_score").hide();
    }
    else{
-    $("#top_score").text("Top Score: " + sessionStorage.getItem('topScore'));
+    $("#top_score").text("Top Score: " + sessionStorage.getItem("topScore"));
    }
  }
 
@@ -58,9 +61,10 @@ function setTopScore(correctAnswers){
  */
 function displayQuestions(){
   $("#error").html("");
-  $('input[name="choices"]').prop('checked', false);
+  $('input[name="choices"]').prop("checked", false);
   if(position >= shuffledQuestions.length){
-    $("#overall_result").html("You got "+correctAnswers+"/"+shuffledQuestions.length+" correct");
+    $("#overall_result").html("You got "+correctAnswers
+    +"/"+shuffledQuestions.length+" correct");
     setTopScore(correctAnswers);
     getTopScore();
     $("#test_status").hide();
@@ -84,7 +88,8 @@ updatePercentage();
  * [displayQuestions]
  */
 function displayNewQuestion(){
-  $("#test_status").html("Question "+(position+1)+" of "+shuffledQuestions.length);
+  $("#test_status").html("Question "+(position+1)
+  +" of "+shuffledQuestions.length);
 
   question = questions[position].question;
   choiceOne = shuffledQuestions[position].a;
@@ -92,11 +97,12 @@ function displayNewQuestion(){
   choiceThree = shuffledQuestions[position].c;
   choiceFour = shuffledQuestions[position].d;
 
-  $('#question').html(position+1+ ". " +"<span>"+question+"</span>");
-  $('#optionA_label').html(choiceOne);
-  $('#optionB_label').html(choiceTwo);
-  $('#optionC_label').html(choiceThree);
-  $('#optionD_label').html(choiceFour);
+  $("#question").html(position+1+ ". "
+  +"<span>"+question+"</span>");
+  $("#optionA_label").html(choiceOne);
+  $("#optionB_label").html(choiceTwo);
+  $("#optionC_label").html(choiceThree);
+  $("#optionD_label").html(choiceFour);
 }
 
 /**
@@ -105,7 +111,8 @@ function displayNewQuestion(){
 function updatePercentage(){
   percentage = percentage + 10;
   $(".progress-bar").html(percentage + "%");
-  $('.progress-bar').css('width', percentage+'%').attr('aria-valuenow', percentage);
+  $(".progress-bar").css("width", percentage+"%")
+  .attr("aria-valuenow", percentage);
 }
 
 /**
@@ -115,16 +122,22 @@ function displayQuizResults(){
     for (var i in allAnswers) {
       if(allAnswers[i][3] == true){
         $("#answers").append("<tr>")
-        $("#answers").append("<td class='correct'>" + allAnswers[i][0] +"</td>");
-        $("#answers").append("<td class='correct'>" + allAnswers[i][1] +"</td>");
-        $("#answers").append("<td class='correct'>" + allAnswers[i][2] +"</td>");
+        $("#answers").append("<td class='correct'>" +
+        allAnswers[i][0] +"</td>");
+        $("#answers").append("<td class='correct'>" +
+        allAnswers[i][1] +"</td>");
+        $("#answers").append("<td class='correct'>" +
+        allAnswers[i][2] +"</td>");
         $("#answers").append("</tr>")
       }
       else{
         $("#answers").append("<tr>")
-        $("#answers").append("<td class='incorrect'>" + allAnswers[i][0] +"</td>");
-        $("#answers").append("<td class='incorrect'>" + allAnswers[i][1] +"</td>");
-        $("#answers").append("<td class='incorrect'>" + allAnswers[i][2] +"</td>");
+        $("#answers").append("<td class='incorrect'>" +
+        allAnswers[i][0] +"</td>");
+        $("#answers").append("<td class='incorrect'>" +
+         allAnswers[i][1] +"</td>");
+        $("#answers").append("<td class='incorrect'>" +
+        allAnswers[i][2] +"</td>");
         $("#answers").append("<tr>")
       }
     }
@@ -168,11 +181,10 @@ function checkAnswer(){
  * [waitOneSecondBeforeNextQuestion, wait one second before next question]
  */
 function waitOneSecondBeforeNextQuestion(){
-setTimeout(
-  function() 
+setTimeout(function()
     {
-      $('#quiz-form .option').each(function() {
-            $(this).css('background-color', 'white');   
+      $("#quiz-form .option").each(function() {
+            $(this).css("background-color", "white");
     });
       displayQuestions();
   }, 1000);
@@ -182,10 +194,10 @@ setTimeout(
  * [displayCorrectAnswerInGreen, updates label of correct answer]
  */
 function displayCorrectAnswerInGreen() {
-  $('#quiz-form .option').each(function() {
+  $("#quiz-form .option").each(function() {
     if($(this).text().match(shuffledQuestions[position].answer)) {
-        $(this).css('background-color', 'green'); 
-    }      
+        $(this).css("background-color", "green");
+    }
   });
 }
 
@@ -193,10 +205,10 @@ function displayCorrectAnswerInGreen() {
  * [displayCorrectAnswerInRed, updates label of wrongly selected answer]
  */
 function displayCorrectAnswerInRed() {
-  $('#quiz-form .option').each(function() {
+  $("#quiz-form .option").each(function() {
     if($(this).text().match(usersAnswer)) {
-        $(this).css('background-color', 'red'); 
-    }      
+        $(this).css("background-color", "red");
+    }
   });
 }
 
@@ -212,7 +224,8 @@ function addTimerDetails() {
             minutes = 0;
         }
     }
-    timer.textContent = "Timer(MM:SS): " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")
+    timer.textContent = "Timer(MM:SS): "
+    + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")
     + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }

@@ -105,7 +105,7 @@
                 <h2 class="white-header2-text">BICEP QUIZ GAME</h2>
                 <p class="white-header3-text">Take part in a quiz on the DJ duo</p>
             </a>
-            <a class="col-sm-6 col-lg-3 dj-pioneer" data-target="#exampleModal" href="#exampleModal" data-toggle="modal">
+            <a class="col-sm-6 col-lg-3 dj-pioneer" data-target="#mailingListModal" href="#mailingListModal" data-toggle="modal">
                 <h2 class="white-header2-text">BICEP MAIL LIST</h2>
                 <p class="white-header3-text">Sign-up to the dj's weekly email</p>
             </a>
@@ -113,7 +113,7 @@
     </div>
 
     <!-- Modal (Credit: https://getbootstrap.com/docs/4.0/components/modal/)-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="mailingListModal" tabindex="-1" role="dialog" aria-labelledby="mailingListModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -125,7 +125,7 @@
             <div class="modal-body">
                 <h5 class="modal-title" id="signUpLabel">Sign up to BICEP's mailing list</h5>
                 <br>
-                <form onsubmit="return sendMail(this);">
+                <form id="mailinglistform" onsubmit="return sendMail(this);">
                         <div class="form-group row">
                             <label for="full_name" class="col-5 col-form-label">Full Name</label>
                             <div class="col-7">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="common_btn" type="submit" value="Submit">Submit</button>
+                        <button class="common_btn" type="submit" value="Submit" data-dismiss="modal">Submit</button>
                         </div>
                 </form> 
             </div>

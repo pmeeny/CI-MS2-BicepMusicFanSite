@@ -10,7 +10,6 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
-            console.log("SUCCESS", response);
         },
         function(error) {
             console.log("FAILED", error);
@@ -18,3 +17,8 @@ function sendMail(contactForm) {
     );
     return false;  // To block from loading a new page
 }
+
+$('#mailinglistform').on('submit', function(e){
+    $('#formSubmitted').modal('show');
+    $('#mailingListModal').hide();
+  });

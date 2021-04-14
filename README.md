@@ -183,6 +183,8 @@ Fix was to call getTopScore after setTopScore once 10 questions were complete
 
 4. Top score is not displayed after 1st attempt results page. Fix was to  $("#top_score").show() to unhide the div
 
+5. After the mailing list mailing list modal closes the screen remains dark and the index isnt loading properly. Fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+
 <br>
 
 ## Code Validators and Website Analysis

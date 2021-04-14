@@ -181,6 +181,8 @@ The fix was to create a new counter, and to increment that seperatly when adding
 3 Top score was not displaying the current value, once a quiz has been completed
 Fix was to call getTopScore after setTopScore once 10 questions were complete
 
+4. Top score is not displayed after 1st attempt results page. Fix was to  $("#top_score").show() to unhide the div
+
 <br>
 
 ## Code Validators and Website Analysis
@@ -310,5 +312,5 @@ To run this project locally, you will need to clone the repository
  <br>
 
 # Acknowledgements
-- I would like to thank my fiancee Mary for her help, constant support and ideas for the website, my son Liam who was born in March, and also to my dog Lily for her company during development of the website.
+- I would like to thank my fiancee Mary for her help, constant support and ideas for the website, my son Liam who was born in March while I worked on this project, and also to my dog Lily for her company during development of the website.
 - I would like to thank my mentor Mo Shami for his input, help and feedback.

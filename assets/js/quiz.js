@@ -52,6 +52,7 @@ function setTopScore(correctAnswers){
     $("#top_score").hide();
    }
    else{
+    $("#top_score").show();
     $("#top_score").text("Top Score: " + sessionStorage.getItem("topScore"));
    }
  }

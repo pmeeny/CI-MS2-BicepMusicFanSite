@@ -41,13 +41,23 @@ function shuffleQuestions(){
  */
 function setTopScore(correctAnswers){
   console.log(correctAnswers)
-  sessionStorage.setItem("topScore", correctAnswers);
+  var getTopScore = sessionStorage.getItem("topScore");
+  if(correctAnswers > getTopScore){
+    sessionStorage.setItem("topScore", correctAnswers);
+  }
 }
 
 /**
- * [getTopScore Display sessionStorage with topScore key value]
+ * [getTopScore return topScore key value]
  */
- function getTopScore(){
+ function getTopScore(correctAnswers){
+  return sessionStorage.getItem("topScore");
+}
+
+/**
+ * [displayTopScore Display sessionStorage with topScore key value]
+ */
+ function displayTopScore(){
    if(sessionStorage.getItem("topScore") == null){
     $("#top_score").hide();
    }
@@ -67,7 +77,7 @@ function displayQuestions(){
     $("#overall_result").html("You got "+correctAnswers
     +"/"+shuffledQuestions.length+" correct");
     setTopScore(correctAnswers);
-    getTopScore();
+    displayTopScore();
     $("#test_status").hide();
     $("#question").hide();
     $("#quiz_options").hide();
@@ -260,7 +270,7 @@ function stopTimer() {
 });
 
 shuffleQuestions();
-getTopScore();
+displayTopScore();
 displayQuestions();
 startTimer();
 getTopScore();

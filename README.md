@@ -39,13 +39,16 @@ The user stories for the website owner are described as follows:
 <br>
 
 Desktop 
-
+- [Index](assets/wireframes/desktop/index_desktop.png)
+- [About](assets/wireframes/desktop/about_desktop.png)
 
 Tablet
-
+- [Index](assets/wireframes/tablet/index_tablet.png)
+- [About](assets/wireframes/tablet/about_tablet.png)
 
 Mobile
-
+- [Index](assets/wireframes/mobile/index_mobile.png)
+- [About](assets/wireframes/mobile/about_mobile.png)
  
 ## Surface
 ### Color Palette

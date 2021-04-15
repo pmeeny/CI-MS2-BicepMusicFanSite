@@ -354,7 +354,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 190vh;
+    height: 1220px;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -540,6 +540,10 @@
     }
 
     #quiz {
+        height: inherit;
+    }
+
+    #about {
         height: inherit;
     }
 }

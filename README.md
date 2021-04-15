@@ -2,9 +2,9 @@
 # Project Overview
 
 - This project is a website for the music DJ duo "BICEP" for submission as milestone project 2 as part of the Code Institute - Diploma in Software Development (Full stack) course.
-- The website showcases the music DJ duo, their album information, event details and there is a quiz on the dj duo.
+- The website showcases the music DJ duo, their album information, event details and there is a quiz on the dj duo also.
 
-- The website is deployed using GIThub pages at the following url: [BICEP](https://pmeeny.github.io/CodeInstitute-MilestoneProject2-BicepMusicFanSite/)
+- The website is deployed using Github pages at the following url: [BICEP](https://pmeeny.github.io/CodeInstitute-MilestoneProject2-BicepMusicFanSite/)
 
 - The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite)
 
@@ -61,7 +61,7 @@ There are TBC colours in the color palette with a
 - I feel the primary and secondary colours complement each other very well, and I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
 
 ### Typography
-The Lato font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Lato font cannot be imported into the website correctly.
+The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Roboto font cannot be imported into the website correctly.
 
 # Features
 The website has TBC

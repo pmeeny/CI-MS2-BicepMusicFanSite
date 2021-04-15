@@ -12,8 +12,8 @@
     <link rel="stylesheet " href="assets/css/style.css " type="text/css" />
 
     <!-- EmailJS library-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
     (function() {
         emailjs.init("user_wxBAvg07l9uKgfV3nW0x3");
     })();
@@ -115,35 +115,35 @@
     <!-- Modal (Credit: https://getbootstrap.com/docs/4.0/components/modal/)-->
     <div class="modal fade" id="mailingListModal" tabindex="-1" role="dialog" aria-labelledby="mailingListModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="mailingListLabel">Mailing List</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h5 class="modal-title" id="signUpLabel">Sign up to BICEP's mailing list</h5>
-                <br>
-                <form id="mailinglistform" onsubmit="return sendMail(this);">
-                        <div class="form-group row">
-                            <label for="full_name" class="col-5 col-form-label">Full Name</label>
-                            <div class="col-7">
-                            <input class="form-control" id="full_name" name="full_name" type="text" placeholder="Joe Bloggs" id="name" required>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="mailingListLabel">Mailing List</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="signUpLabel">Sign up to BICEP's mailing list</h5>
+                    <br>
+                    <form id="mailinglistform" onsubmit="return sendMail(this);">
+                            <div class="form-group row">
+                                <label for="full_name" class="col-5 col-form-label">Full Name</label>
+                                <div class="col-7">
+                                <input class="form-control" id="full_name" name="full_name" type="text" placeholder="Joe Bloggs" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email_address" class="col-5 col-form-label">Email Address</label>
-                            <div class="col-7">
-                            <input class="form-control" id="email_address" type="email" name="email_address" placeholder="joeBloggs@gmail.com" id="emailAddress" required>
+                            <div class="form-group row">
+                                <label for="email_address" class="col-5 col-form-label">Email Address</label>
+                                <div class="col-7">
+                                <input class="form-control" id="email_address" type="email" name="email_address" placeholder="joeBloggs@gmail.com" required>
+                                </div>
+                            </div>  
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button class="common_btn" type="submit" value="Submit">Submit</button>
                             </div>
-                        </div>  
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="common_btn" type="submit" value="Submit">Submit</button>
-                        </div>
-                </form> 
+                    </form> 
+                </div>
             </div>
         </div>
     </div>

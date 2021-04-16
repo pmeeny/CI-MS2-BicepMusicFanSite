@@ -9,7 +9,7 @@
 - The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite)
 
 - The website was built with a responsive look and feel for desktop, tablet and mobile devices
-![Responsive site example](/assets/images/responsive_devices.png)
+![Responsive site example](/assets/images/responsive/responsive_devices.png)
 
 # UX
 ## Strategy

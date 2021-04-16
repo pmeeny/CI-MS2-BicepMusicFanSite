@@ -532,6 +532,10 @@
     font-weight: bold;
 }
 
+#legend_text{
+    font-size: 1rem;
+}
+
 /* ----- Media Queries ----- */
 /* --- Large Screen --- */
 @media screen and (max-width: 1024px) {

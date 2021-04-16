@@ -239,7 +239,8 @@ about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | 
 ### Wave Accessibility
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave_validation/index_wave_validation.jpg)
+index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.png)
+quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.png)
 
 <br>
 

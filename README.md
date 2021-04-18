@@ -42,14 +42,20 @@ The user stories for the website owner are described as follows:
 Desktop 
 - [Index](assets/wireframes/desktop/index_desktop.png)
 - [About](assets/wireframes/desktop/about_desktop.png)
+- [Events](assets/wireframes/desktop/events_desktop.png)
+- [Quiz](assets/wireframes/desktop/quiz_desktop.png)
 
 Tablet
 - [Index](assets/wireframes/tablet/index_tablet.png)
 - [About](assets/wireframes/tablet/about_tablet.png)
+- [Events](assets/wireframes/tablet/events_tablet.png)
+- [Quiz](assets/wireframes/tablet/quiz_tablet.png)
 
 Mobile
 - [Index](assets/wireframes/mobile/index_mobile.png)
 - [About](assets/wireframes/mobile/about_mobile.png)
+- [Events](assets/wireframes/mobile/events_mobile.png)
+- [Quiz](assets/wireframes/mobile/quiz_mobile.png)
  
 ## Surface
 ### Color Palette

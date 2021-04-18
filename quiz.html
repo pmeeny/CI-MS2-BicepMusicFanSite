@@ -70,7 +70,7 @@
     <!-- Quiz, questions and results -->
     <div id="quiz">
         <div class="container">
-            <h1 class="white-header1-text">Quiz</h1>
+            <h1 class="white-header1-text center-text">Quiz</h1>
             <p id="quiz-paragraph">Test your knowledge on BICEP with a quiz, there are ten questions in total, good luck!</p>
             <div class="container" id="quiz-holder">
                 <div id="quiz-header">
@@ -90,18 +90,21 @@
                 </div>
                 <div id="quiz_options">
                     <form id="quiz-form">
-                        <input type="radio" id="optionA" name="choices" value="a">
-                        <label id="optionA_label" class="option" for="optionA"></label><br>
-                     
-                        <input type="radio" id="optionB" name="choices" value="b">
-                        <label id="optionB_label" class="option" for="optionB"></label><br> 
+                        <fieldset>
+                            <legend id=legend_text>Choices:</legend>
+                            <input type="radio" id="optionA" name="choices" value="a">
+                            <label id="optionA_label" class="option" for="optionA"></label><br>
                         
-                        <input type="radio" id="optionC" name="choices" value="c">
-                        <label id="optionC_label" class="option" for="optionC"></label><br>
+                            <input type="radio" id="optionB" name="choices" value="b">
+                            <label id="optionB_label" class="option" for="optionB"></label><br> 
+                            
+                            <input type="radio" id="optionC" name="choices" value="c">
+                            <label id="optionC_label" class="option" for="optionC"></label><br>
 
-                        <input type="radio" id="optionD" name="choices" value="d">
-                        <label id="optionD_label" class="option" for="optionD"></label><br>
-                        <div id="error"></div>
+                            <input type="radio" id="optionD" name="choices" value="d">
+                            <label id="optionD_label" class="option" for="optionD"></label><br>
+                            <div id="error"></div>
+                        </fieldset>
                     </form>
                 </div>
                 <div class="row" id="submit-button-area">

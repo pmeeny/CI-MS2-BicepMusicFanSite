@@ -9,23 +9,24 @@
 - The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite)
 
 - The website was built with a responsive look and feel for desktop, tablet and mobile devices
-![Responsive site example](/assets/images/responsive_devices.png)
+![Responsive site example](/assets/images/responsive/responsive_devices.png)
 
 # UX
 ## Strategy
 ### Primary Goal
-- The primary goal of the website from the site owners perspective is 
-- The primary goal of the website from a site users perspective is 
+- The primary goal of the website from the site owners perspective is to showcase the duo's music on spotify, let fans know about upcoming events, let fans learn more about the djs duo and to subscribe to their mailing list 
+- The primary goal of the website from a site users perspective is to view and listen to the duo's music on spotify, learn about upcoming events, learn more about the djs duo and to subscribe to their mailing list 
 ## Structure
 I have structured the website into four pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
 
 1. Index: The index(homepage): This is the first page the user encounters, it contains
-2.
-3.
-4.
+2. About: The about page reads information from Spotify and displays the bands 2 albums with album information, track listing(with links), the dj's top tracks and the ability to listen to these top tracks on the page in a media player
+3. Events: The events page reads information from ticketmaster on all of biceps events with date, time, title, ticket information and a link to the google map of where the event will be
+4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
+As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation
 
 ### User Stories Website Owner
 The user stories for the website owner are described as follows: 
@@ -62,6 +63,7 @@ There are TBC colours in the color palette with a
 
 ### Typography
 The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Roboto font cannot be imported into the website correctly.
+This font is from the Google fonts library
 
 # Features
 The website has TBC
@@ -179,14 +181,14 @@ The time spent is displaying after each question
 The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
 
 2 allAnswers element was being overwritten if 2 questions had the same number
-The fix was to create a new counter, and to increment that seperatly when adding to the allAnswers list
+The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
 
 3 Top score was not displaying the current value, once a quiz has been completed
 Fix was to call getTopScore after setTopScore once 10 questions were complete
 
-4. Top score is not displayed after 1st attempt results page. Fix was to  $("#top_score").show() to unhide the div
+4. Top score is not displayed after 1st attempt results page. Fix was to  $("#top_score").show() to show the div
 
-5. After the mailing list mailing list modal closes the screen remains dark and the index isnt loading properly. Fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+5. After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. Fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
 
 <br>
 
@@ -239,7 +241,8 @@ about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | 
 ### Wave Accessibility
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave_validation/index_wave_validation.jpg)
+index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.png)
+quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.png)
 
 <br>
 

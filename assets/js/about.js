@@ -3,6 +3,9 @@ const clientSecret = "3290f175cc254cec8a7492fde67287ee";
 const bicepArtistID = "73A3bLnfnz5BoQjb4gNCga";
 var topTracks;
 
+/**
+ * []]
+ */
 var getToken = async () => {
         const result = await fetch("https://accounts.spotify.com/api/token", {
             method: "POST",
@@ -16,6 +19,9 @@ var getToken = async () => {
         return data;
     }
 
+/**
+ * []]
+ */
 var getTopTracks = async (token) => {
         const result = await fetch("https://api.spotify.com/v1/artists/" +
         "73A3bLnfnz5BoQjb4gNCga/top-tracks?market=IE", {
@@ -27,7 +33,9 @@ var getTopTracks = async (token) => {
         return data;
 }
 
-
+/**
+ * []]
+ */
 var getAlbums1 = async (token) => {
     const result = await fetch("https://api.spotify.com/v1/albums" +
         "/4psDRFbIlUM1KUb1omccXo?market=IE", {
@@ -39,6 +47,9 @@ var getAlbums1 = async (token) => {
     return data;
 }
 
+/**
+ * []]
+ */
 var getAlbums2 = async (token) => {
     const result = await fetch("https://api.spotify.com/v1/albums/" +
     "0EdtTRCl3J22AnWrNpH1w9?market=IE", {
@@ -50,21 +61,12 @@ var getAlbums2 = async (token) => {
     return data;
 }
 
-getToken().then(returnData =>{
-    getAlbums1(returnData.access_token).then(newData=> {
-        displayAlbum1(newData)
-    })
 
-    getAlbums2(returnData.access_token).then(newData=> {
-        displayTopTracks(newData);
-        displayAlbum2(newData)
-    })
-
-    getTopTracks(returnData.access_token).then(newData=> {
-        displayTopTracks(newData);
-    })
-});
-
+/**
+ * [displayAlbum1 displays the album info, track
+ * listings and image on the page]
+ * @param data [The json data]
+ */
 function displayAlbum1(data){
     var img= "<img alt=" +"bicep " +"album " + "cover"
         + " id=" + "album1" + " src="
@@ -86,8 +88,12 @@ function displayAlbum1(data){
         + "</span><br>");
 }
 
+/**
+ * [displayAlbum2 displays the album info, track
+ * listings and image on the page]
+ * @param data [The json data]
+ */
 function displayAlbum2(data){
-
     var img= "<img alt=" +"isles " +"album " + "cover"
         + " id=" + "album2" + " src="
     +data.images[0].url + " />";
@@ -111,6 +117,11 @@ function displayAlbum2(data){
                 + data.total_tracks + "</span><br>");
 }
 
+/**
+ * [displayTopTracks displays the top tracks
+ * on the page]
+ * @param data [The json data]
+ */
 function displayTopTracks(data){
     topTracks = data.tracks;
     for (var i = 0; i < topTracks.length; i++) {
@@ -119,14 +130,11 @@ function displayTopTracks(data){
     }
 }
 
-$(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      $("#toptracks .top-track-number").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-
+/**
+ * [topTrackClicked listens for when a top track
+ * div is clicked, and then plays the resultant mp3 clip]
+ * @param data [The json data]
+ */
 $(document).on("click", ".top-track-number", function topTrackClicked(data) {
     var currentselectedTrack = $(this).text();
     for(var i=0; i<topTracks.length; i++){
@@ -137,4 +145,22 @@ $(document).on("click", ".top-track-number", function topTrackClicked(data) {
             $("#track-preview")[0].load();
         }
     }
+});
+
+/**
+ * []]
+ */
+ getToken().then(returnData =>{
+    getAlbums1(returnData.access_token).then(newData=> {
+        displayAlbum1(newData)
+    })
+
+    getAlbums2(returnData.access_token).then(newData=> {
+        displayTopTracks(newData);
+        displayAlbum2(newData)
+    })
+
+    getTopTracks(returnData.access_token).then(newData=> {
+        displayTopTracks(newData);
+    })
 });

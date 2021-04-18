@@ -24,7 +24,7 @@ allAnswers[8] = [];
 allAnswers[9] = [];
 
 // Timer Variables
-var timer = document.getElementById("timer")
+var timer = document.getElementById("timer");
 var seconds = 0;
 var minutes = 0;
 var time;
@@ -40,7 +40,6 @@ function shuffleQuestions(){
  * [setTopScore Update sessionStorage with topScore key value]
  */
 function setTopScore(correctAnswers){
-  console.log(correctAnswers)
   var getTopScore = sessionStorage.getItem("topScore");
   if(correctAnswers > getTopScore){
     sessionStorage.setItem("topScore", correctAnswers);
@@ -72,7 +71,8 @@ function setTopScore(correctAnswers){
  */
 function displayQuestions(){
   $("#error").html("");
-  $('input[name="choices"]').prop("checked", false);
+  var inputName = "input[name=" + "choices" + "]";
+  $(inputName).prop("checked", false);
   if(position >= shuffledQuestions.length){
     $("#overall_result").html("You got "+correctAnswers
     +"/"+shuffledQuestions.length+" correct");
@@ -130,26 +130,27 @@ function updatePercentage(){
  * [displayQuizResults]
  */
 function displayQuizResults(){
-    for (var i in allAnswers) {
+    var i=0;
+    for (i in allAnswers) {
       if(allAnswers[i][3] == true){
-        $("#answers").append("<tr>")
+        $("#answers").append("<tr>");
         $("#answers").append("<td class='correct'>" +
         allAnswers[i][0] +"</td>");
         $("#answers").append("<td class='correct'>" +
         allAnswers[i][1] +"</td>");
         $("#answers").append("<td class='correct'>" +
         allAnswers[i][2] +"</td>");
-        $("#answers").append("</tr>")
+        $("#answers").append("</tr>");
       }
       else{
-        $("#answers").append("<tr>")
+        $("#answers").append("<tr>");
         $("#answers").append("<td class='incorrect'>" +
         allAnswers[i][0] +"</td>");
         $("#answers").append("<td class='incorrect'>" +
          allAnswers[i][1] +"</td>");
         $("#answers").append("<td class='incorrect'>" +
         allAnswers[i][2] +"</td>");
-        $("#answers").append("<tr>")
+        $("#answers").append("<tr>");
       }
     }
   }
@@ -259,8 +260,9 @@ function stopTimer() {
  * [submitAnswerClicked]
  */
  $("#submit_answer").click(function submitAnswerClicked(){
-  var radio_buttons = $("input[name='choices']");
-    if( radio_buttons.filter(':checked').length == 0){
+  var inputName = "input[name=" + "choices" + "]";
+  var radio_buttons = $(inputName);
+    if( radio_buttons.filter(":checked").length == 0){
       $("#error").html("Please select one of the options");
       return;
     }

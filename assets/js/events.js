@@ -47,7 +47,7 @@ function getEvents(page, callback) {
 /**
  * [getEventsForSubsequentPages makes an get
  * request using Ajax to return events with bicep keyword,
- * 2 events per page for subsequent pages, 
+ * 2 events per page for subsequent pages,
  * the result is stored in eventResults json object]
  * @param  page [The page of the results]
  * @param  callback [callback method]
@@ -271,8 +271,8 @@ $(document).on("click", ".event-page-number", function eventPageClicked() {
 
 /**
  * [Click event that will display
- * more information about the event(toggle enabled) 
- * if the more info button is clicked, 
+ * more information about the event(toggle enabled)
+ * if the more info button is clicked
  * displays the 1st entry on results]
  */
 $(".event-click-1").click(function(event) {
@@ -282,7 +282,7 @@ $(".event-click-1").click(function(event) {
 
 /**
  * [Click event that will display more
- * information about the event(toggle enabled) 
+ * information about the event(toggle enabled)
  * if the more info button is clicked, 2nd entry on results]
  */
 $(".event-click-2").click(function(event) {
@@ -291,7 +291,7 @@ $(".event-click-2").click(function(event) {
  });
 
  /**
- * [Listener to update events page when previous 
+ * [Listener to update events page when previous
  * link clicked]
  */
  $(document).on('click', "#previous", function previousButtonClicked() {
@@ -301,7 +301,7 @@ $(".event-click-2").click(function(event) {
 });
 
  /**
- * [Listener to update events page when next 
+ * [Listener to update events page when next
  * link clicked]
  */
 $(document).on('click', "#next", function nextButtonClicked() {

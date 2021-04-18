@@ -182,19 +182,11 @@ Below are the test results for testing the website requirements against a range 
 
 Bug Number | Comment |  Solution/Design decision |
 ------------ | ------------- | ------------- | 
-1 | TBC | TBC
-The time spent is displaying after each question
-The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
-
-2 allAnswers element was being overwritten if 2 questions had the same number
-The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
-
-3 Top score was not displaying the current value, once a quiz has been completed
-Fix was to call getTopScore after setTopScore once 10 questions were complete
-
-4. Top score is not displayed after 1st attempt results page. Fix was to  $("#top_score").show() to show the div
-
-5. After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. Fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+1 | The time spent is displaying after each question, not in total | The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
+2 | The allAnswers element was being overwritten if 2 questions had the same number | The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
+3 | The top score was not displaying the current value, once a quiz has been completed | The fix was to call getTopScore after setTopScore once 10 questions were complete
+4 | The top score is not displayed after 1st attempt results page | The fix was to  $("#top_score").show() to show the div
+5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
 
 <br>
 

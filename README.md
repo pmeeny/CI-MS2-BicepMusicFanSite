@@ -27,10 +27,30 @@ I have structured the website into four pages, each with clear, concise structur
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
 As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation
+As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link
+As a website user I can sign-up the the BICEP mailing list
+As a website user I can view track listing, album cover and album information about Biceps two albums
+As a website user I can listen to the dj's albums in spotify by clicking on a particular track
+As a website user I can view the top tracks for the DJ duo
+As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
+As a website user I can view upcoming events from ticketmaster with date, time, title, ticket and map information
+As a website user I can click a buy tickets link on an event, and this will open up the event on the ticketmaster website
+As a website user I can take a quiz of 10 questions on the DJ duo
+As a website user I can view a timer on the quiz
+As a website user I can view my top score for the browser session
+As a website user I can view the question number, and the correct and incorrect answer as I complete the question
+As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ### User Stories Website Owner
 The user stories for the website owner are described as follows: 
-
+As a website owner I want to display links to spotify, facebook, twitter and instagram pages via a link
+As a website owner I want to provide the ability for a user to sign-up to a mailing list
+As a website owner I want to display track listing, album cover and album information about Biceps two albums, and the ability to listen to these tracks in Spotify
+As a website owner I want to display top tracks for the dj duo and the ability to listen to these top tracks on the page
+As a website owner the top tracks displayed and clicking on one  will play a 30 second clip on a media player in the page
+As a website owner I want to display upcoming events from ticketmaster with date, time, title, ticket and map information
+As a website owner I want the ability for users to buy tickets link on an event, and this will open up the event on the ticketmaster website
+As a website owner I want to display a quiz for users, and that they can see their top score, a timer for the attempt and correct and incorrect answers, wit a summary of all answers
 
 ## Skeleton
 ### Wireframes
@@ -59,13 +79,16 @@ Mobile
  
 ## Surface
 ### Color Palette
-There are TBC colours in the color palette with a 
-- Primary colour of 
-- Secondary colour of 
+I have gone for a simple and minimal design for the website, with black and white font colours over a large hero image on all pages
+There are four colours in the color palette with a 
+- #FFFFFF - White colour for text on background images
+- #000000 - Black colour for text on a white background
+- #0062CC - Blue colour for buttons and links
+- rgba(255,255,255,.5) - Grey colour for not selected navbar icons and text
 
-![Responsive site example](/assets/images/color_palette.png)
+![Palette](/assets/images/color_palette.PNG)
 
-- I feel the primary and secondary colours complement each other very well, and I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
+- I feel the colours complement each other very well, and I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
 
 ### Typography
 The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Roboto font cannot be imported into the website correctly.
@@ -110,7 +133,7 @@ The website has TBC
 - Github (https://github.com/)
     - Github was used to store the project code in a repository
 
-- Guthub desktop
+- Guthub desktop (https://desktop.github.com/)
     - Github desktop was used to view and make commits into GIT
 
 - Microsoft VSCode (https://code.visualstudio.com/)
@@ -324,7 +347,7 @@ To run this project locally, you will need to clone the repository
 
 # Media
 - Wikipedia (https://wikepedia.com/)
-    - The text was used from Wikipedia
+    - The text on index and about was taken from the dj's Wikipedia page
 
  <br>
 

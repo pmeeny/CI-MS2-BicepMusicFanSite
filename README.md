@@ -1,3 +1,10 @@
+![Responsive site example](/assets/images/responsive/responsive_devices.png)
+
+View the live site here: [BICEP fan site](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
+
+<br>
+
+Table of Contents
 - [Project Overview](#project-overview)
 - [UX](#ux)
   * [Strategy](#strategy)
@@ -46,9 +53,9 @@
 - This project is a website for the music DJ duo "BICEP" for submission as milestone project 2 as part of the Code Institute - Diploma in Software Development (Full stack) course.
 - The website showcases the music DJ duo, their album information, event details and there is a quiz on the dj duo also.
 
-- The website is deployed using Github pages at the following url: [BICEP](https://pmeeny.github.io/CodeInstitute-MilestoneProject2-BicepMusicFanSite/)
+- The website is deployed using Github pages at the following url: [BICEP](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
 
-- The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite)
+- The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CI-MS2-BicepMusicFanSite)
 
 - The website was built with a responsive look and feel for desktop, tablet and mobile devices
 ![Responsive site example](/assets/images/responsive/responsive_devices.png)

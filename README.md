@@ -291,14 +291,14 @@ style.css | Passed, No errors found | [Results](assets/images/testing/css-valida
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-index.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-index.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-quiz.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-quiz.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-events.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-events.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
-about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/index)
+index.html (Desktop) | Performance: 98, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/index_desktop.JPG)
+index.html (Mobile) | Performance: 91, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/index_mobile.JPG)
+quiz.html (Desktop) | Performance: 96, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/quiz_desktop.JPG)
+quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/quiz_mobile.JPG)
+events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
+events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
+about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.jpg)
+about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_mobile.jpg)
 
 <br>
 

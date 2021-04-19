@@ -236,8 +236,10 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 110vh;
+    height:auto;
+    min-height:800px;
+    height:auto !important;        /* IE as it does not support min-height */
+    height:800px;                   /* IE as it does not support min-height */
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -260,8 +262,6 @@
     padding-top: 20px;
     padding-bottom: 40px;
     border-radius: 25px;
-    overflow:auto;
-    height: auto;
 }
 
 #event-header-text {
@@ -354,7 +354,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 1220px;
+    height:auto;
+    min-height:800px;
+    height:auto !important;        /* IE as it does not support min-height */
+    height:800px;                   /* IE as it does not support min-height */
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -449,7 +452,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height:auto;
+    min-height:800px;
+    height:auto !important;        /* IE as it does not support min-height */
+    height:800px;                   /* IE as it does not support min-height */
     width: 100%;
     padding-bottom: 30px;
     padding-top: 20px;
@@ -539,10 +545,6 @@
 /* ----- Media Queries ----- */
 /* --- Large Screen --- */
 @media screen and (max-width: 1024px) {
-    #all-events {
-        height: inherit;   
-    }
-
     #quiz {
         height: inherit;
     }
@@ -558,9 +560,6 @@
         display: none;
     }
 
-    #all-events {
-        height: inherit;    
-    }
 }
 
 /* --- Medium Screen --- */
@@ -617,9 +616,6 @@
         height: inherit;   
     }
 
-    #all-events {
-        height: inherit;   
-    }
     
     /* --- About Page --- */   
     #about {
@@ -655,10 +651,6 @@
 
 /* Extra X-SMALL SCREEN */
 @media screen and (max-width: 320px) {
-    #all-events {
-        height: 200vh;   
-    }
-
     /* --- About Page --- */   
     #about {
         height: inherit;  

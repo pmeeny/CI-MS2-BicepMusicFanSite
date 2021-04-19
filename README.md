@@ -1,3 +1,45 @@
+- [Project Overview](#project-overview)
+- [UX](#ux)
+  * [Strategy](#strategy)
+    + [Primary Goal](#primary-goal)
+  * [Structure](#structure)
+  * [Scope](#scope)
+    + [User Stories Potential or Existing Customer](#user-stories-potential-or-existing-customer)
+    + [User Stories Website Owner](#user-stories-website-owner)
+  * [Skeleton](#skeleton)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Color Palette](#color-palette)
+    + [Typography](#typography)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+    + [Feature 1](#feature-1)
+      - [Description](#description)
+      - [User Stories](#user-stories)
+    + [Feature 2](#feature-2)
+      - [Description](#description-1)
+      - [User Stories](#user-stories-1)
+  * [Features Left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Libraries and other resources](#libraries-and-other-resources)
+- [Testing](#testing)
+  * [Test Results](#test-results)
+    + [Feature 1](#feature-1-1)
+  * [Bugs found during the testing phase](#bugs-found-during-the-testing-phase)
+  * [Code Validators and Website Analysis](#code-validators-and-website-analysis)
+    + [HTML Markup Validation Service](#html-markup-validation-service)
+    + [CSS Validation Service](#css-validation-service)
+    + [Chrome Dev tools Lighthouse](#chrome-dev-tools-lighthouse)
+    + [Wave Accessibility](#wave-accessibility)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Content](#content)
+- [Media](#media)
+- [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Project Overview
 
@@ -177,7 +219,7 @@ The website has TBC
     - Used for generating a table of contents for this README
 
 # Testing
-The testing approach was manual, and testing was completed on the following browsers and device types
+The testing approach was manual and automated, and testing was completed on the following browsers and device types
 
 Device Number | Physical/Emulator | Device Name | Device Type | Browser | Version
 ------------ | ------------ | ------------- | ------------- | ------------- | -------------

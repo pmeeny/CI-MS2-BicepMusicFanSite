@@ -542,6 +542,23 @@
     font-size: 1rem;
 }
 
+/* ----- 404 error page ----- */
+#error-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:auto;
+    min-height:800px;
+    height:auto !important;        /* IE as it does not support min-height */
+    height:800px;                   /* IE as it does not support min-height */
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+
 /* ----- Media Queries ----- */
 /* --- Large Screen --- */
 @media screen and (max-width: 1024px) {

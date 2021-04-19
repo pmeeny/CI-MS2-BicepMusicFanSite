@@ -1,6 +1,7 @@
 //Events variables
 var page = 0;
 var eventResults;
+var google;
 
 /**
  * [getEvents makes an get request
@@ -106,15 +107,16 @@ function displayEvents(eventResults) {
         try {
             if(i==0){
                 $(".event-venue1").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
-                item.children(".event-url-1").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
-                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
-                initMap(venue, "map1");
+                item.children(".event-url-1").html("<a "+ "target=" +"_blank"+ " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
+                var venue1 = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
+                initMap(venue1, "map1");
             }
             else{
-                $(".event-venue2").text("Venue: " + events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
+                $(".event-venue2").text("Venue: "+ events[i]._embedded.venues[0].name+ " in " + events[i]._embedded.venues[0].city.name);
                 item.children(".event-url-2").html("<a " + "target=" +"_blank" + " href=" + events[i].url + ">" + "Buy Tickets" + "</a>");
-                var venue = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
-                initMap(venue, "map2");
+
+                var venue2 = events[i]._embedded.venues[0].name + " " + events[i]._embedded.venues[0].city.name;
+                initMap(venue2, "map2");
             }
         }catch (err) {
             console.log(err);
@@ -174,11 +176,11 @@ function displayPagination(eventResults) {
 
     for (var i = 0; i < numberofPages; i++) {
         if (i == 0) {
-            $("#event-pages").append('<div class="event-page-number">' + i + "</div>");
-            $(".event-page-number").addClass("selected")
+            $("#event-pages").append("<div class=" +"event-page-number" +">" + i + "</div>");
+            $(".event-page-number").addClass("selected");
 
         } else {
-            $("#event-pages").append('<div class="event-page-number">' + i + '</div>');
+            $("#event-pages").append("<div class=" +"event-page-number" +">" + i + "</div>");
         }
     }
 }
@@ -237,8 +239,8 @@ function updatePaginationWhenPageSelected() {
  * [Checks if the previous is available in the links object]
  */
 function isPrevAvailable() {
-    if (('prev' in eventResults._links)) {
-        return true
+    if (("prev" in eventResults._links)) {
+        return true;
     } else {
         return false;
     }
@@ -248,8 +250,8 @@ function isPrevAvailable() {
  * [Checks if the next is available in the links object]
  */
 function isNextAvailable() {
-    if (('next' in eventResults._links)) {
-        return true
+    if (("next" in eventResults._links)) {
+        return true;
     } else {
         return false;
     }
@@ -264,8 +266,9 @@ function isNextAvailable() {
 $(document).on("click", ".event-page-number", function eventPageClicked() {
     var currentselectedPage = $(this).text();
     page = currentselectedPage;
-    getEventsForSubsequentPages(currentselectedPage, updatePaginationWhenPageSelected)
-    $(".event-page-number").removeClass("selected")
+    getEventsForSubsequentPages(currentselectedPage,
+        updatePaginationWhenPageSelected);
+    $(".event-page-number").removeClass("selected");
     $(this).addClass("selected");
 });
 
@@ -294,22 +297,22 @@ $(".event-click-2").click(function(event) {
  * [Listener to update events page when previous
  * link clicked]
  */
- $(document).on('click', "#previous", function previousButtonClicked() {
-    $(".event-page-number").removeClass('selected')
-    $("#event-pages > div:nth-child(" + page + ")").addClass('selected');
-    getEventsForSubsequentPages(--page, updatePaginationWhenPreviousClicked)
+ $(document).on("click", "#previous", function previousButtonClicked() {
+    $(".event-page-number").removeClass("selected");
+    $("#event-pages > div:nth-child(" + page + ")").addClass("selected");
+    getEventsForSubsequentPages(--page,
+        updatePaginationWhenPreviousClicked);
 });
 
  /**
  * [Listener to update events page when next
  * link clicked]
  */
-$(document).on('click', "#next", function nextButtonClicked() {
-    console.log("Next button clicked")
-    getEventsForSubsequentPages(++page, updatePaginationWhenNextClicked)
-    cp = page + 1;
-    $(".event-page-number").removeClass('selected')
-    $("#event-pages > div:nth-child(" + cp + ")").addClass('selected');
+$(document).on("click", "#next", function nextButtonClicked() {
+    getEventsForSubsequentPages(++page, updatePaginationWhenNextClicked);
+    var cp = page + 1;
+    $(".event-page-number").removeClass("selected");
+    $("#event-pages > div:nth-child(" + cp + ")").addClass("selected");
 });
 
 getEvents(page, displayPagination);

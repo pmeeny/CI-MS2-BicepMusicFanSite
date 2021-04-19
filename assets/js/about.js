@@ -23,8 +23,7 @@ var getToken = async () => {
  * []]
  */
 var getTopTracks = async (token) => {
-        const result = await fetch("https://api.spotify.com/v1/artists/" +
-        "73A3bLnfnz5BoQjb4gNCga/top-tracks?market=IE", {
+        const result = await fetch("https://api.spotify.com/v1/artists/" + "73A3bLnfnz5BoQjb4gNCga/top-tracks?market=IE", {
         method: "GET",
             headers: { "Authorization" : "Bearer " + token}
 
@@ -37,11 +36,9 @@ var getTopTracks = async (token) => {
  * []]
  */
 var getAlbums1 = async (token) => {
-    const result = await fetch("https://api.spotify.com/v1/albums" +
-        "/4psDRFbIlUM1KUb1omccXo?market=IE", {
+    const result = await fetch("https://api.spotify.com/v1/albums" + "/4psDRFbIlUM1KUb1omccXo?market=IE", {
     method: "GET",
         headers: { "Authorization" : "Bearer " + token}
-
     });
     const data = await result.json();
     return data;
@@ -51,8 +48,7 @@ var getAlbums1 = async (token) => {
  * []]
  */
 var getAlbums2 = async (token) => {
-    const result = await fetch("https://api.spotify.com/v1/albums/" +
-    "0EdtTRCl3J22AnWrNpH1w9?market=IE", {
+    const result = await fetch("https://api.spotify.com/v1/albums/" + "0EdtTRCl3J22AnWrNpH1w9?market=IE", {
     method: "GET",
         headers: { "Authorization" : "Bearer " + token}
 
@@ -68,17 +64,13 @@ var getAlbums2 = async (token) => {
  * @param data [The json data]
  */
 function displayAlbum1(data){
-    var img= "<img alt=" +"bicep " +"album " + "cover"
-        + " id=" + "album1" + " src="
-    +data.images[0].url + " />";
+    var img= "<img alt=" +"bicep " +"album " + "cover" + " id=" + "album1" + " src=" +data.images[0].url + " />";
     $("#album1_image").append(img)
     var albumTracks = data.tracks.items;;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
-        $("#album1_tracks").append("<span>" + (i+1) + ". "
-        +  "<a" + " target=" + "_blank" + " href=" + href +">"
-        + track + "</a></span><br>");
+        $("#album1_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + " href=" + href +">" + track + "</a></span><br>");
     }
     $("#album1_info").append("<span>Name: " + data.name + "</span><br>");
     $("#album1_info").append("<span>Release Date: "

@@ -34,7 +34,6 @@ function getEvents(page, callback) {
         dataType: "json",
         success: function(json) {
             eventResults = json;
-            //console.log(ajaxResult);
             displayEvents(eventResults);
             callback(eventResults);
         },

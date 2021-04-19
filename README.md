@@ -265,9 +265,9 @@ I used https://validator.w3.org/
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 index.html | Passed, No errors found | [Results](assets/images/testing/html-validation/index_html_validation.jpg)
-about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.jpg)
-events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.jpg)
-quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.jpg)
+about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.JPG)
+events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.JPG)
+quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.JPG)
 
 <br>
 

@@ -22,6 +22,8 @@ allAnswers[6] = [];
 allAnswers[7] = [];
 allAnswers[8] = [];
 allAnswers[9] = [];
+var questions;
+var question;
 
 // Timer Variables
 var timer = document.getElementById("timer");
@@ -74,8 +76,7 @@ function displayQuestions(){
   var inputName = "input[name=" + "choices" + "]";
   $(inputName).prop("checked", false);
   if(position >= shuffledQuestions.length){
-    $("#overall_result").html("You got "+correctAnswers
-    +"/"+shuffledQuestions.length+" correct");
+    $("#overall_result").html("You got "+correctAnswers +"/"+shuffledQuestions.length+" correct");
     setTopScore(correctAnswers);
     displayTopScore();
     $("#test_status").hide();
@@ -99,8 +100,7 @@ updatePercentage();
  * [displayQuestions]
  */
 function displayNewQuestion(){
-  $("#test_status").html("Question "+(position+1)
-  +" of "+shuffledQuestions.length);
+  $("#test_status").html("Question "+(position+1)  +" of "+shuffledQuestions.length);
 
   question = questions[position].question;
   choiceOne = shuffledQuestions[position].a;
@@ -108,8 +108,7 @@ function displayNewQuestion(){
   choiceThree = shuffledQuestions[position].c;
   choiceFour = shuffledQuestions[position].d;
 
-  $("#question").html(position+1+ ". "
-  +"<span>"+question+"</span>");
+  $("#question").html(position+1+ ". " +"<span>"+question+"</span>");
   $("#optionA_label").html(choiceOne);
   $("#optionB_label").html(choiceTwo);
   $("#optionC_label").html(choiceThree);
@@ -236,9 +235,7 @@ function addTimerDetails() {
             minutes = 0;
         }
     }
-    timer.textContent = "Timer(MM:SS): "
-    + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")
-    + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    timer.textContent = "Timer(MM:SS): " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }
 

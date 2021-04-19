@@ -17,7 +17,7 @@ var getToken = async () => {
         });
         const data = await result.json();
         return data;
-    }
+    };
 
 /**
  * []]
@@ -30,7 +30,7 @@ var getTopTracks = async (token) => {
         });
         const data = await result.json();
         return data;
-}
+};
 
 /**
  * []]
@@ -42,7 +42,7 @@ var getAlbums1 = async (token) => {
     });
     const data = await result.json();
     return data;
-}
+};
 
 /**
  * []]
@@ -55,7 +55,7 @@ var getAlbums2 = async (token) => {
     });
     const data = await result.json();
     return data;
-}
+};
 
 
 /**
@@ -65,19 +65,17 @@ var getAlbums2 = async (token) => {
  */
 function displayAlbum1(data){
     var img= "<img alt=" +"bicep " +"album " + "cover" + " id=" + "album1" + " src=" +data.images[0].url + " />";
-    $("#album1_image").append(img)
-    var albumTracks = data.tracks.items;;
+    $("#album1_image").append(img);
+    var albumTracks = data.tracks.items;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
         $("#album1_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + " href=" + href +">" + track + "</a></span><br>");
     }
     $("#album1_info").append("<span>Name: " + data.name + "</span><br>");
-    $("#album1_info").append("<span>Release Date: "
-        + data.release_date + "</span><br>");
+    $("#album1_info").append("<span>Release Date: " + data.release_date + "</span><br>");
     $("#album1_info").append("<span>Label: " + data.label + "</span><br>");
-    $("#album1_info").append("<span>Track Count: " + data.total_tracks
-        + "</span><br>");
+    $("#album1_info").append("<span>Track Count: " + data.total_tracks + "</span><br>");
 }
 
 /**
@@ -86,27 +84,20 @@ function displayAlbum1(data){
  * @param data [The json data]
  */
 function displayAlbum2(data){
-    var img= "<img alt=" +"isles " +"album " + "cover"
-        + " id=" + "album2" + " src="
-    +data.images[0].url + " />";
-    $("#album2_image").append(img)
+    var img= "<img alt=" +"isles " +"album " + "cover" + " id=" + "album2" + " src=" +data.images[0].url + " />";
+    $("#album2_image").append(img);
 
     var albumTracks = data.tracks.items;
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
-        $("#album2_tracks").append("<span>" + (i+1) + ". "
-        +  "<a" + " target=" + "_blank" + " href=" + href +">"
-        + track + "</a></span><br>");
+        $("#album2_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + " href=" + href +">"+ track + "</a></span><br>");
     }
 
     $("#album2_info").append("<span>Name: " + data.name + "</span><br>");
-    $("#album2_info").append("<span>Release Date: "
-                + data.release_date + "</span><br>");
-    $("#album2_info").append("<span>Label: "
-                + data.label + "</span><br>");
-    $("#album2_info").append("<span>Track Count: "
-                + data.total_tracks + "</span><br>");
+    $("#album2_info").append("<span>Release Date: " + data.release_date + "</span><br>");
+    $("#album2_info").append("<span>Label: " + data.label + "</span><br>");
+    $("#album2_info").append("<span>Track Count: " + data.total_tracks + "</span><br>");
 }
 
 /**
@@ -117,8 +108,7 @@ function displayAlbum2(data){
 function displayTopTracks(data){
     topTracks = data.tracks;
     for (var i = 0; i < topTracks.length; i++) {
-        $("#toptracks").append("<div class=" + "top-track-number" + ">"
-        + topTracks[i].name + "</div>")
+        $("#toptracks").append("<div class=" + "top-track-number" + ">" + topTracks[i].name + "</div>");
     }
 }
 
@@ -131,8 +121,7 @@ $(document).on("click", ".top-track-number", function topTrackClicked(data) {
     var currentselectedTrack = $(this).text();
     for(var i=0; i<topTracks.length; i++){
        if(currentselectedTrack == topTracks[i].name){
-            $("#track-preview").html("<source src="
-            + topTracks[i].preview_url + " type=audio/mpeg>");
+            $("#track-preview").html("<source src="+ topTracks[i].preview_url + " type=audio/mpeg>");
             $("#track-preview").css("display", "inline-block");
             $("#track-preview")[0].load();
         }
@@ -144,15 +133,15 @@ $(document).on("click", ".top-track-number", function topTrackClicked(data) {
  */
  getToken().then(returnData =>{
     getAlbums1(returnData.access_token).then(newData=> {
-        displayAlbum1(newData)
-    })
+        displayAlbum1(newData);
+    });
 
     getAlbums2(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
-        displayAlbum2(newData)
-    })
+        displayAlbum2(newData);
+    });
 
     getTopTracks(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
-    })
+    });
 });

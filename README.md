@@ -187,6 +187,7 @@ Bug Number | Comment |  Solution/Design decision |
 3 | The top score was not displaying the current value, once a quiz has been completed | The fix was to call getTopScore after setTopScore once 10 questions were complete
 4 | The top score is not displayed after 1st attempt results page | The fix was to  $("#top_score").show() to show the div
 5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+6 | The dynamic about and quiz divs are not scaling properly on IE | The fix was to apply a more dynamic div:  https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456 with a height: auto as IE doesn't support min-height
 
 <br>
 
@@ -295,12 +296,14 @@ To run this project locally, you will need to clone the repository
 
 - The Image flipping css, used in the about.html page: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2
 
+- For IE support for a dynamic div I used the code in this url: https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456
+
 # Content
 - Wikipedia (https://wikepedia.com/)
     - The text on the about page is from wikpedia
 
 - Pixabay (https://pixabay.com/)
-    - The images on the home page are from pixabay
+    - The images on the home page, a and background on events, quiz and about pages are from pixabay
 
 - Font Awesome (http://fontawesome.com)    
     - The fonts on the footer and header are from font awesome
@@ -309,7 +312,13 @@ To run this project locally, you will need to clone the repository
     - The text font(Lato) is from google fonts
 
 - Spotify (http://www.spotify.com)
-    - The spotify logo is from spotify.com brand guidelines and content    
+    - The spotify logo is from spotify.com brand guidelines and content 
+
+- Spotify Web API (https://developer.spotify.com/documentation/web-api/)    
+    - The album information is read from the spotify API
+
+- Ticketmaster (https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)     
+    - The event information is read from the ticketmaster api
 
 <br>
 

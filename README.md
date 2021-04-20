@@ -75,7 +75,7 @@ I have structured the website into four pages, each with clear, concise structur
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
-As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation
+As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
 As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link
 As a website user I can sign-up the the BICEP mailing list
 As a website user I can view track listing, album cover and album information about Biceps two albums
@@ -146,17 +146,33 @@ This font is from the Google fonts library
 # Features
 The website has TBC
 ## Existing Features
-### Feature 1 
+### Feature 1 Navigation Bar
+#### Description
+This is the navigation bar of the website, and is displayed on the four web pages Index(Homepage), About, Events, Quiz. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
+
+#### User Stories
+User Story 1.1: As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
+
+### Feature 2 Index Page
 #### Description
 
 #### User Stories
 
 
-### Feature 2 
+### Feature 2 About Page
 #### Description
 
 #### User Stories
 
+### Feature 3 Events Page
+#### Description
+
+#### User Stories
+
+### Feature 4 Quiz Page
+#### Description
+
+#### User Stories
 
 ##  Features Left to Implement
 
@@ -318,6 +334,15 @@ about.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wav
 events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
 
 <br>
+
+### JSHint
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+about.js | TBC | TBC
+events.js | TBC | TBC
+quiz.js | TBC | TBC
+sendEmail.js | TBC | TBC
+questions.js | TBC | TBC
 
 # Deployment
 The website was developed using the Visual Studio Code IDE due to the extensibility of the Visual Studio Code IDE and I plan on using this IDE for future projects. 

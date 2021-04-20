@@ -4,7 +4,6 @@
  * @param contactForm [The contact form object]
  */
 function sendMail(contactForm) {
-
     emailjs.init("user_wxBAvg07l9uKgfV3nW0x3");
     emailjs.send("gmail", "bicep", {
         "from_name": contactForm.full_name.value,

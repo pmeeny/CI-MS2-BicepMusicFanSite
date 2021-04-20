@@ -1,6 +1,7 @@
+# BICEP fan site
+View the live site [here](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
+<br><br>
 ![Responsive site example](/assets/images/responsive/responsive_devices.png)
-
-View the live site here: [BICEP fan site](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
 
 <br>
 
@@ -58,7 +59,6 @@ Table of Contents
 - The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CI-MS2-BicepMusicFanSite)
 
 - The website was built with a responsive look and feel for desktop, tablet and mobile devices
-![Responsive site example](/assets/images/responsive/responsive_devices.png)
 
 # UX
 ## Strategy
@@ -74,32 +74,32 @@ I have structured the website into four pages, each with clear, concise structur
 4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
 ## Scope
 ### User Stories Potential or Existing Customer
-The user stories for the website user(a potential or existing customer) are described as follows: 
-As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation
-As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link
-As a website user I can sign-up the the BICEP mailing list
-As a website user I can view track listing, album cover and album information about Biceps two albums
-As a website user I can listen to the dj's albums in spotify by clicking on a particular track
-As a website user I can view the top tracks for the DJ duo
-As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
-As a website user I can view upcoming events from ticketmaster with date, time, title, ticket and map information
-As a website user I can click a buy tickets link on an event, and this will open up the event on the ticketmaster website
-As a website user I can take a quiz of 10 questions on the DJ duo
-As a website user I can view a timer on the quiz
-As a website user I can view my top score for the browser session
-As a website user I can view the question number, and the correct and incorrect answer as I complete the question
-As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
+- The user stories for the website user(a potential or existing customer) are described as follows: 
+- As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
+- As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link
+- As a website user I can sign-up the the BICEP mailing list
+- As a website user I can view track listing, album cover and album information about Biceps two albums
+- As a website user I can listen to the dj's albums in spotify by clicking on a particular track
+- As a website user I can view the top tracks for the DJ duo
+- As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
+- As a website user I can view upcoming events from ticketmaster with date, time, title, ticket and map information
+- As a website user I can click a buy tickets link on an event, and this will open up the event on the ticketmaster website
+- As a website user I can take a quiz of 10 questions on the DJ duo
+- As a website user I can view a timer on the quiz
+- As a website user I can view my top score for the browser session
+- As a website user I can view the question number, and the correct and incorrect answer as I complete the question
+- As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ### User Stories Website Owner
 The user stories for the website owner are described as follows: 
-As a website owner I want to display links to spotify, facebook, twitter and instagram pages via a link
-As a website owner I want to provide the ability for a user to sign-up to a mailing list
-As a website owner I want to display track listing, album cover and album information about Biceps two albums, and the ability to listen to these tracks in Spotify
-As a website owner I want to display top tracks for the dj duo and the ability to listen to these top tracks on the page
-As a website owner the top tracks displayed and clicking on one  will play a 30 second clip on a media player in the page
-As a website owner I want to display upcoming events from ticketmaster with date, time, title, ticket and map information
-As a website owner I want the ability for users to buy tickets link on an event, and this will open up the event on the ticketmaster website
-As a website owner I want to display a quiz for users, and that they can see their top score, a timer for the attempt and correct and incorrect answers, wit a summary of all answers
+- As a website owner I want to display links to spotify, facebook, twitter and instagram pages via a link
+- As a website owner I want to provide the ability for a user to sign-up to a mailing list
+- As a website owner I want to display track listing, album cover and album information about Biceps two albums, and the ability to listen to these tracks in Spotify
+- As a website owner I want to display top tracks for the dj duo and the ability to listen to these top tracks on the page
+- As a website owner the top tracks displayed and clicking on one  will play a 30 second clip on a media player in the page
+- As a website owner I want to display upcoming events from ticketmaster with date, time, title, ticket and map information
+- As a website owner I want the ability for users to buy tickets link on an event, and this will open up the event on the ticketmaster website
+- As a website owner I want to display a quiz for users, and that they can see their top score, a timer for the attempt and correct and incorrect answers, wit a summary of all answers
 
 ## Skeleton
 ### Wireframes
@@ -146,17 +146,41 @@ This font is from the Google fonts library
 # Features
 The website has TBC
 ## Existing Features
-### Feature 1 
+### Feature 1 Navigation Bar
+#### Description
+This is the navigation bar of the website, and is displayed on the four web pages Index(Homepage), About, Events, Quiz. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
+
+#### User Stories
+User Story 1.1: As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
+
+
+### Feature 2 Footer
+#### Description
+User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
+
+#### User Stories
+
+
+### Feature 3 Index Page
 #### Description
 
 #### User Stories
 
 
-### Feature 2 
+### Feature 4 About Page
 #### Description
 
 #### User Stories
 
+### Feature 5 Events Page
+#### Description
+
+#### User Stories
+
+### Feature 6 Quiz Page
+#### Description
+
+#### User Stories
 
 ##  Features Left to Implement
 
@@ -244,9 +268,71 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 Below are the test results for testing the website requirements against a range of browsers and devices
 
 
-### Feature 1 
+### Feature 2 Footer
+
+User Story | Test Case Steps | Expected Result | Screenshots
+------------ | ------------ | ------------- | ------------- 
+User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer| 1. Click on each of the index, events, about and quiz pages and scroll down to the footer <br> 2. Click on the spotify image <br> 3. Click on the instagram social icon <br> 4. Click on the twitter social icon <br> 5. Click on the facebook social icon | 1. The footer is displayed on each page <br> 2. The bicep spotify page opens in a new tab <br> 3. The bicep instagram page opens in a new tab  <br> 4. The bicep twitter page opens in a new tab <br> 5. The bicep facebook page opens in a new tab 
 
 
+### Feature 2 Quiz
+
+User Story | Test Case Steps | Expected Result | Screenshots
+------------ | ------------ | ------------- | ------------- 
+
+1. Complte quiz, get 8 out of 10 questions right
+expected: timer updates to correct value
+Question number updates for every question
+Results screens shows 8 questions correct, 2 incorrect, and the information
+A rigth answer is highlighted inn green as the quiz progrsses
+An incorrect  answer is highlighted inn green as the quiz progrsses
+Top score is updated to 8
+
+1. Complte quiz, the top score is displayed at 8
+get 10 out of 10 questions right
+expected: timer updates to correct value
+Question number updates for every question
+Results screens shows
+Top score is updated to 10
+
+Open quiz page, dont select a choice and click submit answer
+A message is displayed "Please select one of the options" is displayed
+
+
+### Feature Events
+
+User Story | Test Case Steps | Expected Result | Screenshots
+------------ | ------------ | ------------- | ------------- 
+Click on the events page
+10 events will be displayed over 5 pages
+On each page the following information will be displayed per event: Date, Time, Titlel Tickets
+Clickign on buy tickets will open the event in ticketmaster
+Clicking on the event will display the venue details and a google map
+Clicking on next will bring you to the next page
+Clicking on previous will bring you to the next page
+
+
+### Feature About
+
+User Story | Test Case Steps | Expected Result | Screenshots
+------------ | ------------ | ------------- | ------------- 
+Click on the about page
+2 albums are displayed
+album track listing is displayed
+album image is displayed
+clicking on album displays album info
+clicking on each track opens track in spotify in a new tab
+
+top tracks are displayed in a list
+clickign on each top track, plays a 30 second click in the media player in the page
+
+
+### Feature About
+
+User Story | Test Case Steps | Expected Result | Screenshots
+------------ | ------------ | ------------- | ------------- 
+Enter a url for a page that doesnt exist
+result is 404 page is displayed
 
 <br>
 
@@ -275,6 +361,7 @@ index.html | Passed, No errors found | [Results](assets/images/testing/html-vali
 about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.JPG)
 events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.JPG)
 quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.JPG)
+404.html | Passed, No errors found | [Results](assets/images/testing/html-validation/404_html_validation.JPG)
 
 <br>
 
@@ -305,7 +392,9 @@ quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, S
 events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
 events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
 about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.jpg)
-about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_mobile.jpg)
+about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/about_mobile.jpg)
+404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
+404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.jpg)
 
 <br>
 
@@ -316,17 +405,27 @@ index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wav
 quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.PNG)
 about.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/about_wave_validation.PNG)
 events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
+404.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/404_wave_validation.PNG)
 
 <br>
+
+### JSHint
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+about.js | TBC | TBC
+events.js | 0 errors and 1 warning | [Results](assets/images/testing/jshint/events_jshint.JPG)
+quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_jshint.JPG)
+sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
+questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
 
 # Deployment
 The website was developed using the Visual Studio Code IDE due to the extensibility of the Visual Studio Code IDE and I plan on using this IDE for future projects. 
 
-The source code is stored in GIT in the repo: pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite(master branch) 
+The source code is stored in GIT in the repo: pmeeny/CI-MS2-BicepMusicFanSite(master branch) 
 
 The website was deployed on GitHub pages (https://pages.github.com/) using the following steps
 1. Log to GitHub (https://wwww.github.com)
-2. Click the Repositories tab and select the repository pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite
+2. Click the Repositories tab and select the repository pmeeny/CI-MS2-BicepMusicFanSite
 3. In the menu, select Settings
 4. Scroll down to the GitHub Pages section
 5. Under source, select the master branch and save
@@ -334,11 +433,11 @@ The website was deployed on GitHub pages (https://pages.github.com/) using the f
 
 To run this project locally, you will need to clone the repository
 1. Login to GitHub (https://wwww.github.com)
-2. Select the repository pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite
-3. Click the Code button and copy the HTTPS url, for example: https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite.git
+2. Select the repository pmeeny/CI-MS2-BicepMusicFanSite
+3. Click the Code button and copy the HTTPS url, for example: https://github.com/pmeeny/CI-MS2-BicepMusicFanSite.git
 4. In your IDE, open a terminal and run the git clone command, for example 
 
-```git clone https://github.com/pmeeny/CodeInstitute-MilestoneProject2-BicepMusicFanSite.git```
+```git clone https://github.com/pmeeny/CI-MS2-BicepMusicFanSite.git```
 
 5. The repository will now be cloned in your workspace
 

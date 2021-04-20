@@ -2,6 +2,7 @@
 var page = 0;
 var eventResults;
 var google;
+const apiKey = "zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z";
 
 /**
  * [getEvents makes an get request
@@ -29,7 +30,7 @@ function getEvents(page, callback) {
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?" +
-        "keyword=bicep&apikey=zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z" +
+        "keyword=bicep&apikey=" + apiKey +
         "&size=2&locale=*&page=" + page,
         dataType: "json",
         success: function(json) {
@@ -72,7 +73,7 @@ function getEventsForSubsequentPages(page, callback) {
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?" +
-        "keyword=bicep&apikey=zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z" +
+        "keyword=bicep&apikey=" + apiKey +
         "&size=2&locale=*&page=" + page,
         dataType: "json",
         success: function(json) {

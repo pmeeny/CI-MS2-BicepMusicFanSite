@@ -1,6 +1,8 @@
 const clientId = "bb60c805a05440999011d33d17846c61";
 const clientSecret = "3290f175cc254cec8a7492fde67287ee";
 const bicepArtistID = "73A3bLnfnz5BoQjb4gNCga";
+const albumOneID = "4psDRFbIlUM1KUb1omccXo"; 
+const albumTwoID = "0EdtTRCl3J22AnWrNpH1w9";
 var topTracks;
 
 /**
@@ -23,7 +25,7 @@ var getToken = async () => {
  * []]
  */
 var getTopTracks = async (token) => {
-        const result = await fetch("https://api.spotify.com/v1/artists/" + "73A3bLnfnz5BoQjb4gNCga/top-tracks?market=IE", {
+        const result = await fetch("https://api.spotify.com/v1/artists/" + bicepArtistID + "/top-tracks?market=IE", {
         method: "GET",
             headers: { "Authorization" : "Bearer " + token}
 
@@ -36,7 +38,7 @@ var getTopTracks = async (token) => {
  * []]
  */
 var getAlbums1 = async (token) => {
-    const result = await fetch("https://api.spotify.com/v1/albums" + "/4psDRFbIlUM1KUb1omccXo?market=IE", {
+    const result = await fetch("https://api.spotify.com/v1/albums/" + albumOneID + "?market=IE", {
     method: "GET",
         headers: { "Authorization" : "Bearer " + token}
     });
@@ -48,7 +50,7 @@ var getAlbums1 = async (token) => {
  * []]
  */
 var getAlbums2 = async (token) => {
-    const result = await fetch("https://api.spotify.com/v1/albums/" + "0EdtTRCl3J22AnWrNpH1w9?market=IE", {
+    const result = await fetch("https://api.spotify.com/v1/albums/" + albumTwoID + "?market=IE", {
     method: "GET",
         headers: { "Authorization" : "Bearer " + token}
 

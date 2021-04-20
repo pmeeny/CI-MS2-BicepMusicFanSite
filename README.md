@@ -333,9 +333,9 @@ quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, S
 events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
 events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
 about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.jpg)
-about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_mobile.jpg)
-404.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/404_desktop.jpg)
-404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/404_mobile.jpg)
+about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/about_mobile.jpg)
+404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
+404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.jpg)
 
 <br>
 

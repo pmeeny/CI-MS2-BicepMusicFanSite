@@ -1,4 +1,5 @@
 # BICEP fan site
+Bicep are an electronic music production and DJ duo from Belfast, Northern Ireland, consisting of Andrew Ferguson and Matthew McBriar. This is a fan page for the DJ duo.
 View the live site [here](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
 <br><br>
 ![Responsive site example](/assets/images/responsive/responsive_devices.png)
@@ -74,20 +75,27 @@ I have structured the website into four pages, each with clear, concise structur
 4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
 ## Scope
 ### User Stories Potential or Existing Customer
-- The user stories for the website user(a potential or existing customer) are described as follows: 
-- As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
-- As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link
-- As a website user I can sign-up the the BICEP mailing list
-- As a website user I can view track listing, album cover and album information about Biceps two albums
+The user stories for the website user(a potential or existing customer) are described as follows: 
+- As a website user the navigation bar is displayed with a logo on the Index, About, Events and Quiz pages for easy navigation
+- As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the footer
+- As a website user I can access the About Page by clicking on a link on the index(homepage) page
+- As a website user I can access the Events Page by clicking on a link on the index(homepage) page
+- As a website user I can access the Quiz Page by clicking on a link on the index(homepage) page
+- As a website user I can sign-up to the BICEP email list by clicking on a link on the index(homepage) page, entering my full name and email address and clicking the Submit button on the modal screen to Submit or Close to close the modal
+- As a website user I can view track listing, album cover image and album about Biceps two albums
+- As a website user I can view album information when I hover over an album image
 - As a website user I can listen to the dj's albums in spotify by clicking on a particular track
 - As a website user I can view the top tracks for the DJ duo
 - As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
-- As a website user I can view upcoming events from ticketmaster with date, time, title, ticket and map information
-- As a website user I can click a buy tickets link on an event, and this will open up the event on the ticketmaster website
+- As a website user I can view upcoming events from ticketmaster with date, time, title, ticket purchase information
+- As a website user I can click next and previous on the event pages and select a particular page, the events on that page will be displayed
+- - As a website user I can click the Buy Tickets link for an event and it will open up the event in ticketmaster in a new tab 
+- As a website user I can click on an event and view the event venue name and google map information
+As a website user if I enter in an incorrect url or page, I will be presented with a 404 page with consistent header and footer
 - As a website user I can take a quiz of 10 questions on the DJ duo
 - As a website user I can view a timer on the quiz
 - As a website user I can view my top score for the browser session
-- As a website user I can view the question number, and the correct and incorrect answer as I complete the question
+- As a website user I can view the question number, and the correct(green color) and incorrectly selected answer(red color) is displayed as I complete the question
 - As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ### User Stories Website Owner
@@ -144,46 +152,97 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 This font is from the Google fonts library
 
 # Features
-The website has TBC
+The website has five webpages consisting of seven distinct features and they are described below
 ## Existing Features
 ### Feature 1 Navigation Bar
 #### Description
-This is the navigation bar of the website, and is displayed on the four web pages Index(Homepage), About, Events, Quiz. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
+This is the navigation bar of the website, and is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
 
 #### User Stories
-User Story 1.1: As a website user the navigation bar is displayed on the Index, About, Events and Quiz pages for easy navigation with a logo
-
+- User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events and Quiz pages for easy navigation
 
 ### Feature 2 Footer
 #### Description
-
+The footer is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. It contains links to the djs spotify, facebook, twitter and instagram pages
 
 #### User Stories
-User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
+- User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
 
 ### Feature 3 Index Page
 #### Description
+The index page contains the header, footer, hero image and hero text and 4 image links to the About, Events, Quiz pages and mailing list modal
+The mailing list modal consists of two fields(full name and email address). When the user enters their information and clicks Submit, the EmailJS API is called to send an email to the user. The email template was configured in Email JS.
+![Mailing List](/assets/images/readme/mailinglist.PNG)
+
 
 #### User Stories
-
+- User Story 3.1: As a website user I can access the About Page by clicking on a link on the index(homepage) page
+- User Story 3.2: As a website user I can access the Events Page by clicking on a link on the index(homepage) page 
+- User Story 3.3: As a website user I can access the Quiz Page by clicking on a link on the index(homepage) page
+- User Story 3.4: As a website user I can sign-up to the BICEP email list by clicking on a link on the index(homepage) page, entering my full name and email address and clicking the Submit button on the modal screen to Submit or Close to close the modal
 
 ### Feature 4 About Page
 #### Description
+- The About page has 3 main sections. The first section is some about text taken from the dj's wikipedia page.
+- The 2nd and 3rd section read information from the spotify api and display it on the screen. The javascript to do this is stored in the about.js file.
+- The first api call is a fetch api call to get a token `"https://accounts.spotify.com/api/token"`. A clientID and clientSecret is passed into the call, and a token is returned, that is used for future spotify api calls in the browsers session. All calls made to spotify return a json object. This object is then parsed and its contents are displayed on the page.
+- The second section displays information about the 2 BICEP albums.
+![Two albums](/assets/images/readme/two_albums.PNG)
+- The album image cover, and track listing is displayed on screen for each album. The token acquired is used to make two spotify api calls: `https://api.spotify.com/v1/albums/` (one for each album id) Each track is a url to that track in Spotify. When the user hovers over the album image cover, the image flips to display album information: name, release date, label, track count.
+![Album information](/assets/images/readme/album_info.PNG)
+- The third section displays the top tracks for the artist. Once again a subsequent call is made to the spotify api using the token acquired. The call is `"https://api.spotify.com/v1/artists/" + bicepArtistID + "/top-tracks?market=IE"`
+- When a track is clicked, a 30 second snippet automatically starts playing in the media player embedded on the page. 
+![Top Track](/assets/images/readme/top_track.PNG)
 
 #### User Stories
+- User Story 4.1: As a website user I can view track listing, album cover image and album about Biceps two albums
+- User Story 4.2: As a website user I can view album information when I hover over an album image
+- User Story 4.2: As a website user I can listen to the dj's albums tracks in a new tab in spotify by clicking on a particular track
+- User Story 4.3: As a website user I can view the top tracks for the DJ duo
+- User Story 4.4: As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
 
 ### Feature 5 Events Page
 #### Description
+- The event page uses the ticketmaster and google map and geocoding apis's. The javascript to do this is stored in the events.js file.
+- An API key was setup for both platforms(ticketmaster and google)
+- The main ticketmaster api call is `"https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=MYAPIKEY&size=2&locale=*&page=page` and is made using Ajax. Thsi returns a json object that is then parsed and its relevant contents displayed on the events page.
+- Each event is displayed with its date, time, title, and ticket purchase information.
+- Clicking an event displays the venue, that venue text is then passed into the google maps api and google geocoding api to then display a google map of the location, the function written to do this is `geocodeAddress(geocoder, map, address)`
+- Pagination is also a feature of this page with 2 events loaded per page, and next, previous links, and the ability to click on a page number and display events for that page.
+![Events](/assets/images/readme/events.PNG)
 
 #### User Stories
+-User Story 5.1: As a website user I can view upcoming events from ticketmaster with date, time, title, ticket purchase information
+-User Story 5.2: As a website user I can click next and previous on the event pages and select a particular page, the events on that page will be displayed
+- User Story 5.3: As a website user I can click the Buy Tickets link for an event and it will open up the event in ticketmaster in a new tab 
+- User Story 5.4: As a website user I can click on an event and view the event venue name and google map information
 
-### Feature 6 Quiz Page
+### Feature 6 404 Page
 #### Description
-
+The 404 page is displayed if the user enters a url that does not exist. The 404 page has a footer, header and text to ask the user are they sure they entered the correct url
+![404 Page](/assets/images/readme/404.PNG)
 #### User Stories
+- User Story 6.1: As a website user if I enter in an incorrect url or page, I will be presented with a 404 page with consistent header and footer
+
+### Feature 7 Quiz Page
+#### Description
+- The quiz page is an interactive quiz consisting of 10 questions. The questions are stored in the questions.js javascript file, and the quiz functionality is in the javascript file quiz.
+![Quiz](/assets/images/readme/quiz.PNG)
+- As the user selects their answer and clicks submit, the correct answer is highligted in green, and the incrrectly selected answer is highlighted in red.
+- When all questions are answered, a summary page is displayed showing the correct and incorrect answers the user submitted.
+![Results and Top Score](/assets/images/readme/results.PNG)
+- A timer starts when the quiz starts and stops after the last question.
+- A percentage bar displays the progress of the user
+- The users top score is displayed, and updated whe the user gets a top score. This information is stored in the browsers sesssion storage: `sessionStorage.getItem("topScore")`
+#### User Stories
+- User Story 7.1: As a website user I can take a quiz of 10 questions on the DJ duo
+- User Story 7.2: As a website user I can view a timer on the quiz
+- User Story 7.3: As a website user I can view my top score for the browser session
+- User Story 7.4: As a website user I can view the question number, and the correct(green color) and incorrectly selected answer(red color) is highlighted as I complete the question
+- User Story 7.5: As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ##  Features Left to Implement
-
+- I am content with what was implemented. The site is a responsive interactive one utilising a number of external API's
 
 # Technologies Used
 ## Languages 
@@ -368,7 +427,7 @@ To run this project locally, you will need to clone the repository
 
 - For the hero video and text overlay on the index.html page, I used the code with some modifications from the w3schools website: https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 
-- I use a number of Bootstrap components and the source code in the examples: Navbar, Carousel, Modal, Collapse in the four webpages
+- I use a number of Bootstrap components and the source code in the examples: Navbar, Modal in the five webpages
     - https://getbootstrap.com/docs/4.6/components/navbar/
     - https://getbootstrap.com/docs/4.6/components/modal/
 

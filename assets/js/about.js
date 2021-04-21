@@ -72,7 +72,7 @@ function displayAlbum1(data){
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
-        $("#album1_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + " href=" + href +">" + track + "</a></span><br>");
+        $("#album1_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + "rel=" +"noreferrer" + " href=" + href +">" + track + "</a></span><br>");
     }
     $("#album1_info").append("<span>Name: " + data.name + "</span><br>");
     $("#album1_info").append("<span>Release Date: " + data.release_date + "</span><br>");
@@ -93,7 +93,7 @@ function displayAlbum2(data){
     for(var i=0; i<albumTracks.length; i++){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
-        $("#album2_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + " href=" + href +">"+ track + "</a></span><br>");
+        $("#album2_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + "rel=" +"noreferrer" + "href=" + href +">"+ track + "</a></span><br>");
     }
 
     $("#album2_info").append("<span>Name: " + data.name + "</span><br>");

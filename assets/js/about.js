@@ -1,3 +1,5 @@
+/*​jshint esversion: 8 */
+
 const clientId = "bb60c805a05440999011d33d17846c61";
 const clientSecret = "3290f175cc254cec8a7492fde67287ee";
 const bicepArtistID = "73A3bLnfnz5BoQjb4gNCga";

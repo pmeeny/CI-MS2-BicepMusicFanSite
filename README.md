@@ -22,25 +22,39 @@ Table of Contents
     + [Typography](#typography)
 - [Features](#features)
   * [Existing Features](#existing-features)
-    + [Feature 1](#feature-1)
+    + [Feature 1 Navigation Bar](#feature-1-navigation-bar)
       - [Description](#description)
       - [User Stories](#user-stories)
-    + [Feature 2](#feature-2)
+    + [Feature 2 Footer](#feature-2-footer)
       - [Description](#description-1)
       - [User Stories](#user-stories-1)
+    + [Feature 3 Index Page](#feature-3-index-page)
+      - [Description](#description-2)
+      - [User Stories](#user-stories-2)
+    + [Feature 4 About Page](#feature-4-about-page)
+      - [Description](#description-3)
+      - [User Stories](#user-stories-3)
+    + [Feature 5 Events Page](#feature-5-events-page)
+      - [Description](#description-4)
+      - [User Stories](#user-stories-4)
+    + [Feature 6 404 Page](#feature-6-404-page)
+      - [Description](#description-5)
+      - [User Stories](#user-stories-5)
+    + [Feature 7 Quiz Page](#feature-7-quiz-page)
+      - [Description](#description-6)
+      - [User Stories](#user-stories-6)
   * [Features Left to Implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Libraries and other resources](#libraries-and-other-resources)
 - [Testing](#testing)
-  * [Test Results](#test-results)
-    + [Feature 1](#feature-1-1)
   * [Bugs found during the testing phase](#bugs-found-during-the-testing-phase)
   * [Code Validators and Website Analysis](#code-validators-and-website-analysis)
     + [HTML Markup Validation Service](#html-markup-validation-service)
     + [CSS Validation Service](#css-validation-service)
     + [Chrome Dev tools Lighthouse](#chrome-dev-tools-lighthouse)
     + [Wave Accessibility](#wave-accessibility)
+    + [JSHint](#jshint)
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Content](#content)
@@ -67,16 +81,17 @@ Table of Contents
 - The primary goal of the website from the site owners perspective is to showcase the duo's music on spotify, let fans know about upcoming events, let fans learn more about the djs duo and to subscribe to their mailing list 
 - The primary goal of the website from a site users perspective is to view and listen to the duo's music on spotify, learn about upcoming events, learn more about the djs duo and to subscribe to their mailing list 
 ## Structure
-I have structured the website into four pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
+I have structured the website into five pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
 
 1. Index: The index(homepage): This is the first page the user encounters, it contains
 2. About: The about page reads information from Spotify and displays the bands 2 albums with album information, track listing(with links), the dj's top tracks and the ability to listen to these top tracks on the page in a media player
 3. Events: The events page reads information from ticketmaster on all of biceps events with date, time, title, ticket information and a link to the google map of where the event will be
 4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
+5. 404 page with a consistent header and footer that is displayed if the user enteres in an incorrect urlwhen accessing the site.
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
-- As a website user the navigation bar is displayed with a logo on the Index, About, Events and Quiz pages for easy navigation
+- As a website user the navigation bar is displayed with a logo on the Index, About, Events, 404 and Quiz pages for easy navigation
 - As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the footer
 - As a website user I can access the About Page by clicking on a link on the index(homepage) page
 - As a website user I can access the Events Page by clicking on a link on the index(homepage) page
@@ -159,7 +174,7 @@ The website has five webpages consisting of seven distinct features and they are
 This is the navigation bar of the website, and is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
 
 #### User Stories
-- User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events and Quiz pages for easy navigation
+- User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events, 404 and Quiz pages for easy navigation
 
 ### Feature 2 Footer
 #### Description
@@ -242,7 +257,8 @@ The 404 page is displayed if the user enters a url that does not exist. The 404 
 - User Story 7.5: As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ##  Features Left to Implement
-- I am content with what was implemented. The site is a responsive interactive one utilising a number of external API's
+- I am content with what was implemented. The site is a responsive interactive one utilising a number of external API's, however in the cases of using the spotify and ticketmaster api's, I could have used other calls, and then displayed more infroamtion about the artists music or ticketmaster events
+- A search area for the whole website in particular the events page
 
 # Technologies Used
 ## Languages 
@@ -369,8 +385,8 @@ quiz.html (Desktop) | Performance: 96, Accessibility: 100, Best practices: 100, 
 quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/quiz_mobile.JPG)
 events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
 events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
-about.html (Desktop) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.jpg)
-about.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/about_mobile.jpg)
+about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.PNG)
+about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_mobile.PNG)
 404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
 404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.jpg)
 
@@ -390,12 +406,14 @@ events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wa
 ### JSHint
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-about.js | TBC | TBC
+about.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/about_jshint.PNG)
 events.js | 0 errors and 1 warning | [Results](assets/images/testing/jshint/events_jshint.JPG)
 quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_jshint.JPG)
 sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
 questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
 
+- I have analysed the warning in events.js, and consider it not to be a serious issue
+<br>
 # Deployment
 The website was developed using the Visual Studio Code IDE due to the extensibility of the Visual Studio Code IDE and I plan on using this IDE for future projects. 
 
@@ -420,6 +438,9 @@ To run this project locally, you will need to clone the repository
 5. The repository will now be cloned in your workspace
 
 # Credits
+- In the file events.js, I built on a tutorial that described connecting to the ticketmaster api, and parsing the json data that is returned: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html
+
+- In the file about.js, I built on a tutorial that described using the spotify api to return json data: https://developer.spotify.com/documentation/web-api/libraries/
 
 - For the social media icons in the footer, I used the code with some modifications from the Code Institute, CV project, reference: https://github.com/Code-Institute-Org/ucd-resume
 
@@ -472,7 +493,7 @@ To run this project locally, you will need to clone the repository
 <br>
 
 # Media
-- Wikipedia (https://wikepedia.com/)
+- Wikipedia (https://wikipedia.com/)
     - The text on index and about was taken from the dj's Wikipedia page
 
  <br>

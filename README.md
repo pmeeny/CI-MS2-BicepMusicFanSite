@@ -227,14 +227,14 @@ The mailing list modal consists of two fields(full name and email address). When
 ![Events](/assets/images/readme/events.PNG)
 
 #### User Stories
--User Story 5.1: As a website user I can view upcoming events from ticketmaster with date, time, title, ticket purchase information
--User Story 5.2: As a website user I can click next and previous on the event pages and select a particular page, the events on that page will be displayed
+- User Story 5.1: As a website user I can view upcoming events from ticketmaster with date, time, title, ticket purchase information
+- User Story 5.2: As a website user I can click next and previous on the event pages and select a particular page, the events on that page will be displayed
 - User Story 5.3: As a website user I can click the Buy Tickets link for an event and it will open up the event in ticketmaster in a new tab 
 - User Story 5.4: As a website user I can click on an event and view the event venue name and google map information
 
 ### Feature 6 404 Page
 #### Description
-The 404 page is displayed if the user enters a url that does not exist. The 404 page has a footer, header and text to ask the user are they sure they entered the correct url
+- The 404 page is displayed if the user enters a url that does not exist. The 404 page has a footer, header and text to ask the user are they sure they entered the correct url
 ![404 Page](/assets/images/readme/404.PNG)
 #### User Stories
 - User Story 6.1: As a website user if I enter in an incorrect url or page, I will be presented with a 404 page with consistent header and footer
@@ -252,14 +252,13 @@ The 404 page is displayed if the user enters a url that does not exist. The 404 
 #### User Stories
 - User Story 7.1: As a website user I can take a quiz of 10 questions on the DJ duo
 - User Story 7.2: As a website user I can view a timer on the quiz
-- User Story 7.3: As a website user I can view my top score for the browser session
+- User Story 7.3: As a website user I can view my current quiz score and top score for the browser session
 - User Story 7.4: As a website user I can view the question number, and the correct(green color) and incorrectly selected answer(red color) is highlighted as I complete the question
 - User Story 7.5: As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ##  Features Left to Implement
 - I am content with what was implemented. The site is a responsive interactive website using a number of external API's, however in the cases of using the spotify and ticketmaster API's, I could have used other calls, and then displayed more information about the artists music or ticketmaster events.
 - A search area for the whole website in particular the events page would be a useful addition to add
-- A unit test framework like Mocha, Jest or Jasmine, I dec
 
 # Technologies Used
 ## Languages 

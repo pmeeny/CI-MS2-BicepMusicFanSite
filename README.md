@@ -87,7 +87,7 @@ I have structured the website into five pages, each with clear, concise structur
 2. About: The about page reads information from Spotify and displays the bands 2 albums with album information, track listing(with links), the dj's top tracks and the ability to listen to these top tracks on the page in a media player
 3. Events: The events page reads information from ticketmaster on all of biceps events with date, time, title, ticket information and a link to the google map of where the event will be
 4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
-5. 404 page with a consistent header and footer that is displayed if the user enteres in an incorrect urlwhen accessing the site.
+5. 404 page with a consistent header and footer that is displayed if the user enters in an incorrect url when accessing the site.
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
@@ -220,7 +220,7 @@ The mailing list modal consists of two fields(full name and email address). When
 #### Description
 - The event page uses the ticketmaster and google map and geocoding apis's. The javascript to do this is stored in the events.js file.
 - An API key was setup for both platforms(ticketmaster and google)
-- The main ticketmaster api call is `"https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=MYAPIKEY&size=2&locale=*&page=page` and is made using Ajax. Thsi returns a json object that is then parsed and its relevant contents displayed on the events page.
+- The main ticketmaster api call is `"https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=MYAPIKEY&size=2&locale=*&page=page` and is made using Ajax. This returns a json object that is then parsed and its relevant contents displayed on the events page.
 - Each event is displayed with its date, time, title, and ticket purchase information.
 - Clicking an event displays the venue, that venue text is then passed into the google maps api and google geocoding api to then display a google map of the location, the function written to do this is `geocodeAddress(geocoder, map, address)`
 - Pagination is also a feature of this page with 2 events loaded per page, and next, previous links, and the ability to click on a page number and display events for that page.
@@ -243,12 +243,12 @@ The 404 page is displayed if the user enters a url that does not exist. The 404 
 #### Description
 - The quiz page is an interactive quiz consisting of 10 questions. The questions are stored in the questions.js javascript file, and the quiz functionality is in the javascript file quiz.
 ![Quiz](/assets/images/readme/quiz.PNG)
-- As the user selects their answer and clicks submit, the correct answer is highligted in green, and the incrrectly selected answer is highlighted in red.
+- As the user selects their answer and clicks submit, the correct answer is highlighted in green, and the incorrectly selected answer is highlighted in red.
 - When all questions are answered, a summary page is displayed showing the correct and incorrect answers the user submitted.
 ![Results and Top Score](/assets/images/readme/results.PNG)
 - A timer starts when the quiz starts and stops after the last question.
 - A percentage bar displays the progress of the user
-- The users top score is displayed, and updated whe the user gets a top score. This information is stored in the browsers sesssion storage: `sessionStorage.getItem("topScore")`
+- The users top score is displayed, and updated whe the user gets a top score. This information is stored in the browsers session storage: `sessionStorage.getItem("topScore")`
 #### User Stories
 - User Story 7.1: As a website user I can take a quiz of 10 questions on the DJ duo
 - User Story 7.2: As a website user I can view a timer on the quiz
@@ -257,8 +257,9 @@ The 404 page is displayed if the user enters a url that does not exist. The 404 
 - User Story 7.5: As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
 
 ##  Features Left to Implement
-- I am content with what was implemented. The site is a responsive interactive one utilising a number of external API's, however in the cases of using the spotify and ticketmaster api's, I could have used other calls, and then displayed more infroamtion about the artists music or ticketmaster events
-- A search area for the whole website in particular the events page
+- I am content with what was implemented. The site is a responsive interactive website using a number of external API's, however in the cases of using the spotify and ticketmaster API's, I could have used other calls, and then displayed more information about the artists music or ticketmaster events.
+- A search area for the whole website in particular the events page would be a useful addition to add
+- A unit test framework like Mocha, Jest or Jasmine, I dec
 
 # Technologies Used
 ## Languages 
@@ -371,7 +372,7 @@ I used https://jigsaw.w3.org/css-validator/
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.jpg)
+style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.JPG)
 
 ### Chrome Dev tools Lighthouse 
 
@@ -385,10 +386,10 @@ quiz.html (Desktop) | Performance: 96, Accessibility: 100, Best practices: 100, 
 quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/quiz_mobile.JPG)
 events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
 events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
-about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse/lighthouse-testing/about_desktop.PNG)
+about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_desktop.PNG)
 about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_mobile.PNG)
 404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
-404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.jpg)
+404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.JPG)
 
 <br>
 
@@ -414,6 +415,7 @@ questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/
 
 - I have analysed the warning in events.js, and consider it not to be a serious issue
 <br>
+
 # Deployment
 The website was developed using the Visual Studio Code IDE due to the extensibility of the Visual Studio Code IDE and I plan on using this IDE for future projects. 
 

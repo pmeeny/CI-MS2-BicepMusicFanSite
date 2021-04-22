@@ -1,5 +1,6 @@
 # BICEP fan site
 Bicep are an electronic music production and DJ duo from Belfast, Northern Ireland, consisting of Andrew Ferguson and Matthew McBriar. This is a fan page for the DJ duo.
+<br>
 View the live site [here](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
 <br><br>
 ![Responsive site example](/assets/images/responsive/responsive_devices.png)

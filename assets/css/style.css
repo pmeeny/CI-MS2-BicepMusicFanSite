@@ -507,7 +507,7 @@
 }
 
 #progress-area {
-    padding-top: 15px;  
+    padding-bottom: 10px;  
 }
 
 #progress-bar {
@@ -544,10 +544,10 @@
 }
 
 #scores {
-    border-top: 2px solid #0062cc;
+    border-top: 3px solid #0062cc;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #0062cc;
+    border-bottom: 3px solid #0062cc;
 }
 
 

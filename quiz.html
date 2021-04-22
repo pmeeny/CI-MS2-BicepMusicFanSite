@@ -71,17 +71,15 @@
             <p id="quiz-paragraph">Test your knowledge on BICEP with a quiz, there are ten questions in total, good luck!</p>
             <div class="container" id="quiz-holder">
                 <div id="quiz-header">
-                    <div class="row">
-                        <div class="col-4" id="timer-area"><div id="timer">00:00</div></div>
-                        <div class="col-3" id="test_status"></div>
-                        <div class="col-2" id="overall_result"></div>
-                        <div class="col-3" id="top_score">Top Score:</div>
+                    <div class="row" id="status">
+                        <div class="col-6" id="timer-area"><div id="timer">00:00</div></div>
+                        <div class="col-6" id="test_status"></div>
+                        <div class="col-6" id="overall_result"></div>
                     </div>   
-                    <div id="progress-area"> 
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                        </div>
-                    </div>    
+                    <div class="row" id="scores">
+                        <div class="col-6" id="current_score">Current Score:</div>
+                        <div class="col-6" id="top_score">Top Score:</div>
+                    </div>   
                 </div>
                 <div id="question">
                 </div>
@@ -109,6 +107,11 @@
                         <button id="submit_answer" class="btn btn-primary">Submit Answer</button>
                     </div>
                 </div>
+                <div id="progress-area"> 
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                </div>  
                 <div id="results_text"></div>
                 <table class="table results_table">
                     <thead>

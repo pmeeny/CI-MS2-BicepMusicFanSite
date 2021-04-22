@@ -493,7 +493,7 @@
 }
 
 #quiz-header {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #quiz-header div{
@@ -501,17 +501,18 @@
 }
 
 #question {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
 }
 
 #progress-area {
-    padding-top: 10px;  
+    padding-top: 15px;  
 }
 
 #progress-bar {
     background-color: #0062cc;
+    font-size: 1.1rem;
 }
 
 #submit_answer {
@@ -534,9 +535,21 @@
     color: red;
 }
 
-#timer-area, #overall_result, #test_status, #top_score{
+#timer-area, #overall_result, #test_status, #top_score, #current_score{
     font-weight: bold;
 }
+
+#status{
+    padding-bottom: 5px;
+}
+
+#scores {
+    border-top: 2px solid #0062cc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0062cc;
+}
+
 
 #legend_text{
     font-size: 1rem;
@@ -664,6 +677,19 @@
     #track-preview-text {
         padding-top: 10px;
     }
+
+    /* --- Quiz Page --- */
+    #question{
+        font-size: 1rem;       
+    }
+
+    #quiz-header div{
+        font-size: 1rem;
+    }
+
+    #progress-bar{
+        font-size: 1rem;
+    }
 }   
 
 /* Extra X-SMALL SCREEN */
@@ -675,5 +701,17 @@
 
     #quiz {
         height: inherit;  
+    }
+
+    #question{
+        font-size: 0.9rem;       
+    }
+
+    #quiz-header div{
+        font-size: 0.9rem;
+    }
+
+    #progress-bar{
+        font-size: 0.8rem;
     }
 }    

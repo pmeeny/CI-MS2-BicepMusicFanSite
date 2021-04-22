@@ -84,6 +84,7 @@ function displayQuestions(){
     $("#quiz_options").hide();
     $("#submit_answer").hide();
     $(".results_table").show();
+    $("#current_score").html("Quiz Score: " + correctAnswers);
 
     displayQuizResults();
     stopTimer();
@@ -93,6 +94,7 @@ function displayQuestions(){
   }
 displayNewQuestion();
 updatePercentage();
+$("#current_score").html("Quiz Score: " + correctAnswers);
 }
 
 
@@ -101,7 +103,6 @@ updatePercentage();
  */
 function displayNewQuestion(){
   $("#test_status").html("Question "+(position+1)  +" of "+shuffledQuestions.length);
-  $("#current_score").html("Quiz Score: " + correctAnswers)
 
   question = questions[position].question;
   choiceOne = shuffledQuestions[position].a;

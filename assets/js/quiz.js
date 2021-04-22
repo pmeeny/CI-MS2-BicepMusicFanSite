@@ -101,6 +101,7 @@ updatePercentage();
  */
 function displayNewQuestion(){
   $("#test_status").html("Question "+(position+1)  +" of "+shuffledQuestions.length);
+  $("#current_score").html("Quiz Score: " + correctAnswers)
 
   question = questions[position].question;
   choiceOne = shuffledQuestions[position].a;

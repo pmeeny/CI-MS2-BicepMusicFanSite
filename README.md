@@ -250,6 +250,8 @@ The mailing list modal consists of two fields(full name and email address). When
 - A timer starts when the quiz starts and stops after the last question.
 - A percentage bar displays the progress of the user
 - The users top score is displayed, and updated whe the user gets a top score. This information is stored in the browsers session storage: `sessionStorage.getItem("topScore")`
+- If the user takes the quiz twice in the browser session, the top score will be displayed on the quiz page, and this will be updated accordingly
+![Quiz and Top Score](/assets/images/readme/top_score.PNG)
 #### User Stories
 - User Story 7.1: As a website user I can take a quiz of 10 questions on the DJ duo
 - User Story 7.2: As a website user I can view a timer on the quiz

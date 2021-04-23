@@ -6,3 +6,7 @@ __pycache__/
 *.py[cod]
 node_modules/
 .vscode
+.gitpod.yml
+.gitpod.dockerfile
+node_modules
+instrumented

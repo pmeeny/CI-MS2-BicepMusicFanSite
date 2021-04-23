@@ -66,14 +66,10 @@ Table of Contents
 
 
 # Project Overview
-
 - This project is a website for the music DJ duo "BICEP" for submission as milestone project 2 as part of the Code Institute - Diploma in Software Development (Full stack) course.
 - The website showcases the music DJ duo, their album information, event details and there is a quiz on the dj duo also.
-
 - The website is deployed using Github pages at the following url: [BICEP](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
-
 - The repository on Github that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/pmeeny/CI-MS2-BicepMusicFanSite)
-
 - The website was built with a responsive look and feel for desktop, tablet and mobile devices
 
 # UX
@@ -83,12 +79,11 @@ Table of Contents
 - The primary goal of the website from a site users perspective is to view and listen to the duo's music on spotify, learn about upcoming events, learn more about the djs duo and to subscribe to their mailing list 
 ## Structure
 I have structured the website into five pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design "out of the box"
-
 1. Index: The index(homepage): This is the first page the user encounters, it contains
 2. About: The about page reads information from Spotify and displays the bands 2 albums with album information, track listing(with links), the dj's top tracks and the ability to listen to these top tracks on the page in a media player
 3. Events: The events page reads information from ticketmaster on all of biceps events with date, time, title, ticket information and a link to the google map of where the event will be
 4. Quiz: The quiz page asks 10 questions on the dj duo, with a timer, and displays the top score for the user for the browser session
-5. 404 page with a consistent header and footer that is displayed if the user enters in an incorrect url when accessing the site.
+5. 404: The 404 error page has a consistent header and footer that is displayed if the user enters in an incorrect url when accessing the site.
 ## Scope
 ### User Stories Potential or Existing Customer
 The user stories for the website user(a potential or existing customer) are described as follows: 
@@ -113,7 +108,6 @@ As a website user if I enter in an incorrect url or page, I will be presented wi
 - As a website user I can view my top score for the browser session
 - As a website user I can view the question number, and the correct(green color) and incorrectly selected answer(red color) is displayed as I complete the question
 - As a website user I can view a summary of my answers for the quiz with the correct and incorrect answers displayed
-
 ### User Stories Website Owner
 The user stories for the website owner are described as follows: 
 - As a website owner I want to display links to spotify, facebook, twitter and instagram pages via a link
@@ -124,32 +118,28 @@ The user stories for the website owner are described as follows:
 - As a website owner I want to display upcoming events from ticketmaster with date, time, title, ticket and map information
 - As a website owner I want the ability for users to buy tickets link on an event, and this will open up the event on the ticketmaster website
 - As a website owner I want to display a quiz for users, and that they can see their top score, a timer for the attempt and correct and incorrect answers, wit a summary of all answers
-
 ## Skeleton
 ### Wireframes
 - Wireframes for the website were developed in Balsamiq and are linked below for Desktop, Tablet and Mobile devices.
 - The wireframes are stored in GIT in the png format and are available at the links below(Desktop, Tablet and Mobile wireframes)
 - One overall pdf containing all wireframes is also stored in the GIT at the following location: - [All Wireframes in PDF format](assets/wireframes/Wireframes_allformats.pdf)
 <br>
-
 Desktop 
 - [Index](assets/wireframes/desktop/index_desktop.png)
 - [About](assets/wireframes/desktop/about_desktop.png)
 - [Events](assets/wireframes/desktop/events_desktop.png)
 - [Quiz](assets/wireframes/desktop/quiz_desktop.png)
-
 Tablet
 - [Index](assets/wireframes/tablet/index_tablet.png)
 - [About](assets/wireframes/tablet/about_tablet.png)
 - [Events](assets/wireframes/tablet/events_tablet.png)
 - [Quiz](assets/wireframes/tablet/quiz_tablet.png)
-
 Mobile
 - [Index](assets/wireframes/mobile/index_mobile.png)
 - [About](assets/wireframes/mobile/about_mobile.png)
 - [Events](assets/wireframes/mobile/events_mobile.png)
 - [Quiz](assets/wireframes/mobile/quiz_mobile.png)
- 
+
 ## Surface
 ### Color Palette
 I have gone for a simple and minimal design for the website, with black and white font colours over a large hero image on all pages
@@ -158,14 +148,11 @@ There are four colours in the color palette with a
 - #000000 - Black colour for text on a white background
 - #0062CC - Blue colour for buttons and links
 - rgba(255,255,255,.5) - Grey colour for not selected navbar icons and text
-
 ![Palette](/assets/images/color_palette.PNG)
-
 - I feel the colours complement each other very well, and I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
 
 ### Typography
-The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Roboto font cannot be imported into the website correctly.
-This font is from the Google fonts library
+The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the Roboto font cannot be imported into the website correctly. This font is from the Google fonts library.
 
 # Features
 The website has five webpages consisting of seven distinct features and they are described below
@@ -224,6 +211,7 @@ The mailing list modal consists of two fields(full name and email address). When
 - The main ticketmaster api call is `"https://app.ticketmaster.com/discovery/v2/events.json?keyword=bicep&apikey=MYAPIKEY&size=2&locale=*&page=page` and is made using Ajax. This returns a json object that is then parsed and its relevant contents displayed on the events page.
 - Each event is displayed with its date, time, title, and ticket purchase information.
 - Clicking an event displays the venue, that venue text is then passed into the google maps api and google geocoding api to then display a google map of the location, the function written to do this is `geocodeAddress(geocoder, map, address)`
+- The google maps geocode api is used to translate the event name returned from ticketmaster and translate to a the google maps location on the events.html page   
 - Pagination is also a feature of this page with 2 events loaded per page, and next, previous links, and the ability to click on a page number and display events for that page.
 ![Events](/assets/images/readme/events.PNG)
 
@@ -267,68 +255,61 @@ The mailing list modal consists of two fields(full name and email address). When
 ## Languages 
 - HTML (https://en.wikipedia.org/wiki/HTML)
     - The project uses html to build the relevant pages
-
 - CSS (https://en.wikipedia.org/wiki/CSS)
     - The project uses CSS to style the relevant pages
-
 - Javascript (https://www.javascript.com/)
     - Javascript was used for all scripting on the site
 
 ## Libraries and other resources
 - Bootstrap 4.6 (https://getbootstrap.com/docs/4.6)
     - The project uses the bootstrap library for some of the UI components in the website
-
 - Git (https://git-scm.com/)
     - Git was used as the source control tool for this project
-
 - Github (https://github.com/)
     - Github was used to store the project code in a repository
-
 - Guthub desktop (https://desktop.github.com/)
     - Github desktop was used to view and make commits into GIT
-
 - Microsoft VSCode (https://code.visualstudio.com/)
     - A locally installed Integrated Development Environment
     - I also installed a number of extensions: Code Spell Checker, Beautify, Auto Rename Tag, Git, GitLens
-
 - Google Fonts (https://fonts.google.com/)
-    - Google font Lato was used as the website font
-
+    - Google font Roboto was used as the website font
 - Balsamiq (https://balsamiq.com/)
     - Balsamiq was used to create the website wireframes
-
 - Font Awesome (https://fontawesome.com/)
     - Font awesome was used to provide the relevant fonts/icons for the website
-
 - JQuery (https://jquery.com)
     - JQuery was used throughout in several of the javascript files fro DOM manipulation
-
 - TinyPNG (https://tinypng.com/)
     - TinyPNG was used to compress images
-
  - CSS Validation Service (https://jigsaw.w3.org/css-validator/)
     - CSS validation service for validation the css in the project  
-
 - HTML Markup Validation Service (https://validator.w3.org/)   
     - HTML validation service for validation the css in the project  
-
 - Chrome dev tools (https://developers.google.com/web/tools/chrome-devtools)
     - For troubleshooting and debugging of the project code
-
 - Chrome Lighthouse (https://developers.google.com/web/tools/lighthouse)
     - For performance, accessibility, progressive web apps, SEO analysis of the project code
-
 - Responsive Design (http://ami.responsivedesign.is/)
     - Website for generating the responsive image in this README
-
 - JS Fiddle (https://jsfiddle.net/)
     - Used for testing html and css concepts
-
 - GitHub Wiki TOC generator (https://ecotrust-canada.github.io/markdown-toc/)
     - Used for generating a table of contents for this README
-
 - Cypress (https://www.cypress.io)
-    - Cypress was used for automated e2e testing of all pages    
+    - Cypress was used for automated e2e testing of all pages 
+ - Cypress Code Coverage (https://docs.cypress.io/guides/tooling/code-coverage)      
+    - Cypress was configured to generate code coverage
+- Istanbul (https://istanbul.js.org/)   
+    - Istanbul was used to instrument the javascript files in the project
+- Spotify API (https://developer.spotify.com)
+    - The spotify API is used to get data in json from spotify and display it on the about.html page
+- Ticketmaster API (https://developer.ticketmaster.com)
+    - The ticketmaster API is used to get data in json from ticketmaster and display it on the events.html page
+- Google Maps api (https://developers.google.com/maps)
+    - The google maps api is used to display the google maps on the events.html page
+- Google maps geocode API (https://developers.google.com/maps/documentation/geocoding/start)
+    - The google maps geocode api is used to translate the event name returned from ticketmaster and translate to a the google maps location on the events.html page    
 
 # Testing
 The testing information and results for this project are documented in [TESTING.md](TESTING.md)
@@ -445,7 +426,7 @@ To run this project locally, you will need to clone the repository
 # Credits
 - In the file events.js, I built on a tutorial that described connecting to the ticketmaster api, and parsing the json data that is returned: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html
 
-- In the file about.js, I built on a tutorial that described using the spotify api to return json data: https://developer.spotify.com/documentation/web-api/libraries/
+- In the file about.js, I built on a tutorial that described using the spotify api to return json data: https://developer.spotify.com/documentation/web-api/libraries/. I also used the google maps api and geocode api: https://developers.google.com/maps/documentation/geocoding/start 
 
 - For the social media icons in the footer, I used the code with some modifications from the Code Institute, CV project, reference: https://github.com/Code-Institute-Org/ucd-resume
 

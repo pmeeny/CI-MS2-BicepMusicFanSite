@@ -2,18 +2,17 @@
 var page = 0;
 var eventResults;
 var google;
-const apiKey = "zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z";
-
+const ticketmasterAPIKey = "zHOhx31e2Dmjcqp5vASU3g6jrhd7Xt8Z";
 /**
  * [getEvents makes an get request
  * using Ajax to return events with bicep keyword,
  * 2 events per page for page 0,
- * the result is stored in eventResults json object]
+ * the result is stored in eventResults json object
+ * Credit: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html]
  * @param  page [The page of the results]
  * @param  callback [callback method]
  */
 function getEvents(page, callback) {
-
     // page must be a valid number
     if (page < 0) {
         page = 0;
@@ -24,13 +23,12 @@ function getEvents(page, callback) {
             page = 0;
         }
     }
-
     //Ajax get request to return events with bicep keyword,
     //2 events per page, the result is stored in eventResults json object
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?" +
-        "keyword=bicep&apikey=" + apiKey +
+        "keyword=bicep&apikey=" + ticketmasterAPIKey +
         "&size=2&locale=*&page=" + page,
         dataType: "json",
         success: function(json) {
@@ -44,36 +42,33 @@ function getEvents(page, callback) {
         }
     });
 }
-
 /**
  * [getEventsForSubsequentPages makes an get
  * request using Ajax to return events with bicep keyword,
  * 2 events per page for subsequent pages,
- * the result is stored in eventResults json object]
+ * the result is stored in eventResults json object
+ * Credit: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html]
  * @param  page [The page of the results]
  * @param  callback [callback method]
  */
 function getEventsForSubsequentPages(page, callback) {
-
     // page must be a valid number
     if (page < 0) {
         page = 0;
         return;
     }
-
     if (page > 0) {
         if (page > eventResults.page.totalPages - 1) {
             page = 0;
         }
     }
-
     /** Ajax get request to return events with bicep keyword,
     // 2 events per page for subsequent page updates,
     // the result is stored in eventResults json object */
     $.ajax({
         type: "GET",
         url: "https://app.ticketmaster.com/discovery/v2/events.json?" +
-        "keyword=bicep&apikey=" + apiKey +
+        "keyword=bicep&apikey=" + ticketmasterAPIKey +
         "&size=2&locale=*&page=" + page,
         dataType: "json",
         success: function(json) {
@@ -87,7 +82,6 @@ function getEventsForSubsequentPages(page, callback) {
         }
     });
 }
-
 /**
  * [displayEvents takes in one parameter , the eventResults object,
  * and displays the event description for the events id]
@@ -97,7 +91,6 @@ function displayEvents(eventResults) {
     var items = $("#events .individual-event");
     var events = eventResults._embedded.events;
     var item = items.first();
-
     //loop through the events object and display the event information
     for (var i = 0; i < events.length; i++) {
         item.children(".event-heading").text(events[i].name);
@@ -124,7 +117,6 @@ function displayEvents(eventResults) {
         item = item.next();
     }
 }
-
   /**
  * [displayPagination takes in one parameter,
  * the eventResults object and displays numbered
@@ -141,8 +133,7 @@ function initMap(address, mapId) {
     const geocoder = new google.maps.Geocoder();
         geocodeAddress(geocoder, map, address);
   }
-
-  /**
+/**
  * [displayPagination takes in one parameter,
  * the eventResults object and displays numbered
  * pagination for the pages of events
@@ -164,7 +155,6 @@ function initMap(address, mapId) {
       }
     });
   }
-
 /**
  * [displayPagination takes in one parameter,
  * the eventResults object and displays numbered
@@ -173,7 +163,6 @@ function initMap(address, mapId) {
  */
 function displayPagination(eventResults) {
     var numberofPages = eventResults.page.totalPages;
-
     for (var i = 0; i < numberofPages; i++) {
         if (i == 0) {
             $("#event-pages").append("<div class=" +"event-page-number" +">" + i + "</div>");
@@ -184,25 +173,21 @@ function displayPagination(eventResults) {
         }
     }
 }
-
  /**
  * [Update next and previous divs when previous link clicked]
  */
   function updatePaginationWhenPreviousClicked() {
-
     if (!(isNextAvailable(eventResults._links.next))) {
         $("#next").hide();
     } else {
         $("#next").show();
     }
-
     if ((isPrevAvailable(eventResults._links.prev))) {
         $("#previous").show();
     } else {
         $("#previous").hide();
     }
 }
-
  /**
  * [Update next and previous divs when next link clicked]
  */
@@ -212,12 +197,10 @@ function updatePaginationWhenNextClicked() {
     } else {
         $("#next").show();
     }
-
     if ((isPrevAvailable(eventResults._links.prev))) {
         $("#previous").show();
     }
 }
-
 /**
  * [Update next and previous divs when page selected]
  */
@@ -234,7 +217,6 @@ function updatePaginationWhenPageSelected() {
         $("#previous").show();
     }
 }
-
  /**
  * [Checks if the previous is available in the links object]
  */
@@ -245,7 +227,6 @@ function isPrevAvailable() {
         return false;
     }
 }
-
  /**
  * [Checks if the next is available in the links object]
  */
@@ -256,7 +237,6 @@ function isNextAvailable() {
         return false;
     }
 }
-
 /**
  * [eventPageClicked is called when a page number is
  *  clicked, the events for that page is updated
@@ -271,7 +251,6 @@ $(document).on("click", ".event-page-number", function eventPageClicked() {
     $(".event-page-number").removeClass("selected");
     $(this).addClass("selected");
 });
-
 /**
  * [Click event that will display
  * more information about the event(toggle enabled)
@@ -282,7 +261,6 @@ $(".event-click-1").click(function(event) {
    event.preventDefault();
    $(".event1-container").toggle();
 });
-
 /**
  * [Click event that will display more
  * information about the event(toggle enabled)
@@ -292,7 +270,6 @@ $(".event-click-2").click(function(event) {
     event.preventDefault();
     $(".event2-container").toggle();
  });
-
  /**
  * [Listener to update events page when previous
  * link clicked]
@@ -303,7 +280,6 @@ $(".event-click-2").click(function(event) {
     getEventsForSubsequentPages(--page,
         updatePaginationWhenPreviousClicked);
 });
-
  /**
  * [Listener to update events page when next
  * link clicked]
@@ -314,5 +290,5 @@ $(document).on("click", "#next", function nextButtonClicked() {
     $(".event-page-number").removeClass("selected");
     $("#event-pages > div:nth-child(" + cp + ")").addClass("selected");
 });
-
+// Initial call to populate the page with events and pagination
 getEvents(page, displayPagination);

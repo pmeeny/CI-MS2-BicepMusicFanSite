@@ -19,6 +19,7 @@ function sendMail(contactForm) {
     return false;  // To block from loading a new page
 }
 
+// When the modal form has been submitted, hide the modal
 $("#mailinglistform").on("submit", function () {
     $("#mailingListModal").modal("hide");
 });

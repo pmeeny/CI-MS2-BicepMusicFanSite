@@ -10,3 +10,10 @@ node_modules/
 .gitpod.dockerfile
 node_modules
 instrumented
+yarn.lock
+package-lock.json
+package.json
+coverage
+.nyc_output
+.babelrc
+.nycrc

@@ -10,18 +10,44 @@
 
 /* --- Global styling --- */
 .white-header1-text {
-    color: white;
     font-size: 2.5rem;
 }
 
 .white-header2-text {
-    color: white;
     font-size: 1.5rem;
 }
 
 .white-header3-text {
-    color: white;
     font-size: 1.0rem;
+}
+.white-p-text {
+    font-size: 1.3rem;
+}
+.common_btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;   
+}
+.center-text{
+    text-align: center;
+}
+/* ----- Start of Color palette ----- */
+/* --- Global --- */
+.white-header1-text {
+    color: white;
+}
+
+.white-header2-text {
+    color: white;
+}
+
+.white-header3-text {
+    color: white;
 }
 
 .white-header2-text {
@@ -30,86 +56,144 @@
 
 .white-p-text {
     color: white;
-    font-size: 1.3rem;
 }
-
-.center-text{
-    text-align: center;
+.common_btn {
+    background: #0c6ace;
+    color: white;
 }
-
-/* ----- Start of Color palette ----- */
-
 /* --- Navigation bar Colors --- */
-
 .site-header {
     background-color: black;
 }
-
-#logo {
-    font-size: 3rem;
-}
-
 .nav-text {
     color: white;
 }
-
 #toggler-border {
     border-color: white;
 }
-
 /* --- Site Footer Colors --- */
 #site-footer {
     background: black;
 }
-
 .mailing-list-text{
     color: white;
 }
-
 .social-icon {
     color: white;
 }
-
 .social-icon:hover {
     color: rgba(255,255,255,.5);
 }
-
 /* --- Events Page Colors --- */
 .event-heading {
     color: black;
 }
-
 .event-text {
     color: black;
 }
-
 .event-venue {
     color: black;
 }
-
 .event-url-1 a{
     color: black;
-    text-decoration: underline;
 }
-
 .event-url-2 a{
     color: black;
-    text-decoration: underline;
 }
-
+.event-url-1 a{
+    color: black;
+}
+.event-url-2 a{
+    color: black;
+}
+#events-holder{
+    background-color: white;
+}
+.event-page-number:hover {
+    background-color: #0062cc;
+}
+#previous {
+    color: black;
+}
+#previous:hover {
+    background-color:#0062cc;
+}
+#next {
+    color: black;
+}
+#next:hover {
+    background-color:#0062cc;
+}
+.event1-container {
+    color: black;
+}
+.event2-container {
+    color: black;
+}
+.selected {
+    background-color: black;
+    color: white;
+}
+/* --- About page colours ---*/
+#album1_tracks, #album2_tracks {
+    color: white;
+}
+#album1_tracks a, #album2_tracks a {
+    color: white;
+}
+#album1_info, #album2_info {
+    color: white;
+}
+#album1_image,#album2_image{
+    color: white;
+}
+#track-preview-text {
+    color: white;
+}
+.top-track-number {
+    color: white;
+}
+.flip-box-back {
+    color: white;
+}
+/* --- Quiz Page --- */
+#quiz-holder {
+    background-color: white;
+}
+#quiz-paragraph {
+    color: white;
+}
+#progress-bar {
+    background-color: #0062cc;
+}
+#submit_answer {
+    background-color: #0062cc;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+#error {
+    color: red;
+}
+#scores {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 /* ----- End of Color palette ----- */
+/* ----- Navigation bar ----- */
+#logo {
+    font-size: 3rem;
+}
 .nav-icon {
     font-size: 2rem;
     text-align: center;
 }
-
 .nav-icon-holder {
     text-align: center;
 }
-
-/* ----- Navigation bar ----- */
-
-
 /* ----- Hero image and overlay text ----- */
 #hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -126,7 +210,6 @@
     padding-left: 5px;
     padding-right: 5px;
 }
-
 .dj-event{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-event.jpg");
     background-repeat: no-repeat;
@@ -136,11 +219,9 @@
     justify-content: center;
     align-items: center;
 }    
-
 .dj-event:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-event.jpg");
 }
-
 .dj-disco{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-disco.jpg");
     background-repeat: no-repeat;
@@ -150,11 +231,9 @@
     justify-content: center;
     align-items: center;
 }    
-
 .dj-disco:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-disco.jpg");
 }
-
 .dj-pioneer{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-pioneer.jpg");
     background-repeat: no-repeat;
@@ -164,11 +243,9 @@
     justify-content: center;
     align-items: center;
 }    
-
 .dj-pioneer:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-pioneer.jpg");
 }
-
 .dj-vinyl{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/dj-vinyl.jpg");
     background-repeat: no-repeat;
@@ -178,59 +255,36 @@
     justify-content: center;
     align-items: center;
 }    
-
 .dj-vinyl:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/dj-vinyl.jpg");
 }
-
 #four-images{
     margin: 0;
 }
-
 #four-images a:hover {
     text-decoration: none;
 }
-
 /* ----- Site Footer ----- */
 .social-icon {
     padding: 10px;
     font-size: 20px;
 }
-
 #site-footer {
     margin: 0;
     width: 100%;
     padding: 25px;
 }
-
 .footer-text {
     padding: 30px;
 }
-
-.common_btn {
-    display: inline-block;
-    background: #0c6ace;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;   
-}
-
 .social-icons{
     text-align: right;
 }
-
 #spotify_image{
     height: 45px;
     width: 120px;
 }
-
 /* ----- Event Page ----- */
-
 #all-events {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
     background-size: cover;
@@ -246,107 +300,83 @@
     padding-left: 5px;
     padding-right: 5px;
 }
-
 #event-pages div {
     float: left;
 }
-
 .events-information{
     padding: 20px 20px 20px 20px;
     padding-top: 20px;
     height: inherit;
 }
-
 #events-holder{
-    background-color: white;
     padding-top: 20px;
     padding-bottom: 40px;
     border-radius: 25px;
 }
-
 #event-header-text {
     font-weight: bold;    
 }
-
 .event-page-number{
     float: left;;
     padding: 10px 10px;
 }
-
-.event-page-number:hover {
-    background-color: #0062cc;
+.event-url-1 a{
+    text-decoration: underline;
 }
-
+.event-url-2 a{
+    text-decoration: underline;
+}
 #previous {
     float: left;;
     padding: 10px 10px;
-    color: black;
     display: none;
 }
-
 .pagination {
     padding-top: 10px;
 }
-
-#previous:hover {
-    background-color:#0062cc;
-}
-
 #next {
     float: left;
     padding: 10px;
-    color: black;
 }
-
-#next:hover {
-    background-color:#0062cc;
-}
-
 .upcoming-events {
     margin-bottom: 0;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
-
 .upcoming-events h2 {
     margin:0;
 }
-
 .event1-container {
     text-align: center;
     display: none;
-    color: black;
 }
-
 .event2-container {
     text-align: center;
     display: none;
-    color: black;
 }
-
 .selected {
     text-decoration: underline;
-    background-color: black;
-    color: white;
     pointer-events:none
 }
-
 .individual-event {
     padding-bottom: 15px;
 }
-
 #map1 {
     height: 250px;
     width: 250px;
     margin: auto;
 }
-
 #map2 {
     height: 250px;
     width: 250px;
     margin: auto;
 }
-
+.event-url-1 a{
+    text-decoration: underline;
+}
+.event-url-2 a{
+    text-decoration: underline;
+}
 /* ----- About Page ----- */
 #about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -362,50 +392,24 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 #album1 {
     height: 200px;
     width: 300px;
 }
-
 #album2 {
     height: 200px;
     width: 300px;
-}
-
-#album1_tracks, #album2_tracks {
-    color: white;
-}
-
-#album1_tracks a, #album2_tracks a {
-    color: white;
-}
-
-#album1_info, #album2_info {
-    color: white;
-}
-
-#album1_image,#album2_image{
-    color: white;
 }
 #track-preview {
     height: 60px;
     width: 250px;
 }
-
 #track-preview-text {
-    color: white;
     font-weight: bold;
 }
-
-.top-track-number {
-    color: white;
-}
-
 #toptracks-holder {
     padding-top: 10px;
 }
-
 /* The flip box css was taken from here and modified: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 */
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -415,7 +419,6 @@
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin-bottom: 30px;
   }
-  
   /* This container is needed to position the front and back side */
   .flip-box-inner {
     position: relative;
@@ -425,12 +428,11 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
   }
-  
+
   /* Position the front and back side */
   .flip-box-front, .flip-box-back {
     position: absolute;
@@ -438,13 +440,10 @@
     height: 100%;
     backface-visibility: hidden;
   }
-  
   /* Style the back side */
   .flip-box-back {
-    color: white;
     transform: rotateY(180deg);
   }
-
 /* ----- Quiz Page ----- */
 #quiz {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -460,101 +459,60 @@
     padding-bottom: 30px;
     padding-top: 20px;
 }
-
 .table {
     table-layout: fixed;
 }
-
 #quiz-holder {
-    background-color: white;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 25px;
 }
-
 #results_text{
     display: none;
 }
-
 .results_table{
     display: none;
 }
-
 #quiz_title{
     text-align: center;
 }
-
 #quiz-text {
     text-align: center;
 }
-
-#quiz-paragraph {
-    color: white;
-}
-
 #quiz-header {
     padding-bottom: 10px;
 }
-
 #quiz-header div{
     font-size: 1.1rem;
 }
-
 #question {
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
 }
-
 #progress-area {
     padding-bottom: 10px;  
 }
-
 #progress-bar {
-    background-color: #0062cc;
     font-size: 1.1rem;
 }
-
-#submit_answer {
-    background-color: #0062cc;
-}
-
 #submit-button-area {
     padding-top: 10px;
-}
-
-.correct {
-    color: green;
-}
-
-.incorrect {
-    color: red;
-}
-
-#error {
-    color: red;
 }
 
 #timer-area, #overall_result, #test_status, #top_score, #current_score{
     font-weight: bold;
 }
-
 #status{
     padding-bottom: 5px;
 }
-
 #scores {
-    border-top: 3px solid #0062cc;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #0062cc;
 }
-
-
 #legend_text{
     font-size: 1rem;
 }
-
 /* ----- 404 error page ----- */
 #error-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vinyl-record-background.jpg");
@@ -570,61 +528,53 @@
     padding-bottom: 30px;
     padding-top: 20px;
 }
-
-
 /* ----- Media Queries ----- */
 /* --- Large Screen --- */
 @media screen and (max-width: 1024px) {
+    /* --- Quiz Page --- */ 
     #quiz {
         height: inherit;
     }
-
+    /* --- About Page --- */ 
     #about {
         height: inherit;
     }
 }
-
 /* --- Large Screen --- */
 @media screen and (max-width: 991px) {
+    /* --- Nav Bar --- */ 
     .nav-icon-holder {
         display: none;
     }
-
 }
-
 /* --- Medium Screen --- */
 @media screen and (max-width: 768px) {
-
+    /* --- Nav Bar --- */ 
     .nav-icon-holder {
         display: none;
     }
-
     /* --- About Page --- */   
     #album1 {
         height: 200px;
         width: 250px;
     }
-
     #album2 {
         height: 200px;
         width: 250px;
     }
-
     .flip-box {
         width: 200px;
         height: 250px;
         margin-bottom: 10px;
-    }
-    
+    } 
     #track-preview-text {
         padding-top: 10px;
     }
-
+    /* --- Quiz Page --- */  
     #quiz {
         height: inherit; 
     }    
 }
-
 /* X-SMALL SCREEN */
 @media screen and (max-width: 481px) {
 
@@ -633,35 +583,25 @@
         color: white;
         font-size: 2.0rem;
     }
-
     .white-p-text {
         font-size: 1.2rem;
     }
-
+    /* --- Footer --- */  
     .social-icon {
         padding: 5px;
     }
-
-    #quiz {
-        height: inherit;   
-    }
-
-    
     /* --- About Page --- */   
     #about {
         height: inherit;  
     }
-
     #album1 {
         height: 110px;
         width: 120px;
-    }
-    
+    }  
     #album2 {
         height: 110px;
         width: 120px;
     }
-    
     .flip-box {
         width: 110px;
         height: 120px;
@@ -670,25 +610,24 @@
     #album1_tracks #album2_tracks {
         padding-top: 10px;
     }
-
     #album1_info, #album2_info{
         font-size: 0.8rem;
     }
     #track-preview-text {
         padding-top: 10px;
     }
-
     /* --- Quiz Page --- */
     #question{
         font-size: 1rem;       
     }
-
     #quiz-header div{
         font-size: 1rem;
     }
-
     #progress-bar{
         font-size: 1rem;
+    }
+    #quiz {
+        height: inherit;   
     }
 }   
 
@@ -698,19 +637,16 @@
     #about {
         height: inherit;  
     }
-
+    /* --- Quiz Page --- */  
     #quiz {
         height: inherit;  
     }
-
     #question{
         font-size: 0.9rem;       
     }
-
     #quiz-header div{
         font-size: 0.9rem;
     }
-
     #progress-bar{
         font-size: 0.8rem;
     }

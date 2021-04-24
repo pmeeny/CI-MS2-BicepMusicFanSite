@@ -191,3 +191,21 @@ Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
 
 <br>
+
+## Automated testing
+A number of testcases were written using the cypress testing framework, they are described below
+### Test Cases
+Test Case Number | Test Case Details | Test Case Result | Test Case Video |
+------------ | ------------ | ------------- | ------------- |
+1 | dd |dd |dd |
+
+### Code Coverage
+I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries
+Further information is described below
+- Cypress (https://www.cypress.io)
+    - Cypress was used for automated e2e testing of all pages 
+ - Cypress Code Coverage (https://docs.cypress.io/guides/tooling/code-coverage)      
+    - Cypress was configured to generate code coverage
+- Istanbul (https://istanbul.js.org/)   
+    - Istanbul was used to instrument the javascript files in the project
+    

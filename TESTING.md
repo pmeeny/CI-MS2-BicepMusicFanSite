@@ -22,25 +22,17 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 ## Test Results
 Below are the test results for testing the website requirements against a range of browsers and devices
 
-## Feature 1 Footer
-
+## Feature 1 Navigation Bar
 ### User Story
-User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
+User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events, 404 and Quiz pages for easy navigation
 
 ### Test case steps
-1. Click on each of the index, events, about and quiz pages and scroll down to the footer
-2. Click on the spotify image
-3. Click on the instagram social icon
-4. Click on the twitter social icon
-5. Click on the facebook social icon
+1. Click on each of the index, events, about, 404 and quiz pages in the navigation bar
+2. Switch the devices that views the page to Tablet or Mobile
 
 ### Expected Result
-1. The footer is displayed on each page
-2. The bicep spotify page opens in a new tab
-3. The bicep instagram page opens in a new tab
-4. The bicep twitter page opens in a new tab
-5. The bicep facebook page opens in a new tab
-
+1. The page is displayed with consistent navigation bar and logo
+2. The navigation bar is displayed as a burger menu to the right of the page
 ### Test Results
 Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
@@ -52,7 +44,17 @@ Steps 1-5 | dd |dd |dd |
 ### User Story
 - User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
 ### Test case steps
+1. View the footer on the index, 404, quiz, events and about html pages
+2. Click on the spotify link(image)
+3. Click on the facebook link(image)
+4. Click on the twitter link(image)
+5. Click on the instagram link(image)
 ### Expected Result
+1. The footer is consistent across the 5 pages, and a link(image) to the spotify, facebook, twitter and instagram pages of the DJ duo is displayed
+2. The dj's spotify page opens in a new tab
+3. The dj's facebook page opens in a new tab
+4. The dj's twitter page opens in a new tab
+5. The dj's instagram page opens in a new tab
 ### Test Results
 Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
@@ -67,17 +69,24 @@ Steps 1-5 | dd |dd |dd |
 - User Story 3.3: As a website user I can access the Quiz Page by clicking on a link on the index(homepage) page
 - User Story 3.4: As a website user I can sign-up to the BICEP email list by clicking on a link on the index(homepage) page, entering my full name and email address and clicking the Submit button on the modal screen to Submit or Close to close the modal
 ### Test case steps
-1.
-2.
-3.
-4.
-5.
+1. Click on the BICEP ABOUT image/link on the index.html page
+2. Click on the BICEP EVENT INFO on the index.html page
+3. Click on the BICEP QUIZ GAME on the index.html page
+4. Click on the BICEP MAIL LIST on the index.html page
+5. Close the mailing list modal
+6. Click on the BICEP MAIL LIST on the index.html page
+7. Enter no value for either name and email address and click the Submit button
+8. Enter a value for the name and email address and click the Submit button
 ### Expected Result
-1.
-2.
-3.
-4.
-5.
+1. The about.html page is displayed in the same tab
+2. The events.html page is displayed in the same tab
+3. The quiz.html page is displayed in the same tab
+4. A modal is displayed called Mailing List sign-up
+5. The mailing list modal is closed
+6. A modal is displayed called Mailing List sign-up
+7. A message is displayed thata each field must be filled in
+8. The modal closes and an email is sent to the email list provided
+
 ### Test Results
 Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
@@ -93,17 +102,17 @@ Steps 1-5 | dd |dd |dd |
 - User Story 4.3: As a website user I can view the top tracks for the DJ duo
 - User Story 4.4: As a website user I can click on a top track and it will play a 30 second clip on a media player in the page
 ### Test case steps
-1. Go to the about page(about.html)
+1. Navigate to the about page(about.html)
 2. Navigate to the Albums section
 3. Hover over one of the album images
-4. Click on a track in the track listings
+4. Click on each track in the track listings
 5. Navigate to the top tracks section
-6. Click on one of the top tracks
+6. Click on each of the top tracks
 ### Expected Result
 1. The about.html page is displayed, and there is a paragraph about the djs displayed in the About section
 2. Two album images are displayed and the track listing for each album
 3. The image clips to display album information(name, label, number of tracks)
-4. The track opens in a new tab in spotify
+4. Each track opens in a new tab in spotify
 5. The top tracks are displayed
 6. The top track(a 30 second clip) starts playing in the media player on the page
 ### Test Results
@@ -120,25 +129,20 @@ Steps 1-5 | dd |dd |dd |
 - User Story 5.3: As a website user I can click the Buy Tickets link for an event and it will open up the event in ticketmaster in a new tab 
 - User Story 5.4: As a website user I can click on an event and view the event venue name and google map information
 ### Test case steps
-1.
-2.
-3.
-4.
-5.
-Click on the events page
-10 events will be displayed over 5 pages
-On each page the following information will be displayed per event: Date, Time, Title, Tickets
-Clicking on buy tickets will open the event in ticketmaster
-Clicking on the event will display the venue details and a google map
-Clicking on next will bring you to the next page
-Clicking on previous will bring you to the next page
+1. Navigate to the events page(about.html)
+2. Click on the Buy Tickets link for an event
+3. Click on an event, and then click on the same link again
+4. Click on a particular page number
+5. Click on the next link
+6. Click on the previous link
 
 ### Expected Result
-1.
-2.
-3.
-4.
-5.
+1. The events.html page is loaded, and an Events table with a number of columns(Date, Time, Title, Tickets) is displayed. Two events will be displayed on each page
+2. A new tab will open and display the event in ticketmaster
+3. The events venue details and a google map of the venue will be displayed. Reclicking the vent will hide this information
+4. The page will update page selected and refresh with new events
+5. The page number will increase and the page will refresh with new events, if you are on the last page the Next link will not be displayed
+5. The page number will decrease and the page will refresh with new events, if you are on the first page the Previous link will not be displayed
 ### Test Results
 Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
@@ -150,7 +154,7 @@ Steps 1-5 | dd |dd |dd |
 ### User Story
 - User Story 6.1: As a website user if I enter in an incorrect url or page, I will be presented with a 404 page with consistent header and footer
 ### Test case steps
-1. Navigate to a page that does not exist (doesNotExist.html)
+1. Navigate to a page that does not exist (for example: doesNotExist.html)
 ### Expected Result
 1. The 404.html page is displayed
 ### Test Results
@@ -198,12 +202,12 @@ Theses 6 test cases were part of a test suite, and the automation was run agains
 ### Test Cases
 Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-1 | 404Test | | Passed | 9 seconds |
-2 | aboutTest | | Passed | 11 seconds |
-3 | eventsTest | | Passed | 28 seconds |
-4 | indexTest |dd |  Passed | 6 seconds |
-5 | mailingListTest |dd | Passed | 11 seconds |
-6 | quizTest |dd | Passed | 1 minute, 49 seconds |
+1 | 404Test | This test opens the 404 page and checks the contents of the page | Passed | 9 seconds |
+2 | aboutTest | This test opens the About Page,  | Passed | 11 seconds |
+3 | eventsTest | This test opens the | Passed | 28 seconds |
+4 | indexTest | This test opens the |  Passed | 6 seconds |
+5 | mailingListTest | This test opens the | Passed | 11 seconds |
+6 | quizTest | This test opens the | Passed | 1 minute, 49 seconds |
 
 Total time: 2 minutes, 58 seconds
 

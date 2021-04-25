@@ -1,3 +1,9 @@
+/*
+* The events.js is used by the event.html file to display the relevant upcoming events about Bicep
+* The file calls a number of methods on the ticketmaster and google maps/geocode api's
+* jshint esversion: 8
+*/
+
 //Events variables
 var page = 0;
 var eventResults;

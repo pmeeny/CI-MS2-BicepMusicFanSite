@@ -1,4 +1,7 @@
-
+/*
+* The quiz.js is used by the quiz.html file to display a quiz comprising of ten questions to the user
+* The quiz has a timer, an incremental correct score count, top score and results summary screen
+*/
 // Quiz Variables
 var position = 0;
 var correctAnswers = 0;
@@ -32,14 +35,14 @@ var minutes = 0;
 var time;
 
 /**
- * [shuffleQuestions randomly shuffles the questions shuffledQuestions]
+ * shuffleQuestions randomly shuffles the questions shuffledQuestions
  */
 function shuffleQuestions(){
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 }
 
 /**
- * [setTopScore Update sessionStorage with topScore key value]
+ * setTopScore updates the browser session storage with the topScore key value
  */
 function setTopScore(correctAnswers){
   var getTopScore = sessionStorage.getItem("topScore");
@@ -49,14 +52,15 @@ function setTopScore(correctAnswers){
 }
 
 /**
- * [getTopScore return topScore key value]
+ * getTopScore return the topScore key value from reading the browser session storage
  */
  function getTopScore(correctAnswers){
   return sessionStorage.getItem("topScore");
 }
 
 /**
- * [displayTopScore Display sessionStorage with topScore key value]
+ * displayTopScore displays using JQuery the top score on the top_score div
+ * It only is displayed if a top score has a valid value
  */
  function displayTopScore(){
    if(sessionStorage.getItem("topScore") == null){
@@ -69,7 +73,10 @@ function setTopScore(correctAnswers){
  }
 
 /**
- * [displayQuestions]
+ * displayQuestions is the main function in the quiz
+ * It controls what is displayed on the screen, and displays the relevant information
+ * When the user completes the quiz, it displays the results table, top score and current score on the screen
+ * Otherwise, it displays the next question by calling displayNewQuestion
  */
 function displayQuestions(){
   $("#error").html("");
@@ -99,7 +106,8 @@ $("#current_score").html("Quiz Score: " + correctAnswers);
 
 
 /**
- * [displayQuestions]
+ * displayNewQuesiton displays the question on the screen with the 4 choices
+ * It uses JQuery to set the html of the question choices options
  */
 function displayNewQuestion(){
   $("#test_status").html("Question "+(position+1)  +" of "+shuffledQuestions.length);
@@ -118,7 +126,8 @@ function displayNewQuestion(){
 }
 
 /**
- * [updatePercentage]
+ * updatePercentage updates the percentage on the screen in increments
+ * as the user completes the 10 questions. It uses JQuery to update the relevant div
  */
 function updatePercentage(){
   percentage = percentage + 10;
@@ -128,7 +137,9 @@ function updatePercentage(){
 }
 
 /**
- * [displayQuizResults]
+ * displayQuizResults displays at the end of the quiz.
+ * It displays the question, correct answer and incorrect answer and color
+ * codes depending on what the user has entered using JQuery
  */
 function displayQuizResults(){
     var i=0;
@@ -157,7 +168,10 @@ function displayQuizResults(){
   }
 
 /**
- * [displayQuizResults]
+ * checkAnswer checks the answer to each question
+ * The allAnswers array is updated with this information
+ * If an answer is answered correctly it is highliughted in green as the quiz progresses
+ * If an answer is answered incorrectly it is highlighted in red as the quiz progresses
  */
 function checkAnswer(){
   choices = document.getElementsByName("choices");
@@ -191,7 +205,8 @@ function checkAnswer(){
 }
 
 /**
- * [waitOneSecondBeforeNextQuestion, wait one second before next question]
+ * waitOneSecondBeforeNextQuestion, wait one second before displaying next question, 
+ * and reset any colors set on the next questions quiz-form div
  */
 function waitOneSecondBeforeNextQuestion(){
 setTimeout(function()
@@ -204,7 +219,8 @@ setTimeout(function()
 }
 
 /**
- * [displayCorrectAnswerInGreen, updates label of correct answer]
+ * displayCorrectAnswerInGreen, updates label of correct answer in green
+ * as the quiz progresses
  */
 function displayCorrectAnswerInGreen() {
   $("#quiz-form .option").each(function() {
@@ -215,7 +231,8 @@ function displayCorrectAnswerInGreen() {
 }
 
 /**
- * [displayCorrectAnswerInRed, updates label of wrongly selected answer]
+ * displayCorrectAnswerInRed, updates label of wrongly selected answer
+ * as the quiz progresses
  */
 function displayCorrectAnswerInRed() {
   $("#quiz-form .option").each(function() {
@@ -226,7 +243,9 @@ function displayCorrectAnswerInRed() {
 }
 
 /**
- * [addTimerDetails, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ * addTimerDetails, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
+ * This function updates the timer as the time passes
+ * It updates the minutes and seconds of the quiz timer
  */
 function addTimerDetails() {
     seconds++;
@@ -242,21 +261,25 @@ function addTimerDetails() {
 }
 
 /**
- * [startTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ * startTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
+ * This function starts the timer, it is started when the quiz page loads and the quiz starts
  */
 function startTimer() {
     time = setTimeout(addTimerDetails, 1000);
 }
 
 /**
- * [stopTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/]
+ * stopTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
+ * This function stops the timer
  */
 function stopTimer() {
     clearTimeout(time);
 }
 
 /**
- * [submitAnswerClicked]
+ * submitAnswerClicked uses JQuery to check has the user selected an option
+ * for a question. If they have not an error message is displayed.
+ * If they have the checkAnswer function is called
  */
  $("#submit_answer").click(function submitAnswerClicked(){
   var inputName = "input[name=" + "choices" + "]";

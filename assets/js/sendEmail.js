@@ -1,6 +1,7 @@
 /**
  * [sendEmail to send email using EmailJS
  * Credit: Code Institute material "Sending Emails Using EmailJS"]
+ * The API that is used is described here: https://www.emailjs.com/
  * @param contactForm [The contact form object]
  */
 function sendMail(contactForm) {

@@ -1,3 +1,7 @@
+/*
+* The questions.js file contains the 10 questions that are used in the quiz.
+* The variable questions is an array with the question, choices and answer
+*/
 var questions = [
     {
       //Question 1

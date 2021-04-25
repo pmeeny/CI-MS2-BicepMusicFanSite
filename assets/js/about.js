@@ -1,4 +1,8 @@
-/*​jshint esversion: 8 */
+/*
+* The about.js is used by the about.html file to display the relevant album and top tracks information about Bicep
+* The file calls a number of methods on the spotify API
+* jshint esversion: 8
+*/
 
 const clientId = "bb60c805a05440999011d33d17846c61";
 const clientSecret = "3290f175cc254cec8a7492fde67287ee";
@@ -9,6 +13,7 @@ var topTracks;
 /**
  * The variable getToken is assigned a spotify token in a JSON object for subsequent spotify api calls
  * The clientID and clientSecret is passed in the headers
+ * The data is returned in a json format and set as the getToken variable
  */
 var getToken = async () => {
         const result = await fetch("https://accounts.spotify.com/api/token", {
@@ -24,8 +29,9 @@ var getToken = async () => {
         return data;
     };
 /**
- * The variable getTopTracks uses the token acquired, and calls a spotify api method to return
- * a json object of the artists top tracks
+ * The variable getTopTracks uses the token acquired(getToken), and calls a spotify api method to return
+ * a json object of the artists top tracks, using the bicepArtistID constant variable
+ * The fetch comment filters on the Irish market(market=IE)
  */
 var getTopTracks = async (token) => {
         const result = await fetch("https://api.spotify.com/v1/artists/" + bicepArtistID + "/top-tracks?market=IE", {
@@ -50,7 +56,7 @@ var getAlbums1 = async (token) => {
 };
 /**
  * The variable getAlbums2 uses the token acquired, and calls a spotify api method to return
- * a json object of the artists second album, with the albumID passed in
+ * a json object of the artists second album, with the conbstant variable albumID passed in
  */
 var getAlbums2 = async (token) => {
     const result = await fetch("https://api.spotify.com/v1/albums/" + albumTwoID + "?market=IE", {
@@ -63,7 +69,7 @@ var getAlbums2 = async (token) => {
 };
 /**
  * displayAlbum1 displays the album info, track
- * listings and image on the page using jQuery append method
+ * listings and image on the about.html page page using jQuery append method
  * @param data [The json data]
  */
 function displayAlbum1(data){
@@ -86,7 +92,7 @@ function displayAlbum1(data){
 
 /**
  * displayAlbum2 displays the album info, track
- * listings and image on the page using JQuery append mthod
+ * listings and image on the page using JQuery append method
  * @param data [The json data]
  */
 function displayAlbum2(data){

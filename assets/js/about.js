@@ -104,7 +104,7 @@ function displayAlbum2(data){
         var track = albumTracks[i].name;
         var href = albumTracks[i].external_urls.spotify;
         // Set the album tracks with link to spotify
-        $("#album2_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + "rel=" +"noreferrer" + "href=" + href +">"+ track + "</a></span><br>");
+        $("#album2_tracks").append("<span>" + (i+1) + ". " +  "<a" + " target=" + "_blank" + "rel=" +"noreferrer" + " href=" + href +">"+ track + "</a></span><br>");
     }
     // Set the album information
     $("#album2_info").append("<span>Name: " + data.name + "</span><br>");

@@ -194,13 +194,40 @@ Step Number | Desktop | Tablet | Mobile |
 
 ## Automated testing
 A number of testcases were written using the cypress testing framework, they are described below
+Theses 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
 ### Test Cases
-Test Case Number | Test Case Details | Test Case Result | Test Case Video |
------------- | ------------ | ------------- | ------------- |
-1 | dd |dd |dd |
+Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
+------------ | ------------ | ------------- | ------------- | ------------- |
+1 | 404Test | | Passed | 9 seconds |
+2 | aboutTest | | Passed | 11 seconds |
+3 | eventsTest | | Passed | 28 seconds |
+4 | indexTest |dd |  Passed | 6 seconds |
+5 | mailingListTest |dd | Passed | 11 seconds |
+6 | quizTest |dd | Passed | 1 minute, 49 seconds |
+
+Total time: 2 minutes, 58 seconds
+
+The test cases written are listed as follows
+![Cypress Test Cases](/assets/images/readme/cypress_testcases.PNG)
+
+The cypress.io dashboard displays the following informtion
+![Cypress Dashboard](/assets/images/readme/cypress_dashboard.PNG)
+
+The test automation suite results, which inclided 6 tests, all passed in a time of 90.61 seconds are displayed below
+![Cypress Test Results](/assets/images/readme/cypress_testresults.PNG)
+
+Video recordings of each of the 6 test cases are available at the following location
+![Cypress Test Recordings](/assets/images/videos)
 
 ### Code Coverage
 I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries
+
+The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
+![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
+
+
+The code cover
+
 Further information is described below
 - Cypress (https://www.cypress.io)
     - Cypress was used for automated e2e testing of all pages 

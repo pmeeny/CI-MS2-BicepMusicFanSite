@@ -250,6 +250,7 @@ The mailing list modal consists of two fields(full name and email address). When
 ##  Features Left to Implement
 - I am content with what was implemented. The site is a responsive interactive website using a number of external API's, however in the cases of using the spotify and ticketmaster API's, I could have used other calls, and then displayed more information about the artists music or ticketmaster events.
 - A search area for the whole website in particular the events page would be a useful addition to add
+- To use the spotify api I had to include the client id and client secret in the javascript file(about.js) From a security perspective the client secret should not be exposed. As this is a frontend project, it was not in scope to have a backend part. However to implement the spotify api correctly from a security perspective I would have like to have a backend element(node for example) and store the client secret in the backend so it is not exposed at the frontend.
 
 # Technologies Used
 ## Languages 
@@ -422,6 +423,44 @@ To run this project locally, you will need to clone the repository
 ```git clone https://github.com/pmeeny/CI-MS2-BicepMusicFanSite.git```
 
 5. The repository will now be cloned in your workspace
+
+The project uses a number of API's and the Cypress testing framework, below are the steps to configure the API in your environment
+## Ticketmaster API
+1. Create an account at https://developer-acct.ticketmaster.com/user/register
+2. Once you create the account, you will need to create a project, and you will be assigned a consumer key and consumer secret
+[Ticketmaster](assets/images/readme/css-validation/ticketmaster_api.PNG)
+3. Take a note of the consumer key, copy its value and update the variable ticketmasterAPIKey in the events.js file with its value
+
+## Spotify API
+1. Create an account at https://developer.spotify.com/dashboard/applications
+2. Once you create the account, you will need to create a project, and you will be assigned a client id and client secret
+[Spotify](assets/images/readme/css-validation/spotify_api.PNG)
+4. Take a note of the client id and client secret
+5. Copy their values, and update the value of the variables clientId and clientSecret in the about.js file with their values
+
+## Google Maps API
+1. Create an account at https://console.developers.google.com
+2. Create an API key and setup the account as requested by google, for example billing information
+3. Configure 2 API's, Maps JavaScript API and Geocoding API
+3. In the credentials screen, set the web restrictions url referrer to the urls of where the site will be hosted as well as your local development enviroment, for example http://127.0.0.1:5500/
+4. In the API restrictions section in the crednetials screen, limit to 2 API's: Maps JavaScript API and Geocoding API
+5. In the events.html file under the footer, update the google maps srcipt src to include your API key
+
+## Email JS
+1. Create an account at emailjs.com 
+2. In the integration screen in the emailjs dashboard, note your userid
+3. Create a gmail email service in the Email Services section and note the id
+4. Create a email template in the Email templates section and note the id
+5. Update the script sendEmail.js, method sendMail with your user id, email service id and email template id
+
+## Cypress Testing framework.
+1. Create an account at cypress.io
+2. Setup a project in the dashbioard at cypress.io
+3. Install cypress in your development enviroment by following the steps in https://docs.cypress.io/guides/getting-started/installing-cypress
+4. The testcases/scripts for this project are available at /cypress/integration
+5. Check that cypress is configured correctly so that the 6 test cases can be run locally with Cypress. These are described in greater detail in the TESTING readme file
+6. To setup code coverage for your tests follow the steps at https://docs.cypress.io/guides/tooling/code-coverage
+7. The code coverage generated at each run is available in a coverage folder
 
 # Credits
 - In the file events.js, I built on a tutorial that described connecting to the ticketmaster api, and parsing the json data that is returned: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html

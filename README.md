@@ -7,7 +7,7 @@ View the live site [here](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
 
 <br>
 
-Table of Contents
+# Table of Contents
 - [Project Overview](#project-overview)
 - [UX](#ux)
   * [Strategy](#strategy)
@@ -18,6 +18,9 @@ Table of Contents
     + [User Stories Website Owner](#user-stories-website-owner)
   * [Skeleton](#skeleton)
     + [Wireframes](#wireframes)
+      - [Desktop](#desktop)
+      - [Tablet](#tablet)
+      - [Mobile](#mobile)
   * [Surface](#surface)
     + [Color Palette](#color-palette)
     + [Typography](#typography)
@@ -57,13 +60,17 @@ Table of Contents
     + [Wave Accessibility](#wave-accessibility)
     + [JSHint](#jshint)
 - [Deployment](#deployment)
+  * [Ticketmaster API](#ticketmaster-api)
+  * [Spotify API](#spotify-api)
+  * [Google Maps API](#google-maps-api)
+  * [Email JS](#email-js)
+  * [Cypress Testing framework.](#cypress-testing-framework)
 - [Credits](#credits)
 - [Content](#content)
 - [Media](#media)
 - [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 # Project Overview
 - This project is a website for the music DJ duo "BICEP" for submission as milestone project 2 as part of the Code Institute - Diploma in Software Development (Full stack) course.
@@ -124,17 +131,20 @@ The user stories for the website owner are described as follows:
 - The wireframes are stored in GIT in the png format and are available at the links below(Desktop, Tablet and Mobile wireframes)
 - One overall pdf containing all wireframes is also stored in the GIT at the following location: - [All Wireframes in PDF format](assets/wireframes/Wireframes_allformats.pdf)
 <br>
-Desktop 
+
+#### Desktop 
 - [Index](assets/wireframes/desktop/index_desktop.png)
 - [About](assets/wireframes/desktop/about_desktop.png)
 - [Events](assets/wireframes/desktop/events_desktop.png)
 - [Quiz](assets/wireframes/desktop/quiz_desktop.png)
-Tablet
+
+#### Tablet
 - [Index](assets/wireframes/tablet/index_tablet.png)
 - [About](assets/wireframes/tablet/about_tablet.png)
 - [Events](assets/wireframes/tablet/events_tablet.png)
 - [Quiz](assets/wireframes/tablet/quiz_tablet.png)
-Mobile
+
+#### Mobile
 - [Index](assets/wireframes/mobile/index_mobile.png)
 - [About](assets/wireframes/mobile/about_mobile.png)
 - [Events](assets/wireframes/mobile/events_mobile.png)
@@ -198,7 +208,7 @@ The mailing list modal consists of two fields(full name and email address). When
 ![Top Track](/assets/images/readme/top_track.PNG)
 
 #### User Stories
-- User Story 4.1: As a website user I can view track listing, album cover image and album about Biceps two albums
+- User Story 4.1: As a website user I can view track listing, album cover image and album information about Biceps two albums
 - User Story 4.2: As a website user I can view album information when I hover over an album image
 - User Story 4.2: As a website user I can listen to the dj's albums tracks in a new tab in spotify by clicking on a particular track
 - User Story 4.3: As a website user I can view the top tracks for the DJ duo
@@ -310,7 +320,9 @@ The mailing list modal consists of two fields(full name and email address). When
 - Google Maps api (https://developers.google.com/maps)
     - The google maps api is used to display the google maps on the events.html page
 - Google maps geocode API (https://developers.google.com/maps/documentation/geocoding/start)
-    - The google maps geocode api is used to translate the event name returned from ticketmaster and translate to a the google maps location on the events.html page    
+    - The google maps geocode api is used to translate the event name returned from ticketmaster and translate to a the google maps location on the events.html page   
+- Gofullpage chrome plugin  (https://chrome.google.com/webstore/detail/gofullpage-full-page-scre)
+    - This plugin was used to take full page screenshots for testing images
 
 # Testing
 The testing information and results for this project are documented in [TESTING.md](TESTING.md)
@@ -442,25 +454,27 @@ The project uses a number of API's and the Cypress testing framework, below are 
 1. Create an account at https://console.developers.google.com
 2. Create an API key and setup the account as requested by google, for example billing information
 3. Configure 2 API's, Maps JavaScript API and Geocoding API
-3. In the credentials screen, set the web restrictions url referrer to the urls of where the site will be hosted as well as your local development enviroment, for example http://127.0.0.1:5500/
-4. In the API restrictions section in the crednetials screen, limit to 2 API's: Maps JavaScript API and Geocoding API
-5. In the events.html file under the footer, update the google maps srcipt src to include your API key
+3. In the credentials screen, set the web restrictions url referrer to the urls of where the site will be hosted as well as your local development environment, for example http://127.0.0.1:5500/
+4. In the API restrictions section in the credentials screen, limit to 2 API's: Maps JavaScript API and Geocoding API
+5. In the events.html file under the footer, update the google maps script src to include your API key
 
 ## Email JS
 1. Create an account at emailjs.com 
 2. In the integration screen in the emailjs dashboard, note your userid
-3. Create a gmail email service in the Email Services section and note the id
+3. Create a 
+ email service in the Email Services section and note the id
 4. Create a email template in the Email templates section and note the id
 5. Update the script sendEmail.js, method sendMail with your user id, email service id and email template id
 
 ## Cypress Testing framework.
 1. Create an account at cypress.io
-2. Setup a project in the dashbioard at cypress.io
-3. Install cypress in your development enviroment by following the steps in https://docs.cypress.io/guides/getting-started/installing-cypress
+2. Setup a project in the dashboard at cypress.io
+3. Install cypress in your development environment by following the steps in https://docs.cypress.io/guides/getting-started/installing-cypress
 4. The testcases/scripts for this project are available at /cypress/integration
 5. Check that cypress is configured correctly so that the 6 test cases can be run locally with Cypress. These are described in greater detail in the TESTING readme file
-6. To setup code coverage for your tests follow the steps at https://docs.cypress.io/guides/tooling/code-coverage
-7. The code coverage generated at each run is available in a coverage folder
+6. In each test case update the cy.visit call with your local server ipaddress and port, for example http://127.0.0.1:5500
+7. To setup code coverage for your tests follow the steps at https://docs.cypress.io/guides/tooling/code-coverage
+8. The code coverage generated at each run is available in a coverage folder
 
 # Credits
 - In the file events.js, I built on a tutorial that described connecting to the ticketmaster api, and parsing the json data that is returned: https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_with_discovery_api.html

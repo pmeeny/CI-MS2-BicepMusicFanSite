@@ -169,6 +169,8 @@ The website has five webpages consisting of seven distinct features and they are
 ### Feature 1 Navigation Bar
 #### Description
 This is the navigation bar of the website, and is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
+![Navigation](/assets/images/testing/manual-testS/testcase_1_1_desktop.PNG)
+![Burger](/assets/images/testing/manual-testS/testcase_1_1_tablet.PNG)
 
 #### User Stories
 - User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events, 404 and Quiz pages for easy navigation
@@ -176,6 +178,7 @@ This is the navigation bar of the website, and is displayed on the Index(Homepag
 ### Feature 2 Footer
 #### Description
 The footer is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. It contains links to the djs spotify, facebook, twitter and instagram pages
+![Footer](/assets/images/testing/manual-testS/testcase_2_1_desktop.PNG)
 
 #### User Stories
 - User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
@@ -185,6 +188,7 @@ The footer is displayed on the Index(Homepage), About, Events, Quiz and 404 page
 The index page contains the header, footer, hero image and hero text and 4 image links to the About, Events, Quiz pages and mailing list modal
 The mailing list modal consists of two fields(full name and email address). When the user enters their information and clicks Submit, the EmailJS API is called to send an email to the user. The email template was configured in Email JS.
 ![Mailing List](/assets/images/readme/mailinglist.PNG)
+![Email Recieved](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG)
 
 
 #### User Stories
@@ -394,9 +398,11 @@ Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.PNG)
 quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.PNG)
-about.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/about_wave_validation.PNG)
+about.html | 2 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/about_wave_validation.PNG)
 events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
 404.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/404_wave_validation.PNG)
+
+Note: The two errors on the about.html page were reported from within the google maps, and although I investigated could inject or resolve the errors, I was not succesful
 
 <br>
 
@@ -409,7 +415,7 @@ quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_
 sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
 questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
 
-- I have analysed the warning in events.js, and consider it not to be a serious issue
+- I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
 <br>
 
 # Deployment

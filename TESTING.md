@@ -107,10 +107,10 @@ Step 1, 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_1_1_des
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
 Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_2_1_mobile.PNG) | Passed |
-Step 2 | dd |dd |dd | Passed | TO DO
-Step 3 | dd |dd |dd | Passed | TO DO
+Step 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_2_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_2_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_2_2_mobile.PNG) | Passed |
+Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_3_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_3_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_2_3_mobile.PNG) | Passed |
 Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_4_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_4_tablet.PNG) | [Mobile Result](assets/images/testing/manual-tests/testcase_2_4_mobile.PNG) | Passed |
-Step 5 | dd |dd |dd | Passed | TO DO
+Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_5_tablet.PNG) | [Mobile Result](assets/images/testing/manual-tests/testcase_2_5_mobile.PNG) | Passed 
 
 <br>
 
@@ -145,14 +145,14 @@ Step 5 | dd |dd |dd | Passed | TO DO
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
 Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_1_desktop.png)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_1_tablet.png) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_1_mobile.png) | Passed |
-TO DO Step 2
+Step 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_2_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_2_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_2_mobile.PNG) | Passed |
 Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_3_desktop.png)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_3_tablet.png) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_3_mobile.png) | Passed |
 Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_4_desktop.png)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_4_tablet.png) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_4_mobile.png) | Passed |
 Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_5_mobile.PNG) | Passed |
 Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_6_desktop.png)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_6_tablet.png) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_6_mobile.png) | Passed |
 Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_7_mobile.PNG) | Passed |
 Step 8 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_8_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_8_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_8_mobile.PNG) | Passed |
-TO DO Step 9
+Step 8 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) | Passed |
 <br>
 
 ## Feature 4 About Page
@@ -165,26 +165,26 @@ TO DO Step 9
 ### Test case steps
 1. Navigate to the about page(about.html)
 2. Navigate to the Albums section
-3. Hover over one of the album images
+3. Click on one of the album images
 4. Click on each track in the track listings
 5. Navigate to the top tracks section
 6. Click on each of the top tracks
 ### Expected Result
 1. The about.html page is displayed, and there is a paragraph about the djs displayed in the About section
 2. Two album images are displayed and the track listing for each album
-3. The image clips to display album information(name, label, number of tracks)
+3. The image flips to display album information(name, label, number of tracks)
 4. Each track opens in a new tab in spotify
 5. The top tracks are displayed
 6. The top track(a 30 second clip) starts playing in the media player on the page
 ### Actual Result
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 |  | | |  |
-Step 2 |  | | |  |
-Step 3 |  | | |  |
-Step 4 |  | | |  |
-Step 5 |  | | |  |
-Step 6 |  | | |  |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_1_mobile.PNG) | Passed |
+Step 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_2_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_2_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_2_mobile.PNG) | Passed |
+Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_3_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_3_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_3_mobile.PNG) | Passed |
+Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_4_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_4_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_4_mobile.PNG) | Passed |
+Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_5_mobile.PNG) | Passed |
+Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_4_6_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_4_6_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_4_6_mobile.PNG) | Passed |
 
 <br>
 
@@ -198,25 +198,20 @@ Step 6 |  | | |  |
 1. Navigate to the events page(about.html)
 2. Click on the Buy Tickets link for an event
 3. Click on an event, and then click on the same link again
-4. Click on a particular page number
-5. Click on the next link
-6. Click on the previous link
+4. Click on a particular page number, then click on the next link and then click on the previous link
 
 ### Expected Result
 1. The events.html page is loaded, and an Events table with a number of columns(Date, Time, Title, Tickets) is displayed. Two events will be displayed on each page
 2. A new tab will open and display the event in ticketmaster
 3. The events venue details and a google map of the venue will be displayed. Re-clicking on the event will hide this information
-4. The page will update page selected and refresh with new events
-5. The page number will increase and the page will refresh with new events, if you are on the last page the Next link will not be displayed
-5. The page number will decrease and the page will refresh with new events, if you are on the first page the Previous link will not be displayed
+4. The page will update page selected and refresh with new events. The page number will increase and the page will refresh with new events, if you are on the last page the Next link will not be displayed. The page number will decrease and the page will refresh with new events, if you are on the first page the Previous link will not be displayed
 ### Actual Result
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 |  | | |  |
-Step 2 |  | | |  |
-Step 3 |  | | |  |
-Step 4 |  | | |  |
-Step 5 |  | | |  |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_5_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_5_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_5_1_mobile.PNG) | Passed |
+Step 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_5_2_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_5_2_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_5_2_mobile.PNG) | Passed |
+Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_5_3_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_5_3_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_5_3_mobile.PNG) | Passed |
+Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_5_4_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_5_4_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_5_4_mobile.PNG) | Passed |
 
 <br>
 

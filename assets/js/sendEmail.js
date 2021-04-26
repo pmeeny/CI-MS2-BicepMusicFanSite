@@ -11,7 +11,7 @@ function sendMail(contactForm) {
         "from_email": contactForm.email_address.value
     }).then(
         function (response) {
-            console.log("Email sent", response);
+            // Success sending email
         },
         function (error) {
             console.log("FAILED", error);

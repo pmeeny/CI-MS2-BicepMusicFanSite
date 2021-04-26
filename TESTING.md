@@ -1,12 +1,11 @@
 # Table of Contents
-- [Testing Approach](#testing-approach)
-  * [Manual testing](#manual-testing)
-  * [Test Results](#test-results)
+- [Testing](#testing)
+  * [Manual testing information](#manual-testing-information)
   * [Feature 1 Navigation Bar](#feature-1-navigation-bar)
     + [User Story](#user-story)
     + [Test case steps](#test-case-steps)
     + [Expected Result](#expected-result)
-    + [Test Results](#test-results-1)
+    + [Test Results](#test-results)
   * [Feature 2 Footer](#feature-2-footer)
     + [User Story](#user-story-1)
     + [Test case steps](#test-case-steps-1)
@@ -37,19 +36,26 @@
     + [Test case steps](#test-case-steps-6)
     + [Expected Result](#expected-result-6)
     + [Actual Result](#actual-result-5)
-- [Automated testing](#automated-testing)
-  * [Test Cases](#test-cases)
-  * [Code Coverage](#code-coverage)
+  * [Automated testing](#automated-testing)
+    + [Test Cases](#test-cases)
+    + [Test case recordings](#test-case-recordings)
+    + [Code Coverage](#code-coverage)
+- [Bugs found during the testing phase](#bugs-found-during-the-testing-phase)
+- [Code Validators and Website Analysis](#code-validators-and-website-analysis)
+  * [HTML Markup Validation Service](#html-markup-validation-service)
+  * [CSS Validation Service](#css-validation-service)
+  * [Chrome Dev tools Lighthouse](#chrome-dev-tools-lighthouse)
+  * [Wave Accessibility](#wave-accessibility)
+  * [JSHint](#jshint)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-# Testing Approach
-The testing approach is as follows
+# Testing
+The testing approach(described in detail in this testing readme) is as follows:
 1. Manual testing using emulators and real devices
 2. Automated E2E testing with Cypress testing framework (www.cypress.io)
-
-## Manual testing
+## Manual testing information
 Testing was completed on the following browsers and device types
 
 Device Number | Physical/Emulator | Device Name | Device Type | Browser | Version
@@ -65,9 +71,8 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 9 | Emulator | iPhone X | Mobile | Chrome Emulator | 86.0 |
 10 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 86.0 |
 
-## Test Results
-Below are the test results for testing the website requirements against a range of browsers and devices
-For the purpose of the screenshots I used a Chrome emulator for desktop, tablet and mobile (Device numbers 6(Desktop), 8(Tablet), 9(Mobile))
+- Below are the test results for testing the website requirements against a range of browsers and devices
+- For the purpose of the screenshots I used a Chrome emulator for desktop, tablet and mobile (Device numbers 6(Desktop), 8(Tablet), 9(Mobile))
 
 ## Feature 1 Navigation Bar
 ### User Story
@@ -152,7 +157,7 @@ Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_5_deskto
 Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_6_desktop.png)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_6_tablet.png) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_6_mobile.png) | Passed |
 Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_7_mobile.PNG) | Passed |
 Step 8 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_8_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_8_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_8_mobile.PNG) | Passed |
-Step 8 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) | Passed |
+Step 9 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_9_alldevices.PNG) | Passed |
 <br>
 
 ## Feature 4 About Page
@@ -269,11 +274,11 @@ Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desk
 
 <br>
 
-# Automated testing
-A number of testcases were written using the cypress testing framework, they are described below
-Theses 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
-The total time for the test cases was around 2 minutes, 58 seconds on average
-## Test Cases
+## Automated testing
+- Six testcases were written using the cypress testing framework, they are described below
+- These 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
+- The total time for the test cases was around 2 minutes, 58 seconds on average to run
+### Test Cases
 Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
 ------------ | ------------ | ------------- | ------------- | ------------- |
 1 | 404Test | This test opens the 404 page and checks the contents of the page | Passed | 9 seconds |
@@ -291,7 +296,7 @@ The cypress.io dashboard displays the following information
 
 The test automation suite results, which included 6 tests, all passed in a time of 90.61 seconds are displayed below
 ![Cypress Test Results](/assets/images/readme/cypress_testresults.PNG)
-
+### Test case recordings
 Video recordings of each of the 6 test cases are available at the following location:
 These can be viewed  in a media player, for example windows media player or an embedded media player in the browser
 - [404 Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/404Testjs.mp4)
@@ -301,7 +306,7 @@ These can be viewed  in a media player, for example windows media player or an e
 - [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingtestjs.mp4)
 - [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quiztestjs.mp4)
 
-## Code Coverage
+### Code Coverage
 I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries
 Further information is described below
 - Cypress (https://www.cypress.io)
@@ -315,3 +320,92 @@ The Code coverage results for the javascript files as a result of running the te
 ![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
 
 The code coverage is generated in a folder "coverage" every time the test suit is run.  
+
+
+# Bugs found during the testing phase
+
+Bug Number | Comment |  Solution/Design decision |
+------------ | ------------- | ------------- | 
+1 | The time spent is displaying after each question, not in total | The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
+2 | The allAnswers element was being overwritten if 2 questions had the same number | The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
+3 | The top score was not displaying the current value, once a quiz has been completed | The fix was to call getTopScore after setTopScore once 10 questions were complete
+4 | The top score is not displayed after 1st attempt results page | The fix was to  $("#top_score").show() to show the div
+5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+6 | The dynamic about and quiz divs are not scaling properly on IE | The fix was to apply a more dynamic div:  https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456 with a height: auto as IE doesn't support min-height
+7 | The quiz score was not updating on question 10 of the quiz. | The fix was to update the current_score div using JQuery at the last question as well as the first 1-9 
+
+<br>
+
+# Code Validators and Website Analysis
+The website's pages were run against the following validators:
+
+## HTML Markup Validation Service
+I used https://validator.w3.org/
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+index.html | Passed, No errors found | [Results](assets/images/testing/html-validation/index_html_validation.jpg)
+about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.JPG)
+events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.JPG)
+quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.JPG)
+404.html | Passed, No errors found | [Results](assets/images/testing/html-validation/404_html_validation.JPG)
+
+<br>
+
+## CSS Validation Service
+I used https://jigsaw.w3.org/css-validator/
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.JPG)
+
+## Chrome Dev tools Lighthouse 
+
+(I used Lighthouse https://developers.google.com/web/tools/lighthouse)
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+index.html (Desktop) | Performance: 98, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/index_desktop.JPG)
+index.html (Mobile) | Performance: 91, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/index_mobile.JPG)
+quiz.html (Desktop) | Performance: 96, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/quiz_desktop.JPG)
+quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/quiz_mobile.JPG)
+events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
+events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
+about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_desktop.PNG)
+about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_mobile.PNG)
+404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
+404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.JPG)
+
+<br>
+
+## Wave Accessibility
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.PNG)
+quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.PNG)
+about.html | 2 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/about_wave_validation.PNG)
+events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
+404.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/404_wave_validation.PNG)
+
+Note: The two errors on the about.html page were reported from within the google maps, and although I investigated could inject or resolve the errors, I was not succesful
+
+<br>
+
+## JSHint
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+about.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/about_jshint.PNG)
+events.js | 0 errors and 1 warning | [Results](assets/images/testing/jshint/events_jshint.JPG)
+quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_jshint.JPG)
+sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
+questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
+
+- I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
+<br>

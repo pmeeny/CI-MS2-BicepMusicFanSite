@@ -52,13 +52,6 @@ View the live site [here](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite)
   * [Languages](#languages)
   * [Libraries and other resources](#libraries-and-other-resources)
 - [Testing](#testing)
-  * [Bugs found during the testing phase](#bugs-found-during-the-testing-phase)
-  * [Code Validators and Website Analysis](#code-validators-and-website-analysis)
-    + [HTML Markup Validation Service](#html-markup-validation-service)
-    + [CSS Validation Service](#css-validation-service)
-    + [Chrome Dev tools Lighthouse](#chrome-dev-tools-lighthouse)
-    + [Wave Accessibility](#wave-accessibility)
-    + [JSHint](#jshint)
 - [Deployment](#deployment)
   * [Ticketmaster API](#ticketmaster-api)
   * [Spotify API](#spotify-api)
@@ -329,94 +322,6 @@ The mailing list modal consists of two fields(full name and email address). When
 
 # Testing
 The testing information and results for this project are documented in [TESTING.md](TESTING.md)
-
-## Bugs found during the testing phase
-
-Bug Number | Comment |  Solution/Design decision |
------------- | ------------- | ------------- | 
-1 | The time spent is displaying after each question, not in total | The fix was to create a new div called total_time_spent, and to update this div as part of the method displayQuestions() instead of checkAnswer()
-2 | The allAnswers element was being overwritten if 2 questions had the same number | The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
-3 | The top score was not displaying the current value, once a quiz has been completed | The fix was to call getTopScore after setTopScore once 10 questions were complete
-4 | The top score is not displayed after 1st attempt results page | The fix was to  $("#top_score").show() to show the div
-5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
-6 | The dynamic about and quiz divs are not scaling properly on IE | The fix was to apply a more dynamic div:  https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456 with a height: auto as IE doesn't support min-height
-7 | The quiz score was not updating on question 10 of the quiz. | The fix was to update the current_score div using JQuery at the last question as well as the first 1-9 
-
-<br>
-
-## Code Validators and Website Analysis
-The website's pages were run against the following validators:
-
-### HTML Markup Validation Service
-I used https://validator.w3.org/
-
-Page | Result | Test Detail/Screenshot
------------- | ------------- | -------------
-index.html | Passed, No errors found | [Results](assets/images/testing/html-validation/index_html_validation.jpg)
-about.html | Passed, No errors found | [Results](assets/images/testing/html-validation/about_html_validation.JPG)
-events.html | Passed, No errors found | [Results](assets/images/testing/html-validation/events_html_validation.JPG)
-quiz.html | Passed, No errors found | [Results](assets/images/testing/html-validation/quiz_html_validation.JPG)
-404.html | Passed, No errors found | [Results](assets/images/testing/html-validation/404_html_validation.JPG)
-
-<br>
-
-### CSS Validation Service
-I used https://jigsaw.w3.org/css-validator/
-<p>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
-    </a>
-</p>
-
-Page | Result | Test Detail/Screenshot
------------- | ------------- | -------------
-style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.JPG)
-
-### Chrome Dev tools Lighthouse 
-
-(I used Lighthouse https://developers.google.com/web/tools/lighthouse)
-
-Page | Result | Test Detail/Screenshot
------------- | ------------- | -------------
-index.html (Desktop) | Performance: 98, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/index_desktop.JPG)
-index.html (Mobile) | Performance: 91, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/index_mobile.JPG)
-quiz.html (Desktop) | Performance: 96, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/quiz_desktop.JPG)
-quiz.html (Mobile) | Performance: 95, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/quiz_mobile.JPG)
-events.html (Desktop) | Performance: 94, Accessibility: 100, Best practices: 93, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/events_desktop.jpg)
-events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/events_mobile.jpg)
-about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_desktop.PNG)
-about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_mobile.PNG)
-404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
-404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.JPG)
-
-<br>
-
-### Wave Accessibility
-Page | Result | Test Detail/Screenshot
------------- | ------------- | -------------
-index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.PNG)
-quiz.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/quiz_wave_validation.PNG)
-about.html | 2 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/about_wave_validation.PNG)
-events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
-404.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/404_wave_validation.PNG)
-
-Note: The two errors on the about.html page were reported from within the google maps, and although I investigated could inject or resolve the errors, I was not succesful
-
-<br>
-
-### JSHint
-Page | Result | Test Detail/Screenshot
------------- | ------------- | -------------
-about.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/about_jshint.PNG)
-events.js | 0 errors and 1 warning | [Results](assets/images/testing/jshint/events_jshint.JPG)
-quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_jshint.JPG)
-sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
-questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
-
-- I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
-<br>
 
 # Deployment
 The website was developed using the Visual Studio Code IDE due to the extensibility of the Visual Studio Code IDE and I plan on using this IDE for future projects. 

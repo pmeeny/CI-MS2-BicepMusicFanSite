@@ -130,7 +130,6 @@ The user stories for the website owner are described as follows:
 - Wireframes for the website were developed in Balsamiq and are linked below for Desktop, Tablet and Mobile devices.
 - The wireframes are stored in GIT in the png format and are available at the links below(Desktop, Tablet and Mobile wireframes)
 - One overall pdf containing all wireframes is also stored in the GIT at the following location: - [All Wireframes in PDF format](assets/wireframes/Wireframes_allformats.pdf)
-<br>
 
 #### Desktop 
 - [Index](assets/wireframes/desktop/index_desktop.png)

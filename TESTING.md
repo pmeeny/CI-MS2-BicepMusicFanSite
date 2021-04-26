@@ -1,5 +1,50 @@
+# Table of Contents
+- [Testing Approach](#testing-approach)
+  * [Manual testing](#manual-testing)
+  * [Test Results](#test-results)
+  * [Feature 1 Navigation Bar](#feature-1-navigation-bar)
+    + [User Story](#user-story)
+    + [Test case steps](#test-case-steps)
+    + [Expected Result](#expected-result)
+    + [Test Results](#test-results-1)
+  * [Feature 2 Footer](#feature-2-footer)
+    + [User Story](#user-story-1)
+    + [Test case steps](#test-case-steps-1)
+    + [Expected Result](#expected-result-1)
+    + [Actual Result](#actual-result)
+  * [Feature 3 Index Page](#feature-3-index-page)
+    + [User Stories](#user-stories)
+    + [Test case steps](#test-case-steps-2)
+    + [Expected Result](#expected-result-2)
+    + [Actual Result](#actual-result-1)
+  * [Feature 4 About Page](#feature-4-about-page)
+    + [User Stories](#user-stories-1)
+    + [Test case steps](#test-case-steps-3)
+    + [Expected Result](#expected-result-3)
+    + [Actual Result](#actual-result-2)
+  * [Feature 5 Events Page](#feature-5-events-page)
+    + [User Stories](#user-stories-2)
+    + [Test case steps](#test-case-steps-4)
+    + [Expected Result](#expected-result-4)
+    + [Actual Result](#actual-result-3)
+  * [Feature 6 404 Page](#feature-6-404-page)
+    + [User Story](#user-story-2)
+    + [Test case steps](#test-case-steps-5)
+    + [Expected Result](#expected-result-5)
+    + [Actual Result](#actual-result-4)
+  * [Feature 7 Quiz](#feature-7-quiz)
+    + [User Stories](#user-stories-3)
+    + [Test case steps](#test-case-steps-6)
+    + [Expected Result](#expected-result-6)
+    + [Actual Result](#actual-result-5)
+- [Automated testing](#automated-testing)
+  * [Test Cases](#test-cases)
+  * [Code Coverage](#code-coverage)
 
-# Testing
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+# Testing Approach
 The testing approach is as follows
 1. Manual testing using emulators and real devices
 2. Automated E2E testing with Cypress testing framework (www.cypress.io)
@@ -14,13 +59,15 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 3 | Physical | One Plus 5 | Mobile | Chrome | 88.0 |
 4 | Physical | Windows Desktop| Desktop | IE Edge | 88.0 |
 5 | Physical | Windows Desktop| Desktop | Mozilla Firefox | 85.0 |
-6 | Emulator | Galaxy S5 | Mobile | Chrome Emulator | 86.0 |
-7 | Emulator | iPad | Tablet | Chrome Emulator | 86.0 |
-8 | Emulator | iPhone X | Mobile | Chrome Emulator | 86.0 |
-9 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 86.0 |
+6 | Physical | Windows Desktop| Desktop | Chrome | 86.0 |
+7 | Emulator | Galaxy S5 | Mobile | Chrome Emulator | 86.0 |
+8 | Emulator | iPad | Tablet | Chrome Emulator | 86.0 |
+9 | Emulator | iPhone X | Mobile | Chrome Emulator | 86.0 |
+10 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 86.0 |
 
 ## Test Results
 Below are the test results for testing the website requirements against a range of browsers and devices
+For the purpose of the screenshots I used a Chrome emulator for desktop, tablet and mobile (Device numbers 6(Desktop), 8(Tablet), 9(Mobile))
 
 ## Feature 1 Navigation Bar
 ### User Story
@@ -32,15 +79,15 @@ User Story 1.1: As a website user the navigation bar is displayed with a logo on
 
 ### Expected Result
 1. The page is displayed with consistent navigation bar and logo
-2. The navigation bar is displayed as a burger menu to the right of the page
+2. The navigation bar is displayed as a burger menu to the right of the page (once the screen width is less than 990 pixels)
 ### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1-5 | dd |dd |dd |
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1, 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_1_1_desktop.PNG) | [Tablet Result](assets/images/testing/manual-tests/testcase_1_1_tablet.PNG)  | [Mobile Result](assets/images/testing/manual-tests/testcase_1_1_mobile.PNG)  | Passed |
 
 <br>
 
-### Feature 2 Footer
+## Feature 2 Footer
 ### User Story
 - User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer
 ### Test case steps
@@ -55,10 +102,15 @@ Steps 1-5 | dd |dd |dd |
 3. The dj's facebook page opens in a new tab
 4. The dj's twitter page opens in a new tab
 5. The dj's instagram page opens in a new tab
-### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1-5 | dd |dd |dd |
+
+### Actual Result
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_2_1_mobile.PNG) | Passed |
+Step 2 | dd |dd |dd | Passed | TO DO
+Step 3 | dd |dd |dd | Passed | TO DO
+Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_2_4_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_2_4_tablet.PNG) | [Mobile Result](assets/images/testing/manual-tests/testcase_2_4_mobile.PNG) | Passed |
+Step 5 | dd |dd |dd | Passed | TO DO
 
 <br>
 
@@ -69,34 +121,43 @@ Steps 1-5 | dd |dd |dd |
 - User Story 3.3: As a website user I can access the Quiz Page by clicking on a link on the index(homepage) page
 - User Story 3.4: As a website user I can sign-up to the BICEP email list by clicking on a link on the index(homepage) page, entering my full name and email address and clicking the Submit button on the modal screen to Submit or Close to close the modal
 ### Test case steps
-1. Click on the BICEP ABOUT image/link on the index.html page
-2. Click on the BICEP EVENT INFO on the index.html page
-3. Click on the BICEP QUIZ GAME on the index.html page
-4. Click on the BICEP MAIL LIST on the index.html page
-5. Close the mailing list modal
-6. Click on the BICEP MAIL LIST on the index.html page
-7. Enter no value for either name and email address and click the Submit button
-8. Enter a value for the name and email address and click the Submit button
+1. Navigate to the index.html page
+2. Click on the BICEP ABOUT image/link on the index.html page
+3. Click on the BICEP EVENT INFO on the index.html page
+4. Click on the BICEP QUIZ GAME on the index.html page
+5. Click on the BICEP MAIL LIST on the index.html page
+6. Close the mailing list modal
+7. Click on the BICEP MAIL LIST on the index.html page
+8. Enter no value for either name and email address and click the Submit button
+9. Enter a value for the name and email address and click the Submit button
 ### Expected Result
-1. The about.html page is displayed in the same tab
-2. The events.html page is displayed in the same tab
-3. The quiz.html page is displayed in the same tab
-4. A modal is displayed called Mailing List sign-up
-5. The mailing list modal is closed
-6. A modal is displayed called Mailing List sign-up
-7. A message is displayed thata each field must be filled in
-8. The modal closes and an email is sent to the email list provided
+1. The index.html page is displayed
+2. The about.html page is displayed in the same tab
+3. The events.html page is displayed in the same tab
+4. The quiz.html page is displayed in the same tab
+5. A modal is displayed called Mailing List sign-up
+6. The mailing list modal is closed
+7. A modal is displayed called Mailing List sign-up
+8. A message is displayed that each field must be filled in
+9. The modal closes and an email is sent to the email list provided
 
-### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1-5 | dd |dd |dd |
-
+### Actual Result
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_1_mobile.PNG) | Passed |
+TO DO Step 2
+Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_3_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_3_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_3_mobile.PNG) | Passed |
+Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_4_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_4_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_4_mobile.PNG) | Passed |
+Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_5_mobile.PNG) | Passed |
+Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_6_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_6_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_6_mobile.PNG) | Passed |
+Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_7_mobile.PNG) | Passed |
+Step 8 | [Desktop Result](assets/images/testing/manual-tests/testcase_3_8_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_3_8_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_3_8_mobile.PNG) | Passed |
+TO DO Step 9
 <br>
 
-### Feature 4 About Page
+## Feature 4 About Page
 ### User Stories
-- User Story 4.1: As a website user I can view track listing, album cover image and album about Biceps two albums
+- User Story 4.1: As a website user I can view track listing, album cover image and album information about Biceps two albums
 - User Story 4.2: As a website user I can view album information when I hover over an album image
 - User Story 4.2: As a website user I can listen to the dj's albums tracks in a new tab in spotify by clicking on a particular track
 - User Story 4.3: As a website user I can view the top tracks for the DJ duo
@@ -115,14 +176,19 @@ Steps 1-5 | dd |dd |dd |
 4. Each track opens in a new tab in spotify
 5. The top tracks are displayed
 6. The top track(a 30 second clip) starts playing in the media player on the page
-### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1-5 | dd |dd |dd |
+### Actual Result
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 |  | | |  |
+Step 2 |  | | |  |
+Step 3 |  | | |  |
+Step 4 |  | | |  |
+Step 5 |  | | |  |
+Step 6 |  | | |  |
 
 <br>
 
-### Feature 5 Events Page
+## Feature 5 Events Page
 ### User Stories
 - User Story 5.1: As a website user I can view upcoming events from ticketmaster with date, time, title, ticket purchase information
 - User Story 5.2: As a website user I can click next and previous on the event pages and select a particular page, the events on that page will be displayed
@@ -139,31 +205,36 @@ Steps 1-5 | dd |dd |dd |
 ### Expected Result
 1. The events.html page is loaded, and an Events table with a number of columns(Date, Time, Title, Tickets) is displayed. Two events will be displayed on each page
 2. A new tab will open and display the event in ticketmaster
-3. The events venue details and a google map of the venue will be displayed. Reclicking the vent will hide this information
+3. The events venue details and a google map of the venue will be displayed. Re-clicking on the event will hide this information
 4. The page will update page selected and refresh with new events
 5. The page number will increase and the page will refresh with new events, if you are on the last page the Next link will not be displayed
 5. The page number will decrease and the page will refresh with new events, if you are on the first page the Previous link will not be displayed
-### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1-5 | dd |dd |dd |
+### Actual Result
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 |  | | |  |
+Step 2 |  | | |  |
+Step 3 |  | | |  |
+Step 4 |  | | |  |
+Step 5 |  | | |  |
 
 <br>
 
-### Feature 6 404 Page
+## Feature 6 404 Page
 ### User Story
 - User Story 6.1: As a website user if I enter in an incorrect url or page, I will be presented with a 404 page with consistent header and footer
 ### Test case steps
-1. Navigate to a page that does not exist (for example: doesNotExist.html)
+1. Navigate to a page that does not exist (for example: doesNotExist.html or quiz1.html)
 ### Expected Result
 1. The 404.html page is displayed
-### Test Results
-Step Number | Desktop | Tablet | Mobile |
------------- | ------------ | ------------- | ------------- |
-Steps 1 | dd |dd |dd |
+### Actual Result
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_6_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_6_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_6_1_mobile.PNG) | Passed |
+
 <br>
 
-### Feature 7 Quiz
+## Feature 7 Quiz
 
 ### User Stories
 - User Story 7.1: As a website user I can take a quiz of 10 questions on the DJ duo
@@ -187,51 +258,56 @@ Steps 1 | dd |dd |dd |
 3. The correct answer of each question is highlighted in green, and any incorrect answers selected are highlighted in red. The question number and quiz score updates for each question. The timer stops and the time taken is displayed.
 4. The results screen displays the 8 questions correctly answered, and the 2 questions incorrect answered.
 5. The top score is updated to 8 out of 10
-6. The results screen displays the 10 questions correctly answered. The order in which the question id displayed is random.
+6. The results screen displays the 10 questions correctly answered. Note: The order in which the question is displayed is random.
 7. The top score is updated to 10 out of 10.
 
-### Test Results
+### Actual Result
 Step Number | Desktop | Tablet | Mobile |
 ------------ | ------------ | ------------- | ------------- |
+Step 1 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_1_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_1_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_1_mobile.PNG) | Passed |
+Step 2 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_2_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_2_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_2_mobile.PNG) | Passed |
+Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_3_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_3_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_3_mobile.PNG) | Passed |
+Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_4_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_4_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_4_5_mobile.PNG) | Passed |
+Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_4_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_4_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_4_5_mobile.PNG) | Passed |
+Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_6_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_6_7_mobile.PNG) | Passed |
+Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_6_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_6_7_mobile.PNG) | Passed |
 
 <br>
 
-## Automated testing
+# Automated testing
 A number of testcases were written using the cypress testing framework, they are described below
 Theses 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
-### Test Cases
+The total time for the test cases was around 2 minutes, 58 seconds on average
+## Test Cases
 Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
 ------------ | ------------ | ------------- | ------------- | ------------- |
 1 | 404Test | This test opens the 404 page and checks the contents of the page | Passed | 9 seconds |
-2 | aboutTest | This test opens the About Page,  | Passed | 11 seconds |
-3 | eventsTest | This test opens the | Passed | 28 seconds |
-4 | indexTest | This test opens the |  Passed | 6 seconds |
-5 | mailingListTest | This test opens the | Passed | 11 seconds |
-6 | quizTest | This test opens the | Passed | 1 minute, 49 seconds |
-
-Total time: 2 minutes, 58 seconds
+2 | aboutTest | This test opens the About Page, checks the contents of the album 1,2 divs, checks that 10 top tracks are displayed and clicks on each one of them  | Passed | 11 seconds |
+3 | eventsTest | This test opens the event page, checks the content of each event(ticket url, date, time, google map), and clicks on the page number, next and previous to test the pagination | Passed | 28 seconds |
+4 | indexTest | This test opens the index.html page and checks the content |  Passed | 6 seconds |
+5 | mailingListTest | This test opens the index.html page, opens the mailing list and submits values for name, email address and clicks Submit to send an email | Passed | 11 seconds |
+6 | quizTest | This test opens the quiz.html page, then takes the quiz 4 times, once for each open(a-d), it checks the percentage value, score value and top score value of every attempt | Passed | 1 minute, 49 seconds |
 
 The test cases written are listed as follows
 ![Cypress Test Cases](/assets/images/readme/cypress_testcases.PNG)
 
-The cypress.io dashboard displays the following informtion
+The cypress.io dashboard displays the following information
 ![Cypress Dashboard](/assets/images/readme/cypress_dashboard.PNG)
 
-The test automation suite results, which inclided 6 tests, all passed in a time of 90.61 seconds are displayed below
+The test automation suite results, which included 6 tests, all passed in a time of 90.61 seconds are displayed below
 ![Cypress Test Results](/assets/images/readme/cypress_testresults.PNG)
 
-Video recordings of each of the 6 test cases are available at the following location
-![Cypress Test Recordings](/assets/images/videos)
+Video recordings of each of the 6 test cases are available at the following location:
+These can be viewed  in a media player, for example windows media player or an embedded media player in the browser
+- [404 Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/404Testjs.mp4)
+- [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/abouttestjs.mp4)
+- [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/eventstestjs.mp4)
+- [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/indextestjs.mp4)
+- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingtestjs.mp4)
+- [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quiztestjs.mp4)
 
-### Code Coverage
+## Code Coverage
 I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries
-
-The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
-![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
-
-
-The code cover
-
 Further information is described below
 - Cypress (https://www.cypress.io)
     - Cypress was used for automated e2e testing of all pages 
@@ -239,4 +315,8 @@ Further information is described below
     - Cypress was configured to generate code coverage
 - Istanbul (https://istanbul.js.org/)   
     - Istanbul was used to instrument the javascript files in the project
-    
+
+The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
+![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
+
+The code coverage is generated in a folder "coverage" every time the test suit is run.  

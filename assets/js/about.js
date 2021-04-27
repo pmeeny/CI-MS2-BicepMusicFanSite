@@ -124,9 +124,8 @@ function displayTopTracks(data){
 /**
  * topTrackClicked listens for when a top track
  * div is clicked, and then plays the relevant mp3 clip using JQuery
- * @param data [The json data]
  */
-$(document).on("click", ".top-track-number", function topTrackClicked(data) {
+$("#toptracks").on("click", ".top-track-number", function topTrackClicked() {
     var currentselectedTrack = $(this).text();
     for(var i=0; i<topTracks.length; i++){
        if(currentselectedTrack == topTracks[i].name){

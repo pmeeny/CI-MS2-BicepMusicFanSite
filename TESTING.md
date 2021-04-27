@@ -334,9 +334,10 @@ Bug Number | Comment |  Solution/Design decision |
 2 | The allAnswers element was being overwritten if 2 questions had the same number | The fix was to create a new counter, and to increment that separately when adding to the allAnswers list
 3 | The top score was not displaying the current value, once a quiz has been completed | The fix was to call getTopScore after setTopScore once 10 questions were complete
 4 | The top score is not displayed after 1st attempt results page | The fix was to  $("#top_score").show() to show the div
-5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add $("#mailingListModal").modal("hide"); when submit button is clicked
+5 | After the mailing list mailing list modal closes the screen remains dark and the index isn't loading properly. |The fix was to add `$("#mailingListModal").modal("hide");` when submit button is clicked
 6 | The dynamic about and quiz divs are not scaling properly on IE | The fix was to apply a more dynamic div:  https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456 with a height: auto as IE doesn't support min-height
 7 | The quiz score was not updating on question 10 of the quiz. | The fix was to update the current_score div using JQuery at the last question as well as the first 1-9 
+8 | Clicking on a top track doesnt' always start the media player | The fix was to update the jquery click call on a div that is in the html, and not dynamically created `$("#toptracks").on("click", ".top-track-number", function topTrackClicked(data)`
 
 <br>
 

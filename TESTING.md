@@ -270,7 +270,7 @@ Step 3 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_3_deskto
 Step 4 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_4_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_4_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_4_5_mobile.PNG) | Passed |
 Step 5 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_4_5_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_4_5_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_4_5_mobile.PNG) | Passed |
 Step 6 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_6_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_6_7_mobile.png) | Passed |
-Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_6_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_6_7_mobile.PNG) | Passed |
+Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desktop.PNG)  | [Tablet Result](assets/images/testing/manual-tests/testcase_7_6_7_tablet.PNG) |[Mobile Result](assets/images/testing/manual-tests/testcase_7_6_7_mobile.png) | Passed |
 
 <br>
 

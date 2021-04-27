@@ -276,6 +276,7 @@ Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desk
 
 ## Automated testing
 - Six testcases were written using the cypress testing framework, they are described below
+- Cypress(www.cypress.io) is a javascript end to end test framework
 - These 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
 - The total time for the test cases was around 2 minutes, 58 seconds on average to run
 ### Test Cases
@@ -303,7 +304,7 @@ These can be viewed  in a media player, for example windows media player or an e
 - [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/aboutTestjs.mp4)
 - [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/eventsTestjs.mp4)
 - [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/indexTestjs.mp4)
-- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingTestjs.mp4)
+- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingListTestjs.mp4)
 - [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quizTestjs.mp4)
 
 ### Code Coverage

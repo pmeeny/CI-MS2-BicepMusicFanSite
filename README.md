@@ -162,8 +162,8 @@ The website has five webpages consisting of seven distinct features and they are
 ### Feature 1 Navigation Bar
 #### Description
 This is the navigation bar of the website, and is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. The navigation bar is a bootstrap component, and is a responsive component. It becomes a burger menu on tablet and mobile devices.
-![Navigation](/assets/images/testing/manual-testS/testcase_1_1_desktop.PNG)
-![Burger](/assets/images/testing/manual-testS/testcase_1_1_tablet.PNG)
+![Navigation](/assets/images/testing/manual-tests/testcase_1_1_desktop.PNG)
+![Burger](/assets/images/testing/manual-tests/testcase_1_1_tablet.PNG)
 
 #### User Stories
 - User Story 1.1: As a website user the navigation bar is displayed with a logo on the Index, About, Events, 404 and Quiz pages for easy navigation
@@ -171,7 +171,7 @@ This is the navigation bar of the website, and is displayed on the Index(Homepag
 ### Feature 2 Footer
 #### Description
 The footer is displayed on the Index(Homepage), About, Events, Quiz and 404 pages. It contains links to the djs spotify, facebook, twitter and instagram pages
-![Footer](/assets/images/testing/manual-testS/testcase_2_1_desktop.PNG)
+![Footer](/assets/images/testing/manual-tests/testcase_2_1_desktop.PNG)
 
 #### User Stories
 - User Story 2.1: As a website user I can access the djs spotify, facebook, twitter and instagram pages via a link on the page footer

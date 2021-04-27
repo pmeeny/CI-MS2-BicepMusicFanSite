@@ -350,13 +350,13 @@ The project uses a number of API's and the Cypress testing framework, below are 
 ## Ticketmaster API
 1. Create an account at https://developer-acct.ticketmaster.com/user/register
 2. Once you create the account, you will need to create a project, and you will be assigned a consumer key and consumer secret
-[Ticketmaster](assets/images/readme/css-validation/ticketmaster_api.PNG)
+![Ticketmaster](assets/images/readme/ticketmaster_api.PNG)
 3. Take a note of the consumer key, copy its value and update the variable ticketmasterAPIKey in the events.js file with its value
 
 ## Spotify API
 1. Create an account at https://developer.spotify.com/dashboard/applications
 2. Once you create the account, you will need to create a project, and you will be assigned a client id and client secret
-[Spotify](assets/images/readme/css-validation/spotify_api.PNG)
+![Spotify](assets/images/readme/spotify_api.PNG)
 4. Take a note of the client id and client secret
 5. Copy their values, and update the value of the variables clientId and clientSecret in the about.js file with their values
 

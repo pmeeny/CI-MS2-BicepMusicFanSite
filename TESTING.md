@@ -318,7 +318,9 @@ Further information is described below
 - Istanbul (https://istanbul.js.org/)   
     - Istanbul was used to instrument the javascript files in the project
 
-The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
+- The five javascript files were instrumented using Istanbul and are stored in the /cypress/instrumented folder
+
+- The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
 ![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
 
 The code coverage is generated in a folder "coverage" every time the test suit is run.  

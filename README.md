@@ -418,9 +418,12 @@ The project uses a number of API's and the Cypress testing framework, below are 
 - For IE support for a dynamic div I used the code in this url: https://stackoverflow.com/questions/4075440/dynamic-height-for-div/4075456
 
 # Content
-- Wikipedia (https://wikepedia.com/)
-    - The text on the about page is from wikpedia
+- Wikipedia (https://wikipedia.com/)
+    - The text on the index and about pages was taken from the dj's Wikipedia page
 
+<br>
+
+# Media
 - Pixabay (https://pixabay.com/)
     - The images on the home page, a and background on events, quiz and about pages are from pixabay
 
@@ -438,12 +441,6 @@ The project uses a number of API's and the Cypress testing framework, below are 
 
 - Ticketmaster (https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)     
     - The event information is read from the ticketmaster api
-
-<br>
-
-# Media
-- Wikipedia (https://wikipedia.com/)
-    - The text on index and about was taken from the dj's Wikipedia page
 
  <br>
 

@@ -283,12 +283,12 @@ Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desk
 ### Test Cases
 Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-1 | 404Test | This test opens the 404 page and checks the contents of the page | Passed | 9 seconds |
-2 | aboutTest | This test opens the About Page, checks the contents of the album 1,2 divs, checks that 10 top tracks are displayed and clicks on each one of them  | Passed | 11 seconds |
-3 | eventsTest | This test opens the event page, checks the content of each event(ticket url, date, time, google map), and clicks on the page number, next and previous to test the pagination | Passed | 28 seconds |
-4 | indexTest | This test opens the index.html page and checks the content |  Passed | 6 seconds |
-5 | mailingListTest | This test opens the index.html page, opens the mailing list and submits values for name, email address and clicks Submit to send an email | Passed | 11 seconds |
-6 | quizTest | This test opens the quiz.html page, then takes the quiz 4 times, once for each open(a-d), it checks the percentage value, score value and top score value of every attempt | Passed | 1 minute, 49 seconds |
+1 | 404 test | This test opens the 404 page and checks the contents of the page | Passed | 9 seconds |
+2 | About test | This test opens the About Page, checks the contents of the album 1,2 divs, checks that 10 top tracks are displayed and clicks on each one of them  | Passed | 11 seconds |
+3 | Events test | This test opens the event page, checks the content of each event(ticket url, date, time, google map), and clicks on the page number, next and previous to test the pagination | Passed | 28 seconds |
+4 | Index test | This test opens the index.html page and checks the content |  Passed | 6 seconds |
+5 | Mailing List Test | This test opens the index.html page, opens the mailing list and submits values for name, email address and clicks Submit to send an email | Passed | 11 seconds |
+6 | Quiz Test | This test opens the quiz.html page, then takes the quiz 4 times, once for each open(a-d), it checks the percentage value, score value and top score value of every attempt | Passed | 1 minute, 49 seconds |
 
 The test cases written are listed as follows
 ![Cypress Test Cases](/assets/images/readme/cypress_testcases.PNG)
@@ -301,12 +301,12 @@ The test automation suite results, which included 6 tests, all passed in a time 
 ### Test case recordings
 Video recordings of each of the 6 test cases are available at the following location:
 These can be viewed  in a media player, for example windows media player or an embedded media player in the browser
-- [404 Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/404Testjs.mp4)
-- [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/aboutTestjs.mp4)
-- [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/eventsTestjs.mp4)
-- [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/indexTestjs.mp4)
-- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingListTestjs.mp4)
-- [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quizTestjs.mp4)
+- [404 Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/404_testjs.mp4)
+- [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/about_testjs.mp4)
+- [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/events_testjs.mp4)
+- [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/index_testjs.mp4)
+- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailing_list_testjs.mp4)
+- [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quiz_testjs.mp4)
 
 ### Code Coverage
 I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries

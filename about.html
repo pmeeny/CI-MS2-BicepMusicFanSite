@@ -64,7 +64,7 @@
             </nav>
         </div>
     </header>
-    <!-- Hero Video and content -->
+    <!-- Hero image and content -->
     <div id="about">
         <div class="container">
             <h1 class="white-header1-text center-text">About</h1>
@@ -73,6 +73,7 @@
             <p class="paragraph">Note: This album and top track information below is read from Spotify</p>
             <h1 class="white-header1-text center-text">Albums</h1>   
             <!-- Credit for flipbox divs to flip pictures:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image -->
+            <!-- Display album images and text -->
             <div id="albums">
                 <div class="container">
                     <div class="row">
@@ -101,6 +102,7 @@
                             </div>   
                         </div>  
                     </div>  
+                    <!-- Album tracks -->
                     <div class="row">     
                         <div class="col-6">
                             <div class="col-sm" id="album2_tracks">Tracks(Click to listen in Spotify):<br></div>
@@ -109,6 +111,7 @@
                             <div class="col-sm" id="album1_tracks">Tracks(Click to listen in Spotify):<br></div>
                         </div>        
                     </div>
+                    <!-- Top tracks -->
                     <div id="toptracks-holder">     
                         <h1 class="white-header1-text">Top Tracks</h1> 
                         <div class="container">
@@ -116,6 +119,7 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div id="toptracks"></div>
                                 </div>
+                                <!-- Audio player to play one of the top tracks -->
                                 <div class="col-sm-12 col-md-6">    
                                     <p id="track-preview-text">Track Preview(loads when a top track is clicked):</p>
                                     <video id="track-preview" controls autoplay>

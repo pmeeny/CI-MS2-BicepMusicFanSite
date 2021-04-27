@@ -1,3 +1,4 @@
+// Tests the 404 page and content
 describe('404 Test', () => {
     it('Opens the 404.html page, and tests the content on the page', () => {
       // Navigate to the 404.html page

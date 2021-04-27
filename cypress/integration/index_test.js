@@ -1,3 +1,4 @@
+// Tests the Index page and content
 describe('Index Test', () => {
     it('Opens the index.html page, and tests the content on the page', () => {
       // Navigate to the index.html page

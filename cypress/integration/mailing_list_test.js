@@ -1,3 +1,4 @@
+// Tests the Mailing list modal and content
 describe('Mailing List Test', () => {
     it('Tests the mailing list modal and emailJS test', () => {
       // Navigate to the index.html page and opens the mailing list modal

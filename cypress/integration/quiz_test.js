@@ -1,3 +1,4 @@
+// Tests the Quiz page and content
 describe('Quiz Test', () => {
     it('Takes the quiz four times and tests all content and scenarios', () => {
       // Navigate to the index.html page

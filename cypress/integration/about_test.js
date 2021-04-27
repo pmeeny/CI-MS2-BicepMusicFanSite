@@ -1,3 +1,4 @@
+// Tests the About page and content
 describe('About Test', () => {
     it('Opens the about.html page, and tests the content on the page', () => {
       // Navigate to the about.html page

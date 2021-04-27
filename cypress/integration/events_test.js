@@ -1,3 +1,4 @@
+// Tests the Events page and content
 describe('Events Test', () => {
     it('Opens the events.html page, and tests the content on the page', () => {
       // Navigate to the index.html page and click the event info link

@@ -278,8 +278,9 @@ Step 7 | [Desktop Result](assets/images/testing/manual-tests/testcase_7_6_7_desk
 - Six testcases were written using the cypress testing framework, they are described below
 - Cypress(www.cypress.io) is a javascript end to end test framework
 ![Cypress](/assets/images/readme/cypress.PNG)
-- These 6 test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
+- These six test cases were part of a test suite, and the automation was run against the Chrome browser in the desktop, version 90.
 - The total time for the test cases was around 2 minutes, 58 seconds on average to run
+- The six test cases code/scripts are stored in github in the following folder: /cypress/integration
 ### Test Cases
 Test Case Number | Test Case Name | Test Case Steps | Test Case Result | Test Case Time | 
 ------------ | ------------ | ------------- | ------------- | ------------- |

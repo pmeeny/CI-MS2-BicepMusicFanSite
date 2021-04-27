@@ -27,13 +27,11 @@ allAnswers[8] = [];
 allAnswers[9] = [];
 var questions;
 var question;
-
 // Timer Variables
 var timer = document.getElementById("timer");
 var seconds = 0;
 var minutes = 0;
 var time;
-
 /**
  * shuffleQuestions randomly shuffles the questions shuffledQuestions
  */
@@ -229,7 +227,6 @@ function displayCorrectAnswerInGreen() {
     }
   });
 }
-
 /**
  * displayCorrectAnswerInRed, updates label of wrongly selected answer
  * as the quiz progresses
@@ -241,7 +238,6 @@ function displayCorrectAnswerInRed() {
     }
   });
 }
-
 /**
  * addTimerDetails, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
  * This function updates the timer as the time passes
@@ -259,7 +255,6 @@ function addTimerDetails() {
     timer.textContent = "Timer(MM:SS): " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
     startTimer();
 }
-
 /**
  * startTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
  * This function starts the timer, it is started when the quiz page loads and the quiz starts
@@ -267,7 +262,6 @@ function addTimerDetails() {
 function startTimer() {
     time = setTimeout(addTimerDetails, 1000);
 }
-
 /**
  * stopTimer, credit: https://jsfiddle.net/Daniel_Hug/pvk6p/
  * This function stops the timer
@@ -275,7 +269,6 @@ function startTimer() {
 function stopTimer() {
     clearTimeout(time);
 }
-
 /**
  * submitAnswerClicked uses JQuery to check has the user selected an option
  * for a question. If they have not an error message is displayed.
@@ -289,10 +282,8 @@ function stopTimer() {
       return;
     }
   checkAnswer();
-
-
 });
-
+// Call functions to initiate quiz
 shuffleQuestions();
 displayTopScore();
 displayQuestions();

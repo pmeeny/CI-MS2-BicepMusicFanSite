@@ -3,7 +3,6 @@
 * The file calls a number of methods on the spotify API
 * jshint esversion: 8
 */
-
 const clientId = "bb60c805a05440999011d33d17846c61";
 const clientSecret = "3290f175cc254cec8a7492fde67287ee";
 const bicepArtistID = "73A3bLnfnz5BoQjb4gNCga";
@@ -89,7 +88,6 @@ function displayAlbum1(data){
     $("#album1_info").append("<span>Label: " + data.label + "</span><br>");
     $("#album1_info").append("<span>Track Count: " + data.total_tracks + "</span><br>");
 }
-
 /**
  * displayAlbum2 displays the album info, track
  * listings and image on the page using JQuery append method
@@ -140,18 +138,16 @@ $(document).on("click", ".top-track-number", function topTrackClicked(data) {
 });
 /**
  * Promises are used to control the order of the function calls, the token is used for
- * all spotify api calls
+ * all spotify api calls. Call functions to initiate api calls and display of data
  */
  getToken().then(returnData =>{
     getAlbums1(returnData.access_token).then(newData=> {
         displayAlbum1(newData);
     });
-
     getAlbums2(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
         displayAlbum2(newData);
     });
-
     getTopTracks(returnData.access_token).then(newData=> {
         displayTopTracks(newData);
     });

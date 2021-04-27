@@ -408,6 +408,7 @@ Note: The two errors on the about.html page were reported from within the google
 ## JSHint
 - JSHint was used to analyse the Javascript files
 - Note: I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
+
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 about.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/about_jshint.PNG)

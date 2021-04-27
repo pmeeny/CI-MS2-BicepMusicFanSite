@@ -321,9 +321,8 @@ Further information is described below
 - The five javascript files were instrumented using Istanbul and are stored in the /cypress/instrumented folder
 
 - The Code coverage results for the javascript files as a result of running the test automation suite in Cypress are displayed below
+- The code coverage is generated in a folder "coverage" every time the test suit is run.  
 ![Cypress Test Coverage](/assets/images/readme/cypress_testcoverage.PNG)
-
-The code coverage is generated in a folder "coverage" every time the test suit is run.  
 
 
 # Bugs found during the testing phase
@@ -344,7 +343,7 @@ Bug Number | Comment |  Solution/Design decision |
 The website's pages were run against the following validators:
 
 ## HTML Markup Validation Service
-I used https://validator.w3.org/
+I used https://validator.w3.org/ to validate the html files
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
@@ -357,7 +356,7 @@ quiz.html | Passed, No errors found | [Results](assets/images/testing/html-valid
 <br>
 
 ## CSS Validation Service
-I used https://jigsaw.w3.org/css-validator/
+I used https://jigsaw.w3.org/css-validator/ to validate the css(style.css)
 <p>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
@@ -370,9 +369,11 @@ Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 style.css | Passed, No errors found | [Results](assets/images/testing/css-validation/css_validation.JPG)
 
+<br>
+
 ## Chrome Dev tools Lighthouse 
 
-(I used Lighthouse https://developers.google.com/web/tools/lighthouse)
+(I used Lighthouse https://developers.google.com/web/tools/lighthouse) to test the performance, seo, best practices and accessability of the site
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
@@ -390,6 +391,8 @@ about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, S
 <br>
 
 ## Wave Accessibility
+- Wave accessibility(https://wave.webaim.org/) was used to test the websites accessibility
+
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 index.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/index_wave_validation.PNG)
@@ -403,6 +406,8 @@ Note: The two errors on the about.html page were reported from within the google
 <br>
 
 ## JSHint
+- JSHint was used to analyse the Javascript files
+- Note: I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 about.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/about_jshint.PNG)
@@ -411,5 +416,4 @@ quiz.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/quiz_
 sendEmail.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/sendemail_jshint.JPG)
 questions.js | 0 errors and 0 warnings | [Results](assets/images/testing/jshint/questions_jshint.JPG)
 
-- I have analysed the warning in events.js, and consider it not to be a serious issue, it is in relation to using the new keyword to create an instance of a google map object in the code
 <br>

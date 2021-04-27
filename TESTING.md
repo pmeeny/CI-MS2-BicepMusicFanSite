@@ -300,11 +300,11 @@ The test automation suite results, which included 6 tests, all passed in a time 
 Video recordings of each of the 6 test cases are available at the following location:
 These can be viewed  in a media player, for example windows media player or an embedded media player in the browser
 - [404 Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/404Testjs.mp4)
-- [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/abouttestjs.mp4)
-- [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/eventstestjs.mp4)
-- [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/indextestjs.mp4)
-- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingtestjs.mp4)
-- [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quiztestjs.mp4)
+- [About Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/aboutTestjs.mp4)
+- [Events Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/eventsTestjs.mp4)
+- [Index Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/indexTestjs.mp4)
+- [Mailing List Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/mailingTestjs.mp4)
+- [Quiz Test Case Video](https://pmeeny.github.io/CI-MS2-BicepMusicFanSite/cypress/videos/quizTestjs.mp4)
 
 ### Code Coverage
 I configured my project to avail of the code coverage functionality provided by Cypress and Istanbul libraries
@@ -381,7 +381,7 @@ events.html (Mobile) | Performance: 88, Accessibility: 100, Best practices: 93, 
 about.html (Desktop) | Performance: 97, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_desktop.PNG)
 about.html (Mobile) | Performance: 87, Accessibility: 100, Best practices: 93, SEO: 90 | [Results](assets/images/testing/lighthouse-testing/about_mobile.PNG)
 404.html (Desktop) | Performance: 99, Accessibility: 100, Best practices: 100, SEO: 100 | [Results](assets/images/testing/lighthouse-testing/404_desktop.JPG)
-404.html (Mobile) | Performance: , Accessibility: , Best practices: , SEO:  | [Results](assets/images/testing/lighthouse-testing/404_mobile.JPG)
+404.html (Mobile) | Performance: 85, Accessibility: 100, Best practices: 100, SEO: 98 | [Results](assets/images/testing/lighthouse-testing/404_mobile.JPG)
 
 <br>
 
@@ -394,7 +394,7 @@ about.html | 2 errors and 0 contrast errors| [Results](assets/images/testing/wav
 events.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/events_wave_validation.PNG)
 404.html | 0 errors and 0 contrast errors| [Results](assets/images/testing/wave-validation/404_wave_validation.PNG)
 
-Note: The two errors on the about.html page were reported from within the google maps, and although I investigated could inject or resolve the errors, I was not succesful
+Note: The two errors on the about.html page were reported from within the google maps, and although I investigated to see could inject something or resolve the error with a workaround, I was not successful.
 
 <br>
 
